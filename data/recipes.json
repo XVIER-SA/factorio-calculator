@@ -1,0 +1,85 @@
+{
+  "items": {
+    "iron-ore": {
+      "name": "Mineral de hierro",
+      "icon": "iron-ore.png",
+      "type": "resource"
+    },
+    "copper-ore": {
+      "name": "Mineral de cobre",
+      "icon": "copper-ore.png",
+      "type": "resource"
+    },
+    "iron-plate": {
+      "name": "Placa de hierro",
+      "icon": "iron-plate.png",
+      "type": "intermediate"
+    },
+    "copper-plate": {
+      "name": "Placa de cobre",
+      "icon": "copper-plate.png",
+      "type": "intermediate"
+    },
+    "iron-gear-wheel": {
+      "name": "Engranaje",
+      "icon": "iron-gear-wheel.png",
+      "type": "intermediate"
+    },
+    "science-pack-1": {
+      "name": "Poción roja",
+      "icon": "science-pack-1.png",
+      "type": "product"
+    }
+  },
+  "recipes": {
+    "iron-plate": {
+      "ingredients": [
+        {"item": "iron-ore", "amount": 1}
+      ],
+      "time": 3.2,
+      "category": "smelting",
+      "result": "iron-plate",
+      "result_count": 1
+    },
+    "copper-plate": {
+      "ingredients": [
+        {"item": "copper-ore", "amount": 1}
+      ],
+      "time": 3.2,
+      "category": "smelting",
+      "result": "copper-plate",
+      "result_count": 1
+    },
+    "iron-gear-wheel": {
+      "ingredients": [
+        {"item": "iron-plate", "amount": 2}
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "iron-gear-wheel",
+      "result_count": 1
+    },
+    "science-pack-1": {
+      "ingredients": [
+        {"item": "iron-gear-wheel", "amount": 1},
+        {"item": "copper-plate", "amount": 1}
+      ],
+      "time": 5,
+      "category": "crafting",
+      "result": "science-pack-1",
+      "result_count": 1
+    }
+  },
+  "machines": {
+    "assembling-machine-1": {
+      "name": "Ensambladora 1",
+      "speed": 0.5,
+      "categories": ["crafting"]
+    },
+    "stone-furnace": {
+      "name": "Horno de piedra",
+      "speed": 1,
+      "categories": ["smelting"]
+    }
+  }
+}
