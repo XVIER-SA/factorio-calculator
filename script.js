@@ -46,6 +46,7 @@ function populateItemSelect() {
 }
 
 // Actualizar los selectores de máquinas según el Tier
+// Actualizar los selectores de máquinas según el Tier
 function updateMachineSelectors() {
     const tierSelect = document.getElementById('tier-select');
     const currentTier = parseInt(tierSelect.value);
@@ -62,10 +63,16 @@ function updateMachineSelectors() {
     };
 
     categories.forEach(cat => {
-        // Buscar máquinas disponibles para este tier y categoría
-        const availableMachines = Object.entries(gameData.machines).filter(([id, m]) => {
-            return m.categories.includes(cat) && m.tier <= currentTier;
+        // 1. Obtener TODAS las máquinas de esta categoría (sin filtrar por tier)
+        const allMachines = Object.entries(gameData.machines).filter(([id, m]) => {
+            return m.categories.includes(cat);
         });
+
+        // 2. Filtrar las máquinas disponibles para el Tier actual (para saber cuál poner por defecto)
+        const tierMachines = allMachines.filter(([id, m]) => m.tier <= currentTier);
+
+        // 3. Ordenar TODAS las máquinas de mayor a menor tier (las mejores arriba)
+        allMachines.sort((a, b) => b[1].tier - a[1].tier);
 
         // Crear el grupo de selección para esta categoría
         const groupDiv = document.createElement('div');
@@ -79,25 +86,36 @@ function updateMachineSelectors() {
         select.id = `machine-select-${cat}`;
         select.className = 'machine-select';
 
-        // Si no hay máquinas, opción manual
-        if (availableMachines.length === 0) {
+        let defaultMachineId = null;
+
+        // Si no hay máquinas para este tier, opción manual
+        if (tierMachines.length === 0) {
             const opt = document.createElement('option');
             opt.value = 'manual';
             opt.textContent = 'Manual (Sin máquina)';
+            opt.selected = true;
             select.appendChild(opt);
             selectedMachines[cat] = null;
         } else {
-            // Ordenar por tier (de mayor a menor) para que la mejor quede arriba
-            availableMachines.sort((a, b) => b[1].tier - a[1].tier);
-            
-            availableMachines.forEach(([id, m]) => {
+            // La máquina por defecto será la mejor disponible en el tier actual
+            tierMachines.sort((a, b) => b[1].tier - a[1].tier);
+            defaultMachineId = tierMachines[0][0];
+
+            // 4. Poblar el select con TODAS las máquinas
+            allMachines.forEach(([id, m]) => {
                 const opt = document.createElement('option');
                 opt.value = id;
-                opt.textContent = `${m.name} (Velocidad: ${m.speed})`;
+                // Añadimos el Tier y la velocidad para que sea fácil de identificar
+                opt.textContent = `${m.name} (Tier ${m.tier} | Vel: ${m.speed})`; 
+                
+                // Si es la máquina por defecto del tier actual, la marcamos como seleccionada
+                if (id === defaultMachineId) {
+                    opt.selected = true;
+                }
                 select.appendChild(opt);
             });
-            // Guardar la mejor máquina por defecto
-            selectedMachines[cat] = availableMachines[0][0];
+            
+            selectedMachines[cat] = defaultMachineId;
         }
 
         // Evento para cuando el usuario cambia la máquina manualmente
