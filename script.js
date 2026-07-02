@@ -46,35 +46,33 @@ function populateItemSelect() {
 }
 
 // Actualizar los selectores de máquinas según el Tier
-// Actualizar los selectores de máquinas según el Tier
 function updateMachineSelectors() {
     const tierSelect = document.getElementById('tier-select');
     const currentTier = parseInt(tierSelect.value);
     const container = document.getElementById('machine-upgrades-content');
     container.innerHTML = '';
 
-    // Categorías de máquinas que tenemos
-    const categories = ['crafting', 'smelting', 'mining', 'pumping'];
+    // Categorías de máquinas (Quitamos 'pumping' como pediste)
+    const categories = ['crafting', 'smelting', 'mining'];
     const categoryNames = {
         'crafting': 'Ensamblaje (Crafting)',
         'smelting': 'Fundición (Smelting)',
-        'mining': 'Minería',
-        'pumping': 'Bombeo de fluidos'
+        'mining': 'Minería'
     };
 
     categories.forEach(cat => {
-        // 1. Obtener TODAS las máquinas de esta categoría (sin filtrar por tier)
+        // 1. Obtener TODAS las máquinas de esta categoría
         const allMachines = Object.entries(gameData.machines).filter(([id, m]) => {
             return m.categories.includes(cat);
         });
 
-        // 2. Filtrar las máquinas disponibles para el Tier actual (para saber cuál poner por defecto)
+        // 2. Filtrar las máquinas disponibles para el Tier actual
         const tierMachines = allMachines.filter(([id, m]) => m.tier <= currentTier);
 
-        // 3. Ordenar TODAS las máquinas de mayor a menor tier (las mejores arriba)
+        // 3. Ordenar TODAS las máquinas de mayor a menor tier
         allMachines.sort((a, b) => b[1].tier - a[1].tier);
 
-        // Crear el grupo de selección para esta categoría
+        // Crear el grupo de selección
         const groupDiv = document.createElement('div');
         groupDiv.className = 'machine-upgrade-group';
 
@@ -86,29 +84,30 @@ function updateMachineSelectors() {
         select.id = `machine-select-${cat}`;
         select.className = 'machine-select';
 
+        // --- CAMBIO 1: Opción Manual SIEMPRE disponible ---
+        const optManual = document.createElement('option');
+        optManual.value = 'manual';
+        optManual.textContent = 'Manual (Sin máquina)';
+        select.appendChild(optManual);
+
         let defaultMachineId = null;
 
-        // Si no hay máquinas para este tier, opción manual
         if (tierMachines.length === 0) {
-            const opt = document.createElement('option');
-            opt.value = 'manual';
-            opt.textContent = 'Manual (Sin máquina)';
-            opt.selected = true;
-            select.appendChild(opt);
+            // Si no hay máquinas para este tier, el manual es el default
+            optManual.selected = true;
             selectedMachines[cat] = null;
         } else {
             // La máquina por defecto será la mejor disponible en el tier actual
             tierMachines.sort((a, b) => b[1].tier - a[1].tier);
             defaultMachineId = tierMachines[0][0];
 
-            // 4. Poblar el select con TODAS las máquinas
+            // Poblar el select con TODAS las máquinas
             allMachines.forEach(([id, m]) => {
                 const opt = document.createElement('option');
                 opt.value = id;
-                // Añadimos el Tier y la velocidad para que sea fácil de identificar
-                opt.textContent = `${m.name} (Tier ${m.tier} | Vel: ${m.speed})`; 
+                // --- CAMBIO 3: Texto limpio, solo el nombre ---
+                opt.textContent = m.name; 
                 
-                // Si es la máquina por defecto del tier actual, la marcamos como seleccionada
                 if (id === defaultMachineId) {
                     opt.selected = true;
                 }
@@ -118,7 +117,7 @@ function updateMachineSelectors() {
             selectedMachines[cat] = defaultMachineId;
         }
 
-        // Evento para cuando el usuario cambia la máquina manualmente
+        // Evento para cambios manuales
         select.addEventListener('change', (e) => {
             selectedMachines[cat] = e.target.value === 'manual' ? null : e.target.value;
         });
