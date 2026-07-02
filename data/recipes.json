@@ -33,27 +33,21 @@
   },
   "recipes": {
     "iron-plate": {
-      "ingredients": [
-        {"item": "iron-ore", "amount": 1}
-      ],
+      "ingredients": [{"item": "iron-ore", "amount": 1}],
       "time": 3.2,
       "category": "smelting",
       "result": "iron-plate",
       "result_count": 1
     },
     "copper-plate": {
-      "ingredients": [
-        {"item": "copper-ore", "amount": 1}
-      ],
+      "ingredients": [{"item": "copper-ore", "amount": 1}],
       "time": 3.2,
       "category": "smelting",
       "result": "copper-plate",
       "result_count": 1
     },
     "iron-gear-wheel": {
-      "ingredients": [
-        {"item": "iron-plate", "amount": 2}
-      ],
+      "ingredients": [{"item": "iron-plate", "amount": 2}],
       "time": 0.5,
       "category": "crafting",
       "result": "iron-gear-wheel",
@@ -68,6 +62,20 @@
       "category": "crafting",
       "result": "science-pack-1",
       "result_count": 1
+    },
+    "mining-iron-ore": {
+      "ingredients": [],
+      "time": 2,
+      "category": "mining",
+      "result": "iron-ore",
+      "result_count": 1
+    },
+    "mining-copper-ore": {
+      "ingredients": [],
+      "time": 2,
+      "category": "mining",
+      "result": "copper-ore",
+      "result_count": 1
     }
   },
   "machines": {
@@ -80,6 +88,11 @@
       "name": "Horno de piedra",
       "speed": 1,
       "categories": ["smelting"]
+    },
+    "burner-mining-drill": {
+      "name": "Mineradora térmica",
+      "speed": 0.5,
+      "categories": ["mining"]
     }
   }
 }

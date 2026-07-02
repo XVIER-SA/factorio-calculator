@@ -1,14 +1,14 @@
 // Variables globales
 let gameData = null;
 
-// Cargar datos al iniciar
+// Al iniciar
 document.addEventListener('DOMContentLoaded', async () => {
     await loadGameData();
     populateItemSelect();
     setupEventListeners();
 });
 
-// Cargar JSON de recetas
+// Cargar JSON
 async function loadGameData() {
     try {
         const response = await fetch('data/recipes.json');
@@ -20,66 +20,171 @@ async function loadGameData() {
     }
 }
 
-// Llenar el select con items disponibles
+// Llenar el select con items que TIENEN receta (no recursos crudos)
 function populateItemSelect() {
     const select = document.getElementById('item-select');
     select.innerHTML = '<option value="">Selecciona un item...</option>';
     
     Object.entries(gameData.items).forEach(([id, item]) => {
-        const option = document.createElement('option');
-        option.value = id;
-        option.textContent = item.name;
-        select.appendChild(option);
+        // Solo mostrar items que se pueden producir (tienen receta)
+        if (item.type !== 'resource') {
+            const option = document.createElement('option');
+            option.value = id;
+            option.textContent = item.name;
+            select.appendChild(option);
+        }
     });
 }
 
-// Configurar eventos
 function setupEventListeners() {
     document.getElementById('calculate-btn').addEventListener('click', calculate);
 }
 
-// Función principal de cálculo
+// ============================================
+// LÓGICA PRINCIPAL DE CÁLCULO
+// ============================================
+
 function calculate() {
     const itemId = document.getElementById('item-select').value;
     const ratePerMinute = parseFloat(document.getElementById('rate-input').value);
     
-    if (!itemId || !ratePerMinute) {
-        alert('Por favor selecciona un item y una cantidad');
+    if (!itemId || !ratePerMinute || ratePerMinute <= 0) {
+        alert('Por favor selecciona un item y una cantidad válida');
         return;
     }
     
-    // Convertir a por segundo
     const ratePerSecond = ratePerMinute / 60;
     
-    // Calcular producción (aquí irá la lógica recursiva)
-    const results = calculateProduction(itemId, ratePerSecond);
+    // Estructura para acumular resultados
+    const productionNodes = [];
     
-    // Mostrar resultados
-    displayResults(results);
+    // Calcular recursivamente
+    calculateItemRecursive(itemId, ratePerSecond, productionNodes);
+    
+    displayResults(itemId, ratePerMinute, productionNodes);
 }
 
-// Calcular producción recursivamente
-function calculateProduction(itemId, ratePerSecond) {
-    // TODO: Implementar lógica de cálculo
-    return {
-        item: itemId,
-        rate: ratePerSecond,
-        machines: {},
-        resources: {}
-    };
+/**
+ * Calcula recursivamente qué se necesita para producir un item
+ * @param {string} itemId - ID del item a producir
+ * @param {number} ratePerSecond - Cuántos por segundo se necesitan
+ * @param {Array} nodes - Array donde acumulamos los resultados
+ */
+function calculateItemRecursive(itemId, ratePerSecond, nodes) {
+    const item = gameData.items[itemId];
+    
+    // CASO 1: Es un recurso crudo (mineral) -> necesita minería
+    if (item.type === 'resource') {
+        const recipeId = `mining-${itemId}`;
+        const recipe = gameData.recipes[recipeId];
+        const machine = findMachineForCategory('mining');
+        
+        // Producción real de 1 máquina: speed / time * result_count
+        const productionPerMachine = (machine.speed / recipe.time) * recipe.result_count;
+        const machinesNeeded = ratePerSecond / productionPerMachine;
+        
+        nodes.push({
+            itemId: itemId,
+            itemName: item.name,
+            ratePerSecond: ratePerSecond,
+            recipe: recipe,
+            machine: machine,
+            machinesNeeded: machinesNeeded
+        });
+        return;
+    }
+    
+    // CASO 2: Es un item intermedio o producto -> buscar receta
+    const recipe = findRecipeForItem(itemId);
+    if (!recipe) {
+        console.warn(`No se encontró receta para ${itemId}`);
+        return;
+    }
+    
+    const machine = findMachineForCategory(recipe.category);
+    
+    // Producción real de 1 máquina
+    const productionPerMachine = (machine.speed / recipe.time) * recipe.result_count;
+    const machinesNeeded = ratePerSecond / productionPerMachine;
+    
+    // Registrar este nodo de producción
+    nodes.push({
+        itemId: itemId,
+        itemName: item.name,
+        ratePerSecond: ratePerSecond,
+        recipe: recipe,
+        machine: machine,
+        machinesNeeded: machinesNeeded
+    });
+    
+    // RECURSIÓN: calcular cada ingrediente
+    recipe.ingredients.forEach(ingredient => {
+        // Cantidad por segundo del ingrediente = tasa del producto * cantidad en receta
+        const ingredientRate = ratePerSecond * ingredient.amount;
+        calculateItemRecursive(ingredient.item, ingredientRate, nodes);
+    });
 }
 
-// Mostrar resultados en pantalla
-function displayResults(results) {
+// Buscar la receta que produce un item
+function findRecipeForItem(itemId) {
+    return Object.values(gameData.recipes).find(r => r.result === itemId);
+}
+
+// Buscar la primera máquina disponible para una categoría
+function findMachineForCategory(category) {
+    return Object.values(gameData.machines).find(m => m.categories.includes(category));
+}
+
+// ============================================
+// MOSTRAR RESULTADOS
+// ============================================
+
+function displayResults(itemId, ratePerMinute, nodes) {
     const resultsSection = document.getElementById('results');
     const resultsContent = document.getElementById('results-content');
     
     resultsSection.classList.remove('hidden');
-    resultsContent.innerHTML = `
-        <div class="result-item">
-            <h3>Resultados para ${gameData.items[results.item].name}</h3>
-            <p>Tasa: ${(results.rate * 60).toFixed(2)} por minuto</p>
-            <p>Funcionalidad básica lista - Próximo paso: implementar cálculo recursivo</p>
+    
+    let html = `
+        <div class="result-summary">
+            <h3>🎯 Objetivo: ${gameData.items[itemId].name}</h3>
+            <p>Tasa deseada: <strong>${ratePerMinute} por minuto</strong> (${(ratePerMinute/60).toFixed(3)}/seg)</p>
+        </div>
+        
+        <h3 style="margin-top: 20px;">🏭 Máquinas necesarias:</h3>
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Tasa (/seg)</th>
+                    <th>Máquina</th>
+                    <th>Cantidad</th>
+                </tr>
+            </thead>
+            <tbody>
+    `;
+    
+    nodes.forEach(node => {
+        const machinesRounded = Math.ceil(node.machinesNeeded);
+        html += `
+            <tr>
+                <td><strong>${node.itemName}</strong></td>
+                <td>${node.ratePerSecond.toFixed(3)}</td>
+                <td>${node.machine.name}</td>
+                <td class="machines-count">${machinesRounded} <span class="exact">(${node.machinesNeeded.toFixed(2)})</span></td>
+            </tr>
+        `;
+    });
+    
+    html += `
+            </tbody>
+        </table>
+        
+        <div class="note">
+            <p>💡 <em>Nota: Las cantidades se redondean hacia arriba (no puedes tener media máquina).</em></p>
+            <p>⚠️ <em>Los valores entre paréntesis son los valores exactos para referencia.</em></p>
         </div>
     `;
+    
+    resultsContent.innerHTML = html;
 }
