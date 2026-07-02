@@ -23,7 +23,20 @@ async function loadGameData() {
 // Llenar el select con items que TIENEN receta (no recursos crudos)
 function populateItemSelect() {
     const select = document.getElementById('item-select');
-    select.innerHTML = ''; // Sin opción por defecto
+    const tierSelect = document.getElementById('tier-select');
+    const currentTier = parseInt(tierSelect.value);
+    
+    select.innerHTML = ''; // Limpiar opciones
+    
+    Object.entries(gameData.items).forEach(([id, item]) => {
+        // Solo mostrar items que se pueden producir (tienen receta) Y están desbloqueados en el tier actual
+        if (item.type !== 'resource' && item.unlock_tier <= currentTier) {
+            const option = document.createElement('option');
+            option.value = id;
+            option.textContent = item.name;
+            select.appendChild(option);
+        }
+    });
     
     Object.entries(gameData.items).forEach(([id, item]) => {
         // Solo mostrar items que se pueden producir (tienen receta)
@@ -43,6 +56,7 @@ function populateItemSelect() {
 
 function setupEventListeners() {
     document.getElementById('calculate-btn').addEventListener('click', calculate);
+    document.getElementById('tier-select').addEventListener('change', populateItemSelect);
 }
 
 // ============================================
