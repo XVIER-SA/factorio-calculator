@@ -2,32 +2,32 @@
   "items": {
     "iron-ore": {
       "name": "Mineral de hierro",
-      "icon": "iron-ore.png",
+      "icon_url": "https://kirkmcdonald.github.io/factorio-calculator/img/icons/iron-ore.png",
       "type": "resource"
     },
     "copper-ore": {
       "name": "Mineral de cobre",
-      "icon": "copper-ore.png",
+      "icon_url": "https://kirkmcdonald.github.io/factorio-calculator/img/icons/copper-ore.png",
       "type": "resource"
     },
     "iron-plate": {
       "name": "Placa de hierro",
-      "icon": "iron-plate.png",
+      "icon_url": "https://kirkmcdonald.github.io/factorio-calculator/img/icons/iron-plate.png",
       "type": "intermediate"
     },
     "copper-plate": {
       "name": "Placa de cobre",
-      "icon": "copper-plate.png",
+      "icon_url": "https://kirkmcdonald.github.io/factorio-calculator/img/icons/copper-plate.png",
       "type": "intermediate"
     },
     "iron-gear-wheel": {
       "name": "Engranaje",
-      "icon": "iron-gear-wheel.png",
+      "icon_url": "https://kirkmcdonald.github.io/factorio-calculator/img/icons/iron-gear-wheel.png",
       "type": "intermediate"
     },
     "science-pack-1": {
       "name": "Poción roja",
-      "icon": "science-pack-1.png",
+      "icon_url": "https://kirkmcdonald.github.io/factorio-calculator/img/icons/science-pack-1.png",
       "type": "product"
     }
   },
@@ -81,18 +81,22 @@
   "machines": {
     "assembling-machine-1": {
       "name": "Ensambladora 1",
+      "icon_url": "https://kirkmcdonald.github.io/factorio-calculator/img/icons/assembling-machine-1.png",
       "speed": 0.5,
       "categories": ["crafting"]
     },
     "stone-furnace": {
       "name": "Horno de piedra",
+      "icon_url": "https://kirkmcdonald.github.io/factorio-calculator/img/icons/stone-furnace.png",
       "speed": 1,
       "categories": ["smelting"]
     },
     "burner-mining-drill": {
       "name": "Mineradora térmica",
+      "icon_url": "https://kirkmcdonald.github.io/factorio-calculator/img/icons/burner-mining-drill.png",
       "speed": 0.5,
       "categories": ["mining"]
     }
   }
 }
+

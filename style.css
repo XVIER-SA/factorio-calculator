@@ -177,3 +177,31 @@ header p {
 .note p {
     margin: 5px 0 !important;
 }
+
+/* Estilos para los iconos */
+.item-icon {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-right: 10px;
+    image-rendering: pixelated; /* Para que se vean nítidos como en el juego */
+}
+
+.item-icon-small {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 8px;
+    image-rendering: pixelated;
+}
+
+.item-cell, .machine-cell {
+    display: flex;
+    align-items: center;
+}
+
+/* Hacer que el select se vea un poco más alto para futuras mejoras */
+#item-select {
+    height: 40px;
+}
+

@@ -30,7 +30,9 @@ function populateItemSelect() {
         if (item.type !== 'resource') {
             const option = document.createElement('option');
             option.value = id;
-            option.textContent = item.name;
+            // Usamos un truco para mostrar el icono en el select (no todos los navegadores lo soportan bien, pero se intenta)
+            option.textContent = `${item.name}`; 
+            option.dataset.icon = item.icon_url;
             select.appendChild(option);
         }
     });
@@ -145,13 +147,18 @@ function displayResults(itemId, ratePerMinute, nodes) {
     
     resultsSection.classList.remove('hidden');
     
+    const targetItem = gameData.items[itemId];
+    
     let html = `
         <div class="result-summary">
-            <h3>🎯 Objetivo: ${gameData.items[itemId].name}</h3>
+            <h3>
+                <img src="${targetItem.icon_url}" alt="${targetItem.name}" class="item-icon"> 
+                Objetivo: ${targetItem.name}
+            </h3>
             <p>Tasa deseada: <strong>${ratePerMinute} por minuto</strong> (${(ratePerMinute/60).toFixed(3)}/seg)</p>
         </div>
         
-        <h3 style="margin-top: 20px;">🏭 Máquinas necesarias:</h3>
+        <h3 style="margin-top: 20px;">Máquinas necesarias:</h3>
         <table class="results-table">
             <thead>
                 <tr>
@@ -166,11 +173,20 @@ function displayResults(itemId, ratePerMinute, nodes) {
     
     nodes.forEach(node => {
         const machinesRounded = Math.ceil(node.machinesNeeded);
+        const item = gameData.items[node.itemId];
+        const machine = node.machine;
+        
         html += `
             <tr>
-                <td><strong>${node.itemName}</strong></td>
+                <td class="item-cell">
+                    <img src="${item.icon_url}" alt="${item.name}" class="item-icon-small">
+                    <strong>${item.name}</strong>
+                </td>
                 <td>${node.ratePerSecond.toFixed(3)}</td>
-                <td>${node.machine.name}</td>
+                <td class="machine-cell">
+                    <img src="${machine.icon_url}" alt="${machine.name}" class="item-icon-small">
+                    ${machine.name}
+                </td>
                 <td class="machines-count">${machinesRounded} <span class="exact">(${node.machinesNeeded.toFixed(2)})</span></td>
             </tr>
         `;
@@ -182,9 +198,10 @@ function displayResults(itemId, ratePerMinute, nodes) {
         
         <div class="note">
             <p>💡 <em>Nota: Las cantidades se redondean hacia arriba (no puedes tener media máquina).</em></p>
-            <p>⚠️ <em>Los valores entre paréntesis son los valores exactos para referencia.</em></p>
+            <p>️ <em>Los valores entre paréntesis son los valores exactos para referencia.</em></p>
         </div>
     `;
     
     resultsContent.innerHTML = html;
 }
+
