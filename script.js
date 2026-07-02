@@ -52,7 +52,6 @@ function updateMachineSelectors() {
     const container = document.getElementById('machine-upgrades-content');
     container.innerHTML = '';
 
-    // Categorías de máquinas (Quitamos 'pumping' como pediste)
     const categories = ['crafting', 'smelting', 'mining'];
     const categoryNames = {
         'crafting': 'Ensamblaje (Crafting)',
@@ -61,18 +60,17 @@ function updateMachineSelectors() {
     };
 
     categories.forEach(cat => {
-        // 1. Obtener TODAS las máquinas de esta categoría
+        // 1. Obtener TODAS las máquinas de esta categoría (sin filtrar)
         const allMachines = Object.entries(gameData.machines).filter(([id, m]) => {
             return m.categories.includes(cat);
         });
 
-        // 2. Filtrar las máquinas disponibles para el Tier actual
+        // 2. Filtrar SOLO para saber cuál es la mejor disponible en el tier actual
         const tierMachines = allMachines.filter(([id, m]) => m.tier <= currentTier);
 
         // 3. Ordenar TODAS las máquinas de mayor a menor tier
         allMachines.sort((a, b) => b[1].tier - a[1].tier);
 
-        // Crear el grupo de selección
         const groupDiv = document.createElement('div');
         groupDiv.className = 'machine-upgrade-group';
 
@@ -84,37 +82,33 @@ function updateMachineSelectors() {
         select.id = `machine-select-${cat}`;
         select.className = 'machine-select';
 
-        // --- CAMBIO 1: Opción Manual SIEMPRE disponible ---
+        // --- SIEMPRE agregar opción Manual ---
         const optManual = document.createElement('option');
         optManual.value = 'manual';
-        optManual.textContent = 'Manual (Sin máquina)';
+        optManual.textContent = 'Manual (Hecho por el jugador)';
         select.appendChild(optManual);
 
-        let defaultMachineId = null;
+        // --- SIEMPRE agregar TODAS las máquinas ---
+        allMachines.forEach(([id, m]) => {
+            const opt = document.createElement('option');
+            opt.value = id;
+            opt.textContent = m.name;
+            select.appendChild(opt);
+        });
 
-        if (tierMachines.length === 0) {
-            // Si no hay máquinas para este tier, el manual es el default
-            optManual.selected = true;
-            selectedMachines[cat] = null;
-        } else {
-            // La máquina por defecto será la mejor disponible en el tier actual
+        // --- Lógica de selección por defecto ---
+        if (tierMachines.length > 0) {
+            // Ordenar tierMachines para obtener la mejor (mayor tier)
             tierMachines.sort((a, b) => b[1].tier - a[1].tier);
-            defaultMachineId = tierMachines[0][0];
-
-            // Poblar el select con TODAS las máquinas
-            allMachines.forEach(([id, m]) => {
-                const opt = document.createElement('option');
-                opt.value = id;
-                // --- CAMBIO 3: Texto limpio, solo el nombre ---
-                opt.textContent = m.name; 
-                
-                if (id === defaultMachineId) {
-                    opt.selected = true;
-                }
-                select.appendChild(opt);
-            });
+            const defaultId = tierMachines[0][0];
             
-            selectedMachines[cat] = defaultMachineId;
+            // Seleccionar esa máquina en el dropdown
+            select.value = defaultId;
+            selectedMachines[cat] = defaultId;
+        } else {
+            // Si no hay máquinas para este tier, dejar en Manual
+            select.value = 'manual';
+            selectedMachines[cat] = null;
         }
 
         // Evento para cambios manuales
