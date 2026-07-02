@@ -235,7 +235,7 @@ function displayResults(itemId, ratePerMinute, nodes) {
             <p>Tasa deseada: <strong>${ratePerMinute} por minuto</strong> (${(ratePerMinute/60).toFixed(3)}/seg)</p>
         </div>
         
-        <h3 style="margin-top: 20px;">🏭 Máquinas necesarias:</h3>
+        <h3 style="margin-top: 20px;">Máquinas necesarias:</h3>
         <table class="results-table">
             <thead>
                 <tr>
