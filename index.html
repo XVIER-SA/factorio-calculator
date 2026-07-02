@@ -16,26 +16,40 @@
       <p>¡La fábrica debe crecer!</p>
     </header>
     <main>
-      <section class="calculator">
+    <section class="calculator">
         <div class="input-group">
-          <label for="item-select" class="main-label">Selecciona un item:</label>
-          <div class="select-wrapper">
-            <select id="item-select">
-              <!-- Las opciones se llenan con JS -->
-            </select>
-          </div>
+            <label for="tier-select" class="main-label">Tier de tecnología:</label>
+            <div class="select-wrapper">
+                <select id="tier-select">
+                    <option value="0">Antes de Poción Roja</option>
+                    <option value="1">Poción Roja (Tier 1)</option>
+                    <option value="2">Poción Verde (Tier 2)</option>
+                </select>
+            </div>
         </div>
+
         <div class="input-group">
-          <label for="rate-input">Cantidad por minuto:</label>
-          <input type="number" id="rate-input" min="0" step="0.1" value="60">
+            <label for="item-select" class="main-label">Selecciona un item:</label>
+            <div class="select-wrapper">
+                <select id="item-select">
+                    <!-- Las opciones se llenan con JS -->
+                </select>
+            </div>
         </div>
+
+        <div class="input-group">
+            <label for="rate-input">Cantidad por minuto:</label>
+            <input type="number" id="rate-input" min="0" step="0.1" value="60">
+        </div>
+
         <button id="calculate-btn" class="btn-primary">Calcular Producción</button>
-      </section>
-      <section id="results" class="results hidden">
+    </section>
+
+    <section id="results" class="results hidden">
         <h2>Resultados</h2>
         <div id="results-content"></div>
-      </section>
-    </main>
+    </section>
+</main>
   </div>
   <script src="script.js"></script>
 </body>
