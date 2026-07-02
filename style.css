@@ -1,68 +1,179 @@
-/* Resultados */
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
+    color: #e0e0e0 !important;
+    min-height: 100vh !important;
+    padding: 20px !important;
+}
+
+.container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+header {
+    text-align: center !important;
+    margin-bottom: 40px !important;
+    padding: 20px !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    border-radius: 10px !important;
+    border: 2px solid #4a90e2 !important;
+}
+
+header h1 {
+    color: #4a90e2 !important;
+    font-size: 2.5em !important;
+    margin-bottom: 10px !important;
+}
+
+header p {
+    color: #888 !important;
+    font-style: italic !important;
+}
+
+.calculator {
+    background: rgba(0, 0, 0, 0.4) !important;
+    padding: 30px !important;
+    border-radius: 10px !important;
+    border: 2px solid #4a90e2 !important;
+    margin-bottom: 30px !important;
+}
+
+.input-group {
+    margin-bottom: 20px !important;
+}
+
+.input-group label {
+    display: block !important;
+    margin-bottom: 8px !important;
+    color: #4a90e2 !important;
+    font-weight: bold !important;
+}
+
+.input-group select,
+.input-group input {
+    width: 100% !important;
+    padding: 12px !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    border: 2px solid #4a90e2 !important;
+    border-radius: 5px !important;
+    color: #e0e0e0 !important;
+    font-size: 16px !important;
+}
+
+.input-group select:focus,
+.input-group input:focus {
+    outline: none !important;
+    border-color: #6ab0ff !important;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.3) !important;
+}
+
+.btn-primary {
+    width: 100% !important;
+    padding: 15px !important;
+    background: #4a90e2 !important;
+    border: none !important;
+    border-radius: 5px !important;
+    color: white !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    transition: all 0.3s !important;
+}
+
+.btn-primary:hover {
+    background: #6ab0ff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4) !important;
+}
+
+.results {
+    background: rgba(0, 0, 0, 0.4) !important;
+    padding: 30px !important;
+    border-radius: 10px !important;
+    border: 2px solid #4a90e2 !important;
+}
+
+.results h2 {
+    color: #4a90e2 !important;
+    margin-bottom: 20px !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Resultados nuevos */
 .result-summary {
-    background: rgba(74, 144, 226, 0.1);
-    padding: 15px;
-    border-radius: 5px;
-    border-left: 4px solid #4a90e2;
-    margin-bottom: 20px;
+    background: rgba(74, 144, 226, 0.1) !important;
+    padding: 15px !important;
+    border-radius: 5px !important;
+    border-left: 4px solid #4a90e2 !important;
+    margin-bottom: 20px !important;
 }
 
 .result-summary h3 {
-    color: #4a90e2;
-    margin-bottom: 8px;
+    color: #4a90e2 !important;
+    margin-bottom: 8px !important;
 }
 
 .results-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    overflow: hidden;
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin-top: 10px !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    border-radius: 5px !important;
+    overflow: hidden !important;
 }
 
 .results-table thead {
-    background: rgba(74, 144, 226, 0.2);
+    background: rgba(74, 144, 226, 0.2) !important;
 }
 
 .results-table th {
-    padding: 12px;
-    text-align: left;
-    color: #4a90e2;
-    font-weight: bold;
-    border-bottom: 2px solid #4a90e2;
+    padding: 12px !important;
+    text-align: left !important;
+    color: #4a90e2 !important;
+    font-weight: bold !important;
+    border-bottom: 2px solid #4a90e2 !important;
 }
 
 .results-table td {
-    padding: 12px;
-    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
+    padding: 12px !important;
+    border-bottom: 1px solid rgba(74, 144, 226, 0.2) !important;
 }
 
 .results-table tr:hover {
-    background: rgba(74, 144, 226, 0.05);
+    background: rgba(74, 144, 226, 0.05) !important;
 }
 
 .machines-count {
-    font-weight: bold;
-    color: #6ab0ff;
-    font-size: 1.1em;
+    font-weight: bold !important;
+    color: #6ab0ff !important;
+    font-size: 1.1em !important;
 }
 
 .exact {
-    font-size: 0.8em;
-    color: #888;
-    font-weight: normal;
+    font-size: 0.8em !important;
+    color: #888 !important;
+    font-weight: normal !important;
 }
 
 .note {
-    margin-top: 20px;
-    padding: 15px;
-    background: rgba(255, 193, 7, 0.1);
-    border-left: 4px solid #ffc107;
-    border-radius: 5px;
-    font-size: 0.9em;
+    margin-top: 20px !important;
+    padding: 15px !important;
+    background: rgba(255, 193, 7, 0.1) !important;
+    border-left: 4px solid #ffc107 !important;
+    border-radius: 5px !important;
+    font-size: 0.9em !important;
 }
 
 .note p {
-    margin: 5px 0;
+    margin: 5px 0 !important;
 }
