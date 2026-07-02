@@ -32,7 +32,7 @@ function populateItemSelect() {
     
     Object.entries(gameData.items).forEach(([id, item]) => {
         // Solo items con receta y desbloqueados en el tier actual
-        if (item.type !== 'resource' && item.unlock_tier <= currentTier) {
+        if (item.type !== 'resource' && item.unlock_tier === currentTier) {
             const option = document.createElement('option');
             option.value = id;
             option.textContent = item.name;
