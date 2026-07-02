@@ -11,7 +11,7 @@
     "copper-plate": { "name": "Placa de cobre", "icon_url": "https://wiki.factorio.com/images/thumb/Copper_plate.png/32px-Copper_plate.png", "type": "intermediate" },
     "steel": { "name": "Acero", "icon_url": "https://wiki.factorio.com/images/thumb/Steel_plate.png/32px-Steel_plate.png", "type": "intermediate" },
     "iron-gear-wheel": { "name": "Engranaje de hierro", "icon_url": "https://wiki.factorio.com/images/thumb/Iron_gear_wheel.png/32px-Iron_gear_wheel.png", "type": "intermediate" },
-    "iron-stick": { "name": "Vara de hierro", "icon_url": "https://wiki.factorio.com/images/thumb/Iron_stick.png/32px-Iron_stick.png", "type": "intermediate" },
+    "firearm-magazine": { "name": "Cargador de munición", "icon_url": "https://wiki.factorio.com/images/thumb/Firearm_magazine.png/32px-Firearm_magazine.png", "type": "intermediate" },
     "electronic-circuit": { "name": "Circuito electrónico", "icon_url": "https://wiki.factorio.com/images/thumb/Electronic_circuit.png/32px-Electronic_circuit.png", "type": "intermediate" },
     "copper-cable": { "name": "Cable de cobre", "icon_url": "https://wiki.factorio.com/images/thumb/Copper_cable.png/32px-Copper_cable.png", "type": "intermediate" },
     "pipe": { "name": "Tubería", "icon_url": "https://wiki.factorio.com/images/thumb/Pipe.png/32px-Pipe.png", "type": "intermediate" },
@@ -58,7 +58,7 @@
     "stone-brick": { "ingredients": [{"item": "stone", "amount": 2}], "time": 3.2, "category": "smelting", "result": "stone-brick", "result_count": 1 },
     
     "iron-gear-wheel": { "ingredients": [{"item": "iron-plate", "amount": 2}], "time": 0.5, "category": "crafting", "result": "iron-gear-wheel", "result_count": 1 },
-    "iron-stick": { "ingredients": [{"item": "iron-plate", "amount": 1}], "time": 0.5, "category": "crafting", "result": "iron-stick", "result_count": 2 },
+    "firearm-magazine": { "ingredients": [{"item": "iron-plate", "amount": 2}], "time": 0.5, "category": "crafting", "result": "firearm-magazine", "result_count": 1 },
     "copper-cable": { "ingredients": [{"item": "copper-plate", "amount": 1}], "time": 0.5, "category": "crafting", "result": "copper-cable", "result_count": 2 },
     "electronic-circuit": { "ingredients": [{"item": "copper-cable", "amount": 3}, {"item": "iron-plate", "amount": 1}], "time": 0.5, "category": "crafting", "result": "electronic-circuit", "result_count": 1 },
     "pipe": { "ingredients": [{"item": "iron-plate", "amount": 1}], "time": 0.5, "category": "crafting", "result": "pipe", "result_count": 1 },
