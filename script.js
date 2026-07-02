@@ -23,19 +23,22 @@ async function loadGameData() {
 // Llenar el select con items que TIENEN receta (no recursos crudos)
 function populateItemSelect() {
     const select = document.getElementById('item-select');
-    select.innerHTML = '<option value="">Selecciona un item...</option>';
+    select.innerHTML = ''; // Sin opción por defecto
     
     Object.entries(gameData.items).forEach(([id, item]) => {
         // Solo mostrar items que se pueden producir (tienen receta)
         if (item.type !== 'resource') {
             const option = document.createElement('option');
             option.value = id;
-            // Usamos un truco para mostrar el icono en el select (no todos los navegadores lo soportan bien, pero se intenta)
-            option.textContent = `${item.name}`; 
-            option.dataset.icon = item.icon_url;
+            option.textContent = item.name; // Solo el nombre, sin placeholder
             select.appendChild(option);
         }
     });
+    
+    // Seleccionar el primer item por defecto (opcional)
+    if (select.options.length > 0) {
+        select.selectedIndex = 0;
+    }
 }
 
 function setupEventListeners() {
