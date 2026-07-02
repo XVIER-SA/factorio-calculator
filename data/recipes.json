@@ -47,8 +47,8 @@
     "radar": { "name": "Radar", "icon_url": "https://wiki.factorio.com/images/thumb/Radar.png/32px-Radar.png", "type": "intermediate", "unlock_tier": 1 },
     "gun-turret": { "name": "Torreta ametralladora", "icon_url": "https://wiki.factorio.com/images/thumb/Gun_turret.png/32px-Gun_turret.png", "type": "intermediate", "unlock_tier": 1 },
     
-    "science-pack-1": { "name": "Paquete de ciencia de automatización", "icon_url": "https://wiki.factorio.com/images/thumb/Automation_science_pack.png/32px-Automation_science_pack.png", "type": "product", "unlock_tier": 1 },
-    "science-pack-2": { "name": "Paquete de ciencia de logística", "icon_url": "https://wiki.factorio.com/images/thumb/Logistic_science_pack.png/32px-Logistic_science_pack.png", "type": "product", "unlock_tier": 2 }
+    "science-pack-1": { "name": "Paquete de ciencia de automatización", "icon_url": "https://wiki.factorio.com/images/thumb/Automation_science_pack.png/32px-Automation_science_pack.png", "type": "product", "unlock_tier": 0 },
+    "science-pack-2": { "name": "Paquete de ciencia de logística", "icon_url": "https://wiki.factorio.com/images/thumb/Logistic_science_pack.png/32px-Logistic_science_pack.png", "type": "product", "unlock_tier": 1 }
   },
   "recipes": {
     "iron-plate": { "ingredients": [{"item": "iron-ore", "amount": 1}], "time": 3.2, "category": "smelting", "result": "iron-plate", "result_count": 1 },
