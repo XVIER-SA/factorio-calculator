@@ -323,3 +323,55 @@ header p {
     padding: 10px !important;
     font-size: 15px !important;
 }
+
+/* Panel de Upgrades de Máquinas */
+.machine-upgrades {
+    background: rgba(0, 0, 0, 0.4) !important;
+    padding: 20px !important;
+    border-radius: 10px !important;
+    border: 2px solid #ffa500 !important; /* Naranja estilo Factorio */
+    margin-bottom: 30px !important;
+}
+
+.machine-upgrades h2 {
+    color: #ffa500 !important;
+    margin-bottom: 10px !important;
+    font-size: 1.4em !important;
+}
+
+.upgrade-note {
+    color: #aaa !important;
+    font-size: 0.9em !important;
+    margin-bottom: 15px !important;
+}
+
+.machine-upgrade-group {
+    display: flex !important;
+    align-items: center !important;
+    margin-bottom: 10px !important;
+    gap: 15px !important;
+}
+
+.machine-upgrade-group label {
+    width: 180px !important;
+    color: #ffa500 !important;
+    font-weight: bold !important;
+}
+
+.machine-select {
+    flex: 1 !important;
+    padding: 10px !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    border: 2px solid #ffa500 !important;
+    border-radius: 5px !important;
+    color: #ffffff !important;
+    font-size: 15px !important;
+    cursor: pointer !important;
+}
+
+.machine-select:focus {
+    outline: none !important;
+    border-color: #ffcc00 !important;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.3) !important;
+}
+
