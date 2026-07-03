@@ -2,67 +2,58 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora Factorio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:,">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculadora Factorio</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="data:,">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Calculadora de Producción Factorio</h1>
-            <p>¡La fábrica debe crecer!</p>
-        </header>
-
-        <main>
-            <section class="calculator">
-                <div class="input-group">
-                    <label for="tier-select" class="main-label">Tier de tecnología:</label>
-                    <div class="select-wrapper">
-                        <select id="tier-select">
-                            <option value="0">Antes de Poción Roja</option>
-                            <option value="1">Poción Roja (Tier 1)</option>
-                            <option value="2">Poción Verde (Tier 2)</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="input-group">
-                    <label for="item-select" class="main-label">Selecciona un item:</label>
-                    <div class="select-wrapper">
-                        <select id="item-select">
-                            <!-- Las opciones se llenan con JS -->
-                        </select>
-                    </div>
-                </div>
-
-                <div class="input-group">
-                    <label for="rate-input">Cantidad por minuto:</label>
-                    <input type="number" id="rate-input" min="0" step="0.1" value="60">
-                </div>
-
-                <button id="calculate-btn" class="btn-primary">Calcular Producción</button>
-            </section>
-
-            <!-- NUEVO: Panel de Upgrades de Máquinas -->
-            <section class="machine-upgrades">
-                <h2>️ Configuración de Máquinas (Upgrades)</h2>
-                <p class="upgrade-note">Cambia el Tier arriba para actualizar los valores por defecto, o selecciona manualmente qué máquina usar para cada proceso.</p>
-                <div id="machine-upgrades-content">
-                    <!-- Los selectores se generan con JS -->
-                </div>
-            </section>
-
-            <section id="results" class="results hidden">
-                <h2>Resultados</h2>
-                <div id="results-content"></div>
-            </section>
-        </main>
-    </div>
-
-    <script src="script.js"></script>
+	<div class="container">
+		<header>
+			<h1>Calculadora de Producción Factorio</h1>
+			<p>¡La fábrica debe crecer!</p>
+		</header>
+		<main>
+			<section class="calculator">
+				<div class="input-group">
+					<label for="tier-select" class="main-label">Tier de tecnología:</label>
+					<div class="select-wrapper">
+						<select id="tier-select">
+							<option value="0">Antes de Poción Roja</option>
+							<option value="1">Poción Roja (Tier 1)</option>
+							<option value="2">Poción Verde (Tier 2)</option>
+						</select>
+					</div>
+				</div>
+				<div class="input-group">
+					<label for="item-select" class="main-label">Selecciona un item:</label>
+					<div class="select-wrapper">
+						<select id="item-select">
+							<!-- Las opciones se llenan con JS -->
+						</select>
+					</div>
+				</div>
+				<div class="input-group">
+					<label for="rate-input">Cantidad por minuto:</label>
+					<input type="number" id="rate-input" min="0" step="0.1" value="60">
+				</div>
+				<button id="calculate-btn" class="btn-primary">Calcular Producción</button>
+			</section>
+			<section class="machine-upgrades">
+				<h2>️ Configuración de Máquinas (Upgrades)</h2>
+				<p class="upgrade-note">Cambia el Tier arriba para actualizar los valores por defecto, o selecciona manualmente
+					qué máquina usar para cada proceso.</p>
+				<div id="machine-upgrades-content"></div>
+			</section>
+			<section id="results" class="results hidden">
+				<h2>Resultados</h2>
+				<div id="results-content"></div>
+			</section>
+		</main>
+	</div>
+	<script src="script.js"></script>
 </body>
 
 </html>
