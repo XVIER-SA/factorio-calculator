@@ -52,23 +52,21 @@ function updateMachineSelectors() {
     const container = document.getElementById('machine-upgrades-content');
     container.innerHTML = '';
 
-    const categories = ['crafting', 'smelting', 'mining'];
+    const categories = ['crafting', 'smelting', 'mining', 'oil-processing', 'chemistry'];
     const categoryNames = {
-        'crafting': 'Ensamblaje (Crafting)',
-        'smelting': 'Fundición (Smelting)',
-        'mining': 'Minería'
+        'crafting': 'Ensamblaje',
+        'smelting': 'Fundición',
+        'mining': 'Minería / Extracción',
+        'oil-processing': 'Refinería',
+        'chemistry': 'Planta Química'
     };
 
     categories.forEach(cat => {
-        // 1. Obtener TODAS las máquinas de esta categoría (sin filtrar)
-        const allMachines = Object.entries(gameData.machines).filter(([id, m]) => {
-            return m.categories.includes(cat);
-        });
-
-        // 2. Filtrar SOLO para saber cuál es la mejor disponible en el tier actual
+        const allMachines = Object.entries(gameData.machines).filter(([id, m]) => m.categories.includes(cat));
         const tierMachines = allMachines.filter(([id, m]) => m.tier <= currentTier);
 
-        // 3. Ordenar TODAS las máquinas de mayor a menor tier
+        if (allMachines.length === 0) return; // Si no hay máquinas para esta categoría, no crear selector
+
         allMachines.sort((a, b) => b[1].tier - a[1].tier);
 
         const groupDiv = document.createElement('div');
@@ -82,38 +80,28 @@ function updateMachineSelectors() {
         select.id = `machine-select-${cat}`;
         select.className = 'machine-select';
 
-        // --- SIEMPRE agregar opción Manual ---
-        const optManual = document.createElement('option');
-        optManual.value = 'manual';
-        optManual.textContent = 'Manual (Hecho por el jugador)';
-        select.appendChild(optManual);
+        let defaultMachineId = null;
 
-        // --- SIEMPRE agregar TODAS las máquinas ---
+        if (tierMachines.length > 0) {
+            tierMachines.sort((a, b) => b[1].tier - a[1].tier);
+            defaultMachineId = tierMachines[0][0];
+        } else {
+            // Si no hay máquinas para este tier, usar la mejor disponible de cualquier tier
+            defaultMachineId = allMachines[0][0];
+        }
+
         allMachines.forEach(([id, m]) => {
             const opt = document.createElement('option');
             opt.value = id;
             opt.textContent = m.name;
+            if (id === defaultMachineId) opt.selected = true;
             select.appendChild(opt);
         });
 
-        // --- Lógica de selección por defecto ---
-        if (tierMachines.length > 0) {
-            // Ordenar tierMachines para obtener la mejor (mayor tier)
-            tierMachines.sort((a, b) => b[1].tier - a[1].tier);
-            const defaultId = tierMachines[0][0];
-            
-            // Seleccionar esa máquina en el dropdown
-            select.value = defaultId;
-            selectedMachines[cat] = defaultId;
-        } else {
-            // Si no hay máquinas para este tier, dejar en Manual
-            select.value = 'manual';
-            selectedMachines[cat] = null;
-        }
+        selectedMachines[cat] = defaultMachineId;
 
-        // Evento para cambios manuales
         select.addEventListener('change', (e) => {
-            selectedMachines[cat] = e.target.value === 'manual' ? null : e.target.value;
+            selectedMachines[cat] = e.target.value;
         });
 
         groupDiv.appendChild(select);
