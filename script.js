@@ -52,7 +52,7 @@ function updateMachineSelectors() {
     const container = document.getElementById('machine-upgrades-content');
     container.innerHTML = '';
 
-    const categories = ['crafting', 'smelting', 'mining', 'oil-processing', 'chemistry'];
+    const categories = ['crafting', 'smelting', 'mining'];
     const categoryNames = {
         'crafting': 'Ensamblaje',
         'smelting': 'Fundición',

@@ -217,7 +217,7 @@
     "steel-furnace": { "name": "Horno de Acero", "icon_url": "https://wiki.factorio.com/images/thumb/Steel_furnace.png/32px-Steel_furnace.png", "speed": 2, "categories": ["smelting"], "tier": 2 },
     "assembling-machine-2": { "name": "Máquina de Ensamblaje 2", "icon_url": "https://wiki.factorio.com/images/thumb/Assembling_machine_2.png/32px-Assembling_machine_2.png", "speed": 0.75, "categories": ["crafting"], "tier": 2 },
     "oil-refinery": { "name": "Refinería de petróleo", "icon_url": "https://wiki.factorio.com/images/thumb/Oil_refinery.png/32px-Oil_refinery.png", "speed": 1, "categories": ["oil-processing"], "tier": 2 },
-    "chemical-plant": { "name": "Planta Química", "icon_url": "https://wiki.factorio.com/images/thumb/Chemical_plant.png/32px-Chemical_plant.png", "speed": 1, "categories": ["crafting"], "tier": 2 },
+    "chemical-plant": { "name": "Planta Química", "icon_url": "https://wiki.factorio.com/images/thumb/Chemical_plant.png/32px-Chemical_plant.png", "speed": 1, "categories": ["chemistry"], "tier": 2 },
     "pumpjack": { "name": "Bomba Extractora", "icon_url": "https://wiki.factorio.com/images/thumb/Pumpjack.png/32px-Pumpjack.png", "speed": 1, "categories": ["pumping"], "tier": 2 }
   }
 }
