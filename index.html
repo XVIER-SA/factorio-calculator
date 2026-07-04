@@ -19,12 +19,32 @@
 			<section class="calculator">
 				<div class="input-group">
 					<label for="tier-select" class="main-label">Tier de tecnología:</label>
-					<div class="select-wrapper">
-						<select id="tier-select">
-							<option value="0">Antes de Poción Roja</option>
-							<option value="1">Poción Roja (Tier 1)</option>
-							<option value="2">Poción Verde (Tier 2)</option>
-						</select>
+					<div class="input-group">
+						<label class="main-label">Selecciona un item:</label>
+
+						<!-- Tabs de categorías -->
+						<div class="category-tabs">
+							<button class="tab-btn active" data-category="all">Todos</button>
+							<button class="tab-btn" data-category="logistics">Logística</button>
+							<button class="tab-btn" data-category="production">Producción</button>
+							<button class="tab-btn" data-category="resources">Recursos</button>
+							<button class="tab-btn" data-category="space">Espacio</button>
+							<button class="tab-btn" data-category="combat">Combate</button>
+						</div>
+
+						<!-- Búsqueda -->
+						<input type="text" id="item-search" placeholder="Buscar item..." class="search-input">
+
+						<!-- Grid de items -->
+						<div id="item-grid" class="item-grid">
+							<!-- Los items se generan con JS -->
+						</div>
+
+						<!-- Item seleccionado (oculto pero funcional) -->
+						<input type="hidden" id="item-select">
+						<div id="selected-item-display" class="selected-item-display">
+							Ningún item seleccionado
+						</div>
 					</div>
 				</div>
 				<div class="input-group">

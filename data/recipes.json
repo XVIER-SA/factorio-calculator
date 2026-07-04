@@ -1,342 +1,2252 @@
 {
   "items": {
-    "wood": { "name": "Madera", "icon_url": "https://wiki.factorio.com/images/thumb/Wood.png/32px-Wood.png", "type": "resource", "unlock_tier": 0 },
-    "iron-ore": { "name": "Mineral de Hierro", "icon_url": "https://wiki.factorio.com/images/thumb/Iron_ore.png/32px-Iron_ore.png", "type": "resource", "unlock_tier": 0 },
-    "copper-ore": { "name": "Mineral de Cobre", "icon_url": "https://wiki.factorio.com/images/thumb/Copper_ore.png/32px-Copper_ore.png", "type": "resource", "unlock_tier": 0 },
-    "coal": { "name": "Carbón", "icon_url": "https://wiki.factorio.com/images/thumb/Coal.png/32px-Coal.png", "type": "resource", "unlock_tier": 0 },
-    "stone": { "name": "Piedra", "icon_url": "https://wiki.factorio.com/images/thumb/Stone.png/32px-Stone.png", "type": "resource", "unlock_tier": 0 },
-    "water": { "name": "Agua", "icon_url": "https://wiki.factorio.com/images/thumb/Water.png/32px-Water.png", "type": "resource", "unlock_tier": 0 },
-    "iron-plate": { "name": "Placa de Hierro", "icon_url": "https://wiki.factorio.com/images/thumb/Iron_plate.png/32px-Iron_plate.png", "type": "intermediate", "unlock_tier": 0 },
-    "copper-plate": { "name": "Placa de Cobre", "icon_url": "https://wiki.factorio.com/images/thumb/Copper_plate.png/32px-Copper_plate.png", "type": "intermediate", "unlock_tier": 0 },
-    "copper-cable": { "name": "Cable de Cobre", "icon_url": "https://wiki.factorio.com/images/thumb/Copper_cable.png/32px-Copper_cable.png", "type": "intermediate", "unlock_tier": 0 },
-    "iron-gear-wheel": { "name": "Engranaje de Hierro", "icon_url": "https://wiki.factorio.com/images/thumb/Iron_gear_wheel.png/32px-Iron_gear_wheel.png", "type": "intermediate", "unlock_tier": 0 },
-    "electronic-circuit": { "name": "Circuito Electrónico", "icon_url": "https://wiki.factorio.com/images/thumb/Electronic_circuit.png/32px-Electronic_circuit.png", "type": "intermediate", "unlock_tier": 0 },
-    "pipe": { "name": "Tubería", "icon_url": "https://wiki.factorio.com/images/thumb/Pipe.png/32px-Pipe.png", "type": "intermediate", "unlock_tier": 0 },
-    "stone-brick": { "name": "Ladrillo de Piedra", "icon_url": "https://wiki.factorio.com/images/thumb/Stone_brick.png/32px-Stone_brick.png", "type": "intermediate", "unlock_tier": 0 },
-    "firearm-magazine": { "name": "Cargador de Munición", "icon_url": "https://wiki.factorio.com/images/thumb/Firearm_magazine.png/32px-Firearm_magazine.png", "type": "intermediate", "unlock_tier": 0 },
-    "wooden-chest": { "name": "Cofre de Madera", "icon_url": "https://wiki.factorio.com/images/thumb/Wooden_chest.png/32px-Wooden_chest.png", "type": "intermediate", "unlock_tier": 0 },
-    "iron-chest": { "name": "Cofre de Hierro", "icon_url": "https://wiki.factorio.com/images/thumb/Iron_chest.png/32px-Iron_chest.png", "type": "intermediate", "unlock_tier": 0 },
-    "transport-belt": { "name": "Cinta Transportadora", "icon_url": "https://wiki.factorio.com/images/thumb/Transport_belt.png/32px-Transport_belt.png", "type": "intermediate", "unlock_tier": 0 },
-    "burner-inserter": { "name": "Insertador a Combustión", "icon_url": "https://wiki.factorio.com/images/thumb/Burner_inserter.png/32px-Burner_inserter.png", "type": "intermediate", "unlock_tier": 0 },
-    "inserter": { "name": "Insertador", "icon_url": "https://wiki.factorio.com/images/thumb/Inserter.png/32px-Inserter.png", "type": "intermediate", "unlock_tier": 0 },
-    "small-electric-pole": { "name": "Poste Eléctrico Pequeño", "icon_url": "https://wiki.factorio.com/images/thumb/Small_electric_pole.png/32px-Small_electric_pole.png", "type": "intermediate", "unlock_tier": 0 },
-    "pipe-to-ground": { "name": "Tubería Subterránea", "icon_url": "https://wiki.factorio.com/images/thumb/Pipe_to_ground.png/32px-Pipe_to_ground.png", "type": "intermediate", "unlock_tier": 0 },
-    "stone-furnace": { "name": "Horno de Piedra", "icon_url": "https://wiki.factorio.com/images/thumb/Stone_furnace.png/32px-Stone_furnace.png", "type": "intermediate", "unlock_tier": 0 },
-    "burner-mining-drill": { "name": "Perforadora de Combustión", "icon_url": "https://wiki.factorio.com/images/thumb/Burner_mining_drill.png/32px-Burner_mining_drill.png", "type": "intermediate", "unlock_tier": 0 },
-    "offshore-pump": { "name": "Bomba Costera", "icon_url": "https://wiki.factorio.com/images/thumb/Offshore_pump.png/32px-Offshore_pump.png", "type": "intermediate", "unlock_tier": 0 },
-    "boiler": { "name": "Caldera", "icon_url": "https://wiki.factorio.com/images/thumb/Boiler.png/32px-Boiler.png", "type": "intermediate", "unlock_tier": 0 },
-    "steam-engine": { "name": "Motor a Vapor", "icon_url": "https://wiki.factorio.com/images/thumb/Steam_engine.png/32px-Steam_engine.png", "type": "intermediate", "unlock_tier": 0 },
-    "lab": { "name": "Laboratorio", "icon_url": "https://wiki.factorio.com/images/thumb/Lab.png/32px-Lab.png", "type": "intermediate", "unlock_tier": 0 },
-    
-    "steel": { "name": "Acero", "icon_url": "https://wiki.factorio.com/images/thumb/Steel_plate.png/32px-Steel_plate.png", "type": "intermediate", "unlock_tier": 1 },
-    "steel-chest": { "name": "Cofre de Acero", "icon_url": "https://wiki.factorio.com/images/thumb/Steel_chest.png/32px-Steel_chest.png", "type": "intermediate", "unlock_tier": 1 },
-    "underground-belt": { "name": "Cinta Transportadora Subterránea", "icon_url": "https://wiki.factorio.com/images/thumb/Underground_belt.png/32px-Underground_belt.png", "type": "intermediate", "unlock_tier": 1 },
-    "splitter": { "name": "Divisor", "icon_url": "https://wiki.factorio.com/images/thumb/Splitter.png/32px-Splitter.png", "type": "intermediate", "unlock_tier": 1 },
-    "long-handed-inserter": { "name": "Insertador Largo", "icon_url": "https://wiki.factorio.com/images/thumb/Long-handed_inserter.png/32px-Long-handed_inserter.png", "type": "intermediate", "unlock_tier": 1 },
-    "fast-inserter": { "name": "Insertador Rápido", "icon_url": "https://wiki.factorio.com/images/thumb/Fast_inserter.png/32px-Fast_inserter.png", "type": "intermediate", "unlock_tier": 1 },
-    "lamp": { "name": "Lámpara", "icon_url": "https://wiki.factorio.com/images/thumb/Small_lamp.png/32px-Small_lamp.png", "type": "intermediate", "unlock_tier": 1 },
-    "repair-pack": { "name": "Pack de Reparación", "icon_url": "https://wiki.factorio.com/images/thumb/Repair_pack.png/32px-Repair_pack.png", "type": "intermediate", "unlock_tier": 1 },
-    "electric-mining-drill": { "name": "Perforadora Eléctrica", "icon_url": "https://wiki.factorio.com/images/thumb/Electric_mining_drill.png/32px-Electric_mining_drill.png", "type": "intermediate", "unlock_tier": 1 },
-    "assembling-machine-1": { "name": "Máquina de Ensamblaje 1", "icon_url": "https://wiki.factorio.com/images/thumb/Assembling_machine_1.png/32px-Assembling_machine_1.png", "type": "intermediate", "unlock_tier": 1 },
-    "shotgun-shell": { "name": "Cartucho de Escopeta", "icon_url": "https://wiki.factorio.com/images/thumb/Shotgun_shell.png/32px-Shotgun_shell.png", "type": "intermediate", "unlock_tier": 1 },
-    "wall": { "name": "Muro", "icon_url": "https://wiki.factorio.com/images/thumb/Wall.png/32px-Wall.png", "type": "intermediate", "unlock_tier": 1 },
-    "radar": { "name": "Radar", "icon_url": "https://wiki.factorio.com/images/thumb/Radar.png/32px-Radar.png", "type": "intermediate", "unlock_tier": 1 },
-    "gun-turret": { "name": "Torreta Ametralladora", "icon_url": "https://wiki.factorio.com/images/thumb/Gun_turret.png/32px-Gun_turret.png", "type": "intermediate", "unlock_tier": 1 },
-
-    "storage-tank": { "name": "Cisterna", "icon_url": "https://wiki.factorio.com/images/thumb/Storage_tank.png/32px-Storage_tank.png", "type": "intermediate", "unlock_tier": 2 },
-    "fast-transport-belt": { "name": "Cinta Rápida", "icon_url": "https://wiki.factorio.com/images/thumb/Fast_transport_belt.png/32px-Fast_transport_belt.png", "type": "intermediate", "unlock_tier": 2 },
-    "fast-underground-belt": { "name": "Cinta Subterránea Rápida", "icon_url": "https://wiki.factorio.com/images/thumb/Fast_underground_belt.png/32px-Fast_underground_belt.png", "type": "intermediate", "unlock_tier": 2 },
-    "fast-splitter": { "name": "Divisor Rápido", "icon_url": "https://wiki.factorio.com/images/thumb/Fast_splitter.png/32px-Fast_splitter.png", "type": "intermediate", "unlock_tier": 2 },
-    "stack-inserter": { "name": "Insertador por Lotes", "icon_url": "https://wiki.factorio.com/images/thumb/Stack_inserter.png/32px-Stack_inserter.png", "type": "intermediate", "unlock_tier": 2 },
-    "medium-electric-pole": { "name": "Poste Eléctrico Mediano", "icon_url": "https://wiki.factorio.com/images/thumb/Medium_electric_pole.png/32px-Medium_electric_pole.png", "type": "intermediate", "unlock_tier": 2 },
-    "big-electric-pole": { "name": "Poste Eléctrico Grande", "icon_url": "https://wiki.factorio.com/images/thumb/Big_electric_pole.png/32px-Big_electric_pole.png", "type": "intermediate", "unlock_tier": 2 },
-    "pump": { "name": "Bomba de Fluidos", "icon_url": "https://wiki.factorio.com/images/thumb/Pump.png/32px-Pump.png", "type": "intermediate", "unlock_tier": 2 },
-    "rail": { "name": "Vía", "icon_url": "https://wiki.factorio.com/images/thumb/Rail.png/32px-Rail.png", "type": "intermediate", "unlock_tier": 2 },
-    "train-stop": { "name": "Parada de Tren", "icon_url": "https://wiki.factorio.com/images/thumb/Train_stop.png/32px-Train_stop.png", "type": "intermediate", "unlock_tier": 2 },
-    "rail-signal": { "name": "Semáforo Ferroviario", "icon_url": "https://wiki.factorio.com/images/thumb/Rail_signal.png/32px-Rail_signal.png", "type": "intermediate", "unlock_tier": 2 },
-    "rail-chain-signal": { "name": "Semáforo Ferroviario en Cadena", "icon_url": "https://wiki.factorio.com/images/thumb/Rail_chain_signal.png/32px-Rail_chain_signal.png", "type": "intermediate", "unlock_tier": 2 },
-    "locomotive": { "name": "Locomotora", "icon_url": "https://wiki.factorio.com/images/thumb/Locomotive.png/32px-Locomotive.png", "type": "intermediate", "unlock_tier": 2 },
-    "cargo-wagon": { "name": "Vagón de Carga", "icon_url": "https://wiki.factorio.com/images/thumb/Cargo_wagon.png/32px-Cargo_wagon.png", "type": "intermediate", "unlock_tier": 2 },
-    "fluid-wagon": { "name": "Vagón Cisterna", "icon_url": "https://wiki.factorio.com/images/thumb/Fluid_wagon.png/32px-Fluid_wagon.png", "type": "intermediate", "unlock_tier": 2 },
-    "arithmetic-combinator": { "name": "Combinador Aritmético", "icon_url": "https://wiki.factorio.com/images/thumb/Arithmetic_combinator.png/32px-Arithmetic_combinator.png", "type": "intermediate", "unlock_tier": 2 },
-    "decider-combinator": { "name": "Combinador Comparador", "icon_url": "https://wiki.factorio.com/images/thumb/Decider_combinator.png/32px-Decider_combinator.png", "type": "intermediate", "unlock_tier": 2 },
-    "constant-combinator": { "name": "Combinador Constante", "icon_url": "https://wiki.factorio.com/images/thumb/Constant_combinator.png/32px-Constant_combinator.png", "type": "intermediate", "unlock_tier": 2 },
-    "power-switch": { "name": "Interruptor", "icon_url": "https://wiki.factorio.com/images/thumb/Power_switch.png/32px-Power_switch.png", "type": "intermediate", "unlock_tier": 2 },
-    "programmable-speaker": { "name": "Altavoz Programable", "icon_url": "https://wiki.factorio.com/images/thumb/Programmable_speaker.png/32px-Programmable_speaker.png", "type": "intermediate", "unlock_tier": 2 },
-    "display-panel": { "name": "Panel de Visualización", "icon_url": "https://wiki.factorio.com/images/thumb/Display_panel.png/32px-Display_panel.png", "type": "intermediate", "unlock_tier": 2 },
-    "concrete": { "name": "Hormigón", "icon_url": "https://wiki.factorio.com/images/thumb/Concrete.png/32px-Concrete.png", "type": "intermediate", "unlock_tier": 2 },
-    "hazard-concrete": { "name": "Hormigón con Señal de Peligro", "icon_url": "https://wiki.factorio.com/images/thumb/Hazard_concrete.png/32px-Hazard_concrete.png", "type": "intermediate", "unlock_tier": 2 },
-    "refined-concrete": { "name": "Hormigón Refinado", "icon_url": "https://wiki.factorio.com/images/thumb/Refined_concrete.png/32px-Refined_concrete.png", "type": "intermediate", "unlock_tier": 2 },
-    "refined-hazard-concrete": { "name": "Hormigón Refinado con Señal de Peligro", "icon_url": "https://wiki.factorio.com/images/thumb/Refined_hazard_concrete.png/32px-Refined_hazard_concrete.png", "type": "intermediate", "unlock_tier": 2 },
-    "landfill": { "name": "Relleno de Tierra", "icon_url": "https://wiki.factorio.com/images/thumb/Landfill.png/32px-Landfill.png", "type": "intermediate", "unlock_tier": 2 },
-    "solar-panel": { "name": "Panel Solar", "icon_url": "https://wiki.factorio.com/images/thumb/Solar_panel.png/32px-Solar_panel.png", "type": "intermediate", "unlock_tier": 2 },
-    "accumulator": { "name": "Acumulador", "icon_url": "https://wiki.factorio.com/images/thumb/Accumulator.png/32px-Accumulator.png", "type": "intermediate", "unlock_tier": 2 },
-    "pumpjack": { "name": "Bomba Extractora", "icon_url": "https://wiki.factorio.com/images/thumb/Pumpjack.png/32px-Pumpjack.png", "type": "intermediate", "unlock_tier": 2 },
-    "steel-furnace": { "name": "Horno de Acero", "icon_url": "https://wiki.factorio.com/images/thumb/Steel_furnace.png/32px-Steel_furnace.png", "type": "intermediate", "unlock_tier": 2 },
-    "assembling-machine-2": { "name": "Máquina de Ensamblaje 2", "icon_url": "https://wiki.factorio.com/images/thumb/Assembling_machine_2.png/32px-Assembling_machine_2.png", "type": "intermediate", "unlock_tier": 2 },
-    "oil-refinery": { "name": "Refinería de Petróleo", "icon_url": "https://wiki.factorio.com/images/thumb/Oil_refinery.png/32px-Oil_refinery.png", "type": "intermediate", "unlock_tier": 2 },
-    "chemical-plant": { "name": "Planta Química", "icon_url": "https://wiki.factorio.com/images/thumb/Chemical_plant.png/32px-Chemical_plant.png", "type": "intermediate", "unlock_tier": 2 },
-    "speed-module": { "name": "Módulo de Velocidad", "icon_url": "https://wiki.factorio.com/images/thumb/Speed_module.png/32px-Speed_module.png", "type": "intermediate", "unlock_tier": 2 },
-    "efficiency-module": { "name": "Módulo de Eficiencia", "icon_url": "https://wiki.factorio.com/images/thumb/Efficiency_module.png/32px-Efficiency_module.png", "type": "intermediate", "unlock_tier": 2 },
-    "productivity-module": { "name": "Módulo de Productividad", "icon_url": "https://wiki.factorio.com/images/thumb/Productivity_module.png/32px-Productivity_module.png", "type": "intermediate", "unlock_tier": 2 },
-    "quality-module": { "name": "Módulo de Calidad", "icon_url": "https://wiki.factorio.com/images/thumb/Quality_module.png/32px-Quality_module.png", "type": "intermediate", "unlock_tier": 2 },
-    "crude-oil": { "name": "Petróleo Crudo", "icon_url": "https://wiki.factorio.com/images/thumb/Fluid_crude-oil.png/32px-Fluid_crude-oil.png", "type": "resource", "unlock_tier": 2 },
-    "petroleum-gas": { "name": "Gas de Petróleo", "icon_url": "https://wiki.factorio.com/images/thumb/Fluid_petroleum-gas.png/32px-Fluid_petroleum-gas.png", "type": "intermediate", "unlock_tier": 2 },
-    "solid-fuel": { "name": "Combustible Sólido", "icon_url": "https://wiki.factorio.com/images/thumb/Solid_fuel.png/32px-Solid_fuel.png", "type": "intermediate", "unlock_tier": 2 },
-    "sulfuric-acid": { "name": "Ácido Sulfúrico", "icon_url": "https://wiki.factorio.com/images/thumb/Fluid_sulfuric-acid.png/32px-Fluid_sulfuric-acid.png", "type": "intermediate", "unlock_tier": 2 },
-    "plastic-bar": { "name": "Barra de Plástico", "icon_url": "https://wiki.factorio.com/images/thumb/Plastic_bar.png/32px-Plastic_bar.png", "type": "intermediate", "unlock_tier": 2 },
-    "sulfur": { "name": "Azufre", "icon_url": "https://wiki.factorio.com/images/thumb/Sulfur.png/32px-Sulfur.png", "type": "intermediate", "unlock_tier": 2 },
-    "battery": { "name": "Batería", "icon_url": "https://wiki.factorio.com/images/thumb/Battery.png/32px-Battery.png", "type": "intermediate", "unlock_tier": 2 },
-    "explosives": { "name": "Explosivos", "icon_url": "https://wiki.factorio.com/images/thumb/Explosives.png/32px-Explosives.png", "type": "intermediate", "unlock_tier": 2 },
-    "iron-stick": { "name": "Vara de Hierro", "icon_url": "https://wiki.factorio.com/images/thumb/Iron_stick.png/32px-Iron_stick.png", "type": "intermediate", "unlock_tier": 2 },
-    "barrel": { "name": "Barril", "icon_url": "https://wiki.factorio.com/images/thumb/Barrel.png/32px-Barrel.png", "type": "intermediate", "unlock_tier": 2 },
-    "advanced-circuit": { "name": "Circuito Electrónico Avanzado", "icon_url": "https://wiki.factorio.com/images/thumb/Advanced_circuit.png/32px-Advanced_circuit.png", "type": "intermediate", "unlock_tier": 2 },
-    "engine-unit": { "name": "Motor", "icon_url": "https://wiki.factorio.com/images/thumb/Engine_unit.png/32px-Engine_unit.png", "type": "intermediate", "unlock_tier": 2 },
-    "piercing-rounds-magazine": { "name": "Munición Penetrante", "icon_url": "https://wiki.factorio.com/images/thumb/Piercing_rounds_magazine.png/32px-Piercing_rounds_magazine.png", "type": "intermediate", "unlock_tier": 2 },
-    "grenade": { "name": "Granada", "icon_url": "https://wiki.factorio.com/images/thumb/Grenade.png/32px-Grenade.png", "type": "intermediate", "unlock_tier": 2 },
-
-    "heavy-oil": { "name": "Petróleo Pesado", "icon_url": "https://wiki.factorio.com/images/thumb/Fluid_heavy-oil.png/32px-Fluid_heavy-oil.png", "type": "intermediate", "unlock_tier": 3 },
-    "light-oil": { "name": "Petróleo Ligero", "icon_url": "https://wiki.factorio.com/images/thumb/Fluid_light-oil.png/32px-Fluid_light-oil.png", "type": "intermediate", "unlock_tier": 3 },
-    "lubricant": { "name": "Lubricante", "icon_url": "https://wiki.factorio.com/images/thumb/Fluid_lubricant.png/32px-Fluid_lubricant.png", "type": "intermediate", "unlock_tier": 3 },
-    "processing-unit": { "name": "Unidad de Procesamiento", "icon_url": "https://wiki.factorio.com/images/thumb/Processing_unit.png/32px-Processing_unit.png", "type": "intermediate", "unlock_tier": 3 },
-    "electric-engine-unit": { "name": "Motor Eléctrico", "icon_url": "https://wiki.factorio.com/images/thumb/Electric_engine_unit.png/32px-Electric_engine_unit.png", "type": "intermediate", "unlock_tier": 3 },
-    "flying-robot-frame": { "name": "Estructura de Robot Volador", "icon_url": "https://wiki.factorio.com/images/thumb/Flying_robot_frame.png/32px-Flying_robot_frame.png", "type": "intermediate", "unlock_tier": 3 },
-    "low-density-structure": { "name": "Estructura de Baja Densidad", "icon_url": "https://wiki.factorio.com/images/thumb/Low_density_structure.png/32px-Low_density_structure.png", "type": "intermediate", "unlock_tier": 3 },
-    "rocket-fuel": { "name": "Combustible de Cohete", "icon_url": "https://wiki.factorio.com/images/thumb/Rocket_fuel.png/32px-Rocket_fuel.png", "type": "intermediate", "unlock_tier": 3 },
-    "uranium-ore": { "name": "Mineral de uranio", "icon_url": "https://wiki.factorio.com/images/thumb/Uranium_ore.png/32px-Uranium_ore.png", "type": "resource", "unlock_tier": 3 },
-    "uranium-235": { "name": "Uranio 235", "icon_url": "https://wiki.factorio.com/images/thumb/Uranium-235.png/32px-Uranium-235.png", "type": "intermediate", "unlock_tier": 3 },
-    "uranium-238": { "name": "Uranio 238", "icon_url": "https://wiki.factorio.com/images/thumb/Uranium-238.png/32px-Uranium-238.png", "type": "intermediate", "unlock_tier": 3 },
-    "uranium-fuel-cell": { "name": "Célula de Combustible de Uranio", "icon_url": "https://wiki.factorio.com/images/thumb/Uranium_fuel_cell.png/32px-Uranium_fuel_cell.png", "type": "intermediate", "unlock_tier": 3 },
-    "substation": { "name": "Subestación Eléctrica", "icon_url": "https://wiki.factorio.com/images/thumb/Substation.png/32px-Substation.png", "type": "intermediate", "unlock_tier": 3 },
-    "tank": { "name": "Tanque", "icon_url": "https://wiki.factorio.com/images/thumb/Tank.png/32px-Tank.png", "type": "intermediate", "unlock_tier": 3 },
-    "logistic-robot": { "name": "Robot Logístico", "icon_url": "https://wiki.factorio.com/images/thumb/Logistic_robot.png/32px-Logistic_robot.png", "type": "intermediate", "unlock_tier": 3 },
-    "construction-robot": { "name": "Robot de Construcción", "icon_url": "https://wiki.factorio.com/images/thumb/Construction_robot.png/32px-Construction_robot.png", "type": "intermediate", "unlock_tier": 3 },
-    "logistic-chest-passive-provider": { "name": "Cofre Proveedor Pasivo", "icon_url": "https://wiki.factorio.com/images/thumb/Passive_provider_chest.png/32px-Passive_provider_chest.png", "type": "intermediate", "unlock_tier": 3 },
-    "logistic-chest-storage": { "name": "Cofre de Almacenamiento", "icon_url": "https://wiki.factorio.com/images/thumb/Storage_chest.png/32px-Storage_chest.png", "type": "intermediate", "unlock_tier": 3 },
-    "roboport": { "name": "Robopuerto", "icon_url": "https://wiki.factorio.com/images/thumb/Roboport.png/32px-Roboport.png", "type": "intermediate", "unlock_tier": 3 },
-    "selector-combinator": { "name": "Combinador Selector", "icon_url": "https://wiki.factorio.com/images/thumb/Selector_combinator.png/32px-Selector_combinator.png", "type": "intermediate", "unlock_tier": 3 },
-    "nuclear-reactor": { "name": "Reactor Nuclear", "icon_url": "https://wiki.factorio.com/images/thumb/Nuclear_reactor.png/32px-Nuclear_reactor.png", "type": "intermediate", "unlock_tier": 3 },
-    "heat-pipe": { "name": "Tubería Térmica", "icon_url": "https://wiki.factorio.com/images/thumb/Heat_pipe.png/32px-Heat_pipe.png", "type": "intermediate", "unlock_tier": 3 },
-    "heat-exchanger": { "name": "Intercambiador de Calor", "icon_url": "https://wiki.factorio.com/images/thumb/Heat_exchanger.png/32px-Heat_exchanger.png", "type": "intermediate", "unlock_tier": 3 },
-    "steam-turbine": { "name": "Turbina de Vapor", "icon_url": "https://wiki.factorio.com/images/thumb/Steam_turbine.png/32px-Steam_turbine.png", "type": "intermediate", "unlock_tier": 3 },
-    "electric-furnace": { "name": "Horno Eléctrico", "icon_url": "https://wiki.factorio.com/images/thumb/Electric_furnace.png/32px-Electric_furnace.png", "type": "intermediate", "unlock_tier": 3 },
-    "centrifuge": { "name": "Centrifugadora", "icon_url": "https://wiki.factorio.com/images/thumb/Centrifuge.png/32px-Centrifuge.png", "type": "intermediate", "unlock_tier": 3 },
-    "rocket-silo": { "name": "Silo de Cohetes", "icon_url": "https://wiki.factorio.com/images/thumb/Rocket_silo.png/32px-Rocket_silo.png", "type": "intermediate", "unlock_tier": 3 },
-    "landing-pad": { "name": "Plataforma de Aterrizaje", "icon_url": "https://wiki.factorio.com/images/thumb/Landing_pad.png/32px-Landing_pad.png", "type": "intermediate", "unlock_tier": 3 },
-    "space-platform-foundation": { "name": "Cimiento de Plataforma Espacial", "icon_url": "https://wiki.factorio.com/images/thumb/Space_platform_foundation.png/32px-Space_platform_foundation.png", "type": "intermediate", "unlock_tier": 3 },
-    "cargo-bay": { "name": "Compartimiento de Carga", "icon_url": "https://wiki.factorio.com/images/thumb/Cargo_bay.png/32px-Cargo_bay.png", "type": "intermediate", "unlock_tier": 3 },
-    "asteroid-collector": { "name": "Recolector de Asteroides", "icon_url": "https://wiki.factorio.com/images/thumb/Asteroid_collector.png/32px-Asteroid_collector.png", "type": "intermediate", "unlock_tier": 3 },
-    "crusher": { "name": "Trituradora", "icon_url": "https://wiki.factorio.com/images/thumb/Crusher.png/32px-Crusher.png", "type": "intermediate", "unlock_tier": 3 },
-    "space-platform-starter-pack": { "name": "Paquete de Inicio para la Plataforma Espacial", "icon_url": "https://wiki.factorio.com/images/thumb/Space_platform_starter_pack.png/32px-Space_platform_starter_pack.png", "type": "intermediate", "unlock_tier": 3 },
-    "metallic-asteroid": { "name": "Asteroide Metálico", "icon_url": "https://wiki.factorio.com/images/thumb/Metallic_asteroid.png/32px-Metallic_asteroid.png", "type": "resource", "unlock_tier": 3 },
-    "carbonic-asteroid": { "name": "Asteroide Carbónico", "icon_url": "https://wiki.factorio.com/images/thumb/Carbonic_asteroid.png/32px-Carbonic_asteroid.png", "type": "resource", "unlock_tier": 3 },
-    "oxidic-asteroid": { "name": "Asteroide de Óxido", "icon_url": "https://wiki.factorio.com/images/thumb/Oxidic_asteroid.png/32px-Oxidic_asteroid.png", "type": "resource", "unlock_tier": 3 },
-    "cannon-shell": { "name": "Proyectil de Cañón", "icon_url": "https://wiki.factorio.com/images/thumb/Cannon_shell.png/32px-Cannon_shell.png", "type": "intermediate", "unlock_tier": 3 },
-    "explosive-cannon-shell": { "name": "Proyectil de Cañón Explosivo", "icon_url": "https://wiki.factorio.com/images/thumb/Explosive_cannon_shell.png/32px-Explosive_cannon_shell.png", "type": "intermediate", "unlock_tier": 3 },
-    "rocket": { "name": "Cohete", "icon_url": "https://wiki.factorio.com/images/thumb/Rocket.png/32px-Rocket.png", "type": "intermediate", "unlock_tier": 3 },
-    "explosive-rocket": { "name": "Cohete Explosivo", "icon_url": "https://wiki.factorio.com/images/thumb/Explosive_rocket.png/32px-Explosive_rocket.png", "type": "intermediate", "unlock_tier": 3 },
-    "flamethrower-ammo": { "name": "Munición de Lanzallamas", "icon_url": "https://wiki.factorio.com/images/thumb/Flamethrower_ammo.png/32px-Flamethrower_ammo.png", "type": "intermediate", "unlock_tier": 3 },
-    "poison-capsule": { "name": "Cápsula de Veneno", "icon_url": "https://wiki.factorio.com/images/thumb/Poison_capsule.png/32px-Poison_capsule.png", "type": "intermediate", "unlock_tier": 3 },
-    "slowdown-capsule": { "name": "Cápsula de Ralentización", "icon_url": "https://wiki.factorio.com/images/thumb/Slowdown_capsule.png/32px-Slowdown_capsule.png", "type": "intermediate", "unlock_tier": 3 },
-    "defender-capsule": { "name": "Cápsula de Defensor", "icon_url": "https://wiki.factorio.com/images/thumb/Defender_capsule.png/32px-Defender_capsule.png", "type": "intermediate", "unlock_tier": 3 },
-    "distractor-capsule": { "name": "Cápsula de Distractor", "icon_url": "https://wiki.factorio.com/images/thumb/Distractor_capsule.png/32px-Distractor_capsule.png", "type": "intermediate", "unlock_tier": 3 },
-    "land-mine": { "name": "Mina Terrestre", "icon_url": "https://wiki.factorio.com/images/thumb/Land_mine.png/32px-Land_mine.png", "type": "intermediate", "unlock_tier": 3 },
-    "laser-turret": { "name": "Torreta Láser", "icon_url": "https://wiki.factorio.com/images/thumb/Laser_turret.png/32px-Laser_turret.png", "type": "intermediate", "unlock_tier": 3 },
-    "flamethrower-turret": { "name": "Torreta Lanzallamas", "icon_url": "https://wiki.factorio.com/images/thumb/Flamethrower_turret.png/32px-Flamethrower_turret.png", "type": "intermediate", "unlock_tier": 3 },
-    
-    "science-pack-1": { "name": "Paquete de Ciencia de Automatización (Ciencia Roja)", "icon_url": "https://wiki.factorio.com/images/thumb/Automation_science_pack.png/32px-Automation_science_pack.png", "type": "product", "unlock_tier": 0 },
-    "science-pack-2": { "name": "Paquete de Ciencia de Logística (Ciencia Verde)", "icon_url": "https://wiki.factorio.com/images/thumb/Logistic_science_pack.png/32px-Logistic_science_pack.png", "type": "product", "unlock_tier": 1 },
-    "science-pack-3": { "name": "Paquete de Ciencia Militar (Ciencia Negra)", "icon_url": "https://wiki.factorio.com/images/thumb/Military_science_pack.png/32px-Military_science_pack.png", "type": "product", "unlock_tier": 2 },
-    "science-pack-4": { "name": "Paquete de Ciencia Química (Ciencia Azul)", "icon_url": "https://wiki.factorio.com/images/thumb/Chemical_science_pack.png/32px-Chemical_science_pack.png", "type": "product", "unlock_tier": 2 },
-    "science-pack-5": { "name": "Paquete de Ciencia de Producción (Ciencia Morada)", "icon_url": "https://wiki.factorio.com/images/thumb/Production_science_pack.png/32px-Production_science_pack.png", "type": "product", "unlock_tier": 3 },
-    "science-pack-6": { "name": "Paquete de Ciencia de Utilidad (Ciencia Amarilla)", "icon_url": "https://wiki.factorio.com/images/thumb/Utility_science_pack.png/32px-Utility_science_pack.png", "type": "product", "unlock_tier": 3 },
-    "science-pack-7": { "name": "Paquete de Ciencia Espacial (Ciencia Blanca)", "icon_url": "https://wiki.factorio.com/images/thumb/Space_science_pack.png/32px-Space_science_pack.png", "type": "product", "unlock_tier": 3 }
+    "wood": {
+      "name": "Madera",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Wood.png/32px-Wood.png",
+      "type": "resource",
+      "unlock_tier": 0,
+      "category": "resources"
+    },
+    "iron-ore": {
+      "name": "Mineral de Hierro",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Iron_ore.png/32px-Iron_ore.png",
+      "type": "resource",
+      "unlock_tier": 0,
+      "category": "resources"
+    },
+    "copper-ore": {
+      "name": "Mineral de Cobre",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Copper_ore.png/32px-Copper_ore.png",
+      "type": "resource",
+      "unlock_tier": 0,
+      "category": "resources"
+    },
+    "coal": {
+      "name": "Carbón",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Coal.png/32px-Coal.png",
+      "type": "resource",
+      "unlock_tier": 0,
+      "category": "resources"
+    },
+    "stone": {
+      "name": "Piedra",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Stone.png/32px-Stone.png",
+      "type": "resource",
+      "unlock_tier": 0,
+      "category": "resources"
+    },
+    "water": {
+      "name": "Agua",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Water.png/32px-Water.png",
+      "type": "resource",
+      "unlock_tier": 0,
+      "category": "resources"
+    },
+    "iron-plate": {
+      "name": "Placa de Hierro",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Iron_plate.png/32px-Iron_plate.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "resources"
+    },
+    "copper-plate": {
+      "name": "Placa de Cobre",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Copper_plate.png/32px-Copper_plate.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "resources"
+    },
+    "copper-cable": {
+      "name": "Cable de Cobre",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Copper_cable.png/32px-Copper_cable.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "resources"
+    },
+    "iron-gear-wheel": {
+      "name": "Engranaje de Hierro",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Iron_gear_wheel.png/32px-Iron_gear_wheel.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "resources"
+    },
+    "electronic-circuit": {
+      "name": "Circuito Electrónico",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Electronic_circuit.png/32px-Electronic_circuit.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "resources"
+    },
+    "pipe": {
+      "name": "Tubería",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Pipe.png/32px-Pipe.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "logistics"
+    },
+    "stone-brick": {
+      "name": "Ladrillo de Piedra",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Stone_brick.png/32px-Stone_brick.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "resources"
+    },
+    "firearm-magazine": {
+      "name": "Cargador de Munición",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Firearm_magazine.png/32px-Firearm_magazine.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "combat"
+    },
+    "wooden-chest": {
+      "name": "Cofre de Madera",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Wooden_chest.png/32px-Wooden_chest.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "logistics"
+    },
+    "iron-chest": {
+      "name": "Cofre de Hierro",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Iron_chest.png/32px-Iron_chest.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "logistics"
+    },
+    "transport-belt": {
+      "name": "Cinta Transportadora",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Transport_belt.png/32px-Transport_belt.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "logistics"
+    },
+    "burner-inserter": {
+      "name": "Insertador a Combustión",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Burner_inserter.png/32px-Burner_inserter.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "logistics"
+    },
+    "inserter": {
+      "name": "Insertador",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Inserter.png/32px-Inserter.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "logistics"
+    },
+    "small-electric-pole": {
+      "name": "Poste Eléctrico Pequeño",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Small_electric_pole.png/32px-Small_electric_pole.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "logistics"
+    },
+    "pipe-to-ground": {
+      "name": "Tubería Subterránea",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Pipe_to_ground.png/32px-Pipe_to_ground.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "logistics"
+    },
+    "stone-furnace": {
+      "name": "Horno de Piedra",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Stone_furnace.png/32px-Stone_furnace.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "production"
+    },
+    "burner-mining-drill": {
+      "name": "Perforadora de Combustión",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Burner_mining_drill.png/32px-Burner_mining_drill.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "production"
+    },
+    "offshore-pump": {
+      "name": "Bomba Costera",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Offshore_pump.png/32px-Offshore_pump.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "production"
+    },
+    "boiler": {
+      "name": "Caldera",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Boiler.png/32px-Boiler.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "production"
+    },
+    "steam-engine": {
+      "name": "Motor a Vapor",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Steam_engine.png/32px-Steam_engine.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "production"
+    },
+    "lab": {
+      "name": "Laboratorio",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Lab.png/32px-Lab.png",
+      "type": "intermediate",
+      "unlock_tier": 0,
+      "category": "production"
+    },
+    "steel": {
+      "name": "Acero",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Steel_plate.png/32px-Steel_plate.png",
+      "type": "intermediate",
+      "unlock_tier": 1,
+      "category": "resources"
+    },
+    "steel-chest": {
+      "name": "Cofre de Acero",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Steel_chest.png/32px-Steel_chest.png",
+      "type": "intermediate",
+      "unlock_tier": 1,
+      "category": "logistics"
+    },
+    "underground-belt": {
+      "name": "Cinta Transportadora Subterránea",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Underground_belt.png/32px-Underground_belt.png",
+      "type": "intermediate",
+      "unlock_tier": 1,
+      "category": "logistics"
+    },
+    "splitter": {
+      "name": "Divisor",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Splitter.png/32px-Splitter.png",
+      "type": "intermediate",
+      "unlock_tier": 1,
+      "category": "logistics"
+    },
+    "long-handed-inserter": {
+      "name": "Insertador Largo",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Long-handed_inserter.png/32px-Long-handed_inserter.png",
+      "type": "intermediate",
+      "unlock_tier": 1,
+      "category": "logistics"
+    },
+    "fast-inserter": {
+      "name": "Insertador Rápido",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Fast_inserter.png/32px-Fast_inserter.png",
+      "type": "intermediate",
+      "unlock_tier": 1,
+      "category": "logistics"
+    },
+    "lamp": {
+      "name": "Lámpara",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Small_lamp.png/32px-Small_lamp.png",
+      "type": "intermediate",
+      "unlock_tier": 1,
+      "category": "logistics"
+    },
+    "repair-pack": {
+      "name": "Pack de Reparación",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Repair_pack.png/32px-Repair_pack.png",
+      "type": "intermediate",
+      "unlock_tier": 1,
+      "category": "resources"
+    },
+    "electric-mining-drill": {
+      "name": "Perforadora Eléctrica",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Electric_mining_drill.png/32px-Electric_mining_drill.png",
+      "type": "intermediate",
+      "unlock_tier": 1,
+      "category": "production"
+    },
+    "assembling-machine-1": {
+      "name": "Máquina de Ensamblaje 1",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Assembling_machine_1.png/32px-Assembling_machine_1.png",
+      "type": "intermediate",
+      "unlock_tier": 1,
+      "category": "production"
+    },
+    "shotgun-shell": {
+      "name": "Cartucho de Escopeta",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Shotgun_shell.png/32px-Shotgun_shell.png",
+      "type": "intermediate",
+      "unlock_tier": 1,
+      "category": "combat"
+    },
+    "wall": {
+      "name": "Muro",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Wall.png/32px-Wall.png",
+      "type": "intermediate",
+      "unlock_tier": 1,
+      "category": "combat"
+    },
+    "radar": {
+      "name": "Radar",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Radar.png/32px-Radar.png",
+      "type": "intermediate",
+      "unlock_tier": 1,
+      "category": "resources"
+    },
+    "gun-turret": {
+      "name": "Torreta Ametralladora",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Gun_turret.png/32px-Gun_turret.png",
+      "type": "intermediate",
+      "unlock_tier": 1,
+      "category": "combat"
+    },
+    "storage-tank": {
+      "name": "Cisterna",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Storage_tank.png/32px-Storage_tank.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "logistics"
+    },
+    "fast-transport-belt": {
+      "name": "Cinta Rápida",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Fast_transport_belt.png/32px-Fast_transport_belt.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "logistics"
+    },
+    "fast-underground-belt": {
+      "name": "Cinta Subterránea Rápida",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Fast_underground_belt.png/32px-Fast_underground_belt.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "logistics"
+    },
+    "fast-splitter": {
+      "name": "Divisor Rápido",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Fast_splitter.png/32px-Fast_splitter.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "logistics"
+    },
+    "stack-inserter": {
+      "name": "Insertador por Lotes",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Stack_inserter.png/32px-Stack_inserter.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "logistics"
+    },
+    "medium-electric-pole": {
+      "name": "Poste Eléctrico Mediano",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Medium_electric_pole.png/32px-Medium_electric_pole.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "logistics"
+    },
+    "big-electric-pole": {
+      "name": "Poste Eléctrico Grande",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Big_electric_pole.png/32px-Big_electric_pole.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "logistics"
+    },
+    "pump": {
+      "name": "Bomba de Fluidos",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Pump.png/32px-Pump.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "production"
+    },
+    "rail": {
+      "name": "Vía",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Rail.png/32px-Rail.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "logistics"
+    },
+    "train-stop": {
+      "name": "Parada de Tren",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Train_stop.png/32px-Train_stop.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "logistics"
+    },
+    "rail-signal": {
+      "name": "Semáforo Ferroviario",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Rail_signal.png/32px-Rail_signal.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "logistics"
+    },
+    "rail-chain-signal": {
+      "name": "Semáforo Ferroviario en Cadena",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Rail_chain_signal.png/32px-Rail_chain_signal.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "logistics"
+    },
+    "locomotive": {
+      "name": "Locomotora",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Locomotive.png/32px-Locomotive.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "logistics"
+    },
+    "cargo-wagon": {
+      "name": "Vagón de Carga",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Cargo_wagon.png/32px-Cargo_wagon.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "logistics"
+    },
+    "fluid-wagon": {
+      "name": "Vagón Cisterna",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Fluid_wagon.png/32px-Fluid_wagon.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "logistics"
+    },
+    "arithmetic-combinator": {
+      "name": "Combinador Aritmético",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Arithmetic_combinator.png/32px-Arithmetic_combinator.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "decider-combinator": {
+      "name": "Combinador Comparador",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Decider_combinator.png/32px-Decider_combinator.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "constant-combinator": {
+      "name": "Combinador Constante",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Constant_combinator.png/32px-Constant_combinator.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "power-switch": {
+      "name": "Interruptor",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Power_switch.png/32px-Power_switch.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "logistics"
+    },
+    "programmable-speaker": {
+      "name": "Altavoz Programable",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Programmable_speaker.png/32px-Programmable_speaker.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "display-panel": {
+      "name": "Panel de Visualización",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Display_panel.png/32px-Display_panel.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "production"
+    },
+    "concrete": {
+      "name": "Hormigón",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Concrete.png/32px-Concrete.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "hazard-concrete": {
+      "name": "Hormigón con Señal de Peligro",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Hazard_concrete.png/32px-Hazard_concrete.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "refined-concrete": {
+      "name": "Hormigón Refinado",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Refined_concrete.png/32px-Refined_concrete.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "refined-hazard-concrete": {
+      "name": "Hormigón Refinado con Señal de Peligro",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Refined_hazard_concrete.png/32px-Refined_hazard_concrete.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "landfill": {
+      "name": "Relleno de Tierra",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Landfill.png/32px-Landfill.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "solar-panel": {
+      "name": "Panel Solar",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Solar_panel.png/32px-Solar_panel.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "production"
+    },
+    "accumulator": {
+      "name": "Acumulador",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Accumulator.png/32px-Accumulator.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "production"
+    },
+    "pumpjack": {
+      "name": "Bomba Extractora",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Pumpjack.png/32px-Pumpjack.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "production"
+    },
+    "steel-furnace": {
+      "name": "Horno de Acero",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Steel_furnace.png/32px-Steel_furnace.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "production"
+    },
+    "assembling-machine-2": {
+      "name": "Máquina de Ensamblaje 2",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Assembling_machine_2.png/32px-Assembling_machine_2.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "production"
+    },
+    "oil-refinery": {
+      "name": "Refinería de Petróleo",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Oil_refinery.png/32px-Oil_refinery.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "production"
+    },
+    "chemical-plant": {
+      "name": "Planta Química",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Chemical_plant.png/32px-Chemical_plant.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "production"
+    },
+    "speed-module": {
+      "name": "Módulo de Velocidad",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Speed_module.png/32px-Speed_module.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "efficiency-module": {
+      "name": "Módulo de Eficiencia",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Efficiency_module.png/32px-Efficiency_module.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "productivity-module": {
+      "name": "Módulo de Productividad",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Productivity_module.png/32px-Productivity_module.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "quality-module": {
+      "name": "Módulo de Calidad",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Quality_module.png/32px-Quality_module.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "crude-oil": {
+      "name": "Petróleo Crudo",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Fluid_crude-oil.png/32px-Fluid_crude-oil.png",
+      "type": "resource",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "petroleum-gas": {
+      "name": "Gas de Petróleo",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Fluid_petroleum-gas.png/32px-Fluid_petroleum-gas.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "solid-fuel": {
+      "name": "Combustible Sólido",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Solid_fuel.png/32px-Solid_fuel.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "sulfuric-acid": {
+      "name": "Ácido Sulfúrico",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Fluid_sulfuric-acid.png/32px-Fluid_sulfuric-acid.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "plastic-bar": {
+      "name": "Barra de Plástico",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Plastic_bar.png/32px-Plastic_bar.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "sulfur": {
+      "name": "Azufre",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Sulfur.png/32px-Sulfur.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "battery": {
+      "name": "Batería",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Battery.png/32px-Battery.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "explosives": {
+      "name": "Explosivos",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Explosives.png/32px-Explosives.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "iron-stick": {
+      "name": "Vara de Hierro",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Iron_stick.png/32px-Iron_stick.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "barrel": {
+      "name": "Barril",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Barrel.png/32px-Barrel.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "logistics"
+    },
+    "advanced-circuit": {
+      "name": "Circuito Electrónico Avanzado",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Advanced_circuit.png/32px-Advanced_circuit.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "engine-unit": {
+      "name": "Motor",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Engine_unit.png/32px-Engine_unit.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "piercing-rounds-magazine": {
+      "name": "Munición Penetrante",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Piercing_rounds_magazine.png/32px-Piercing_rounds_magazine.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "combat"
+    },
+    "grenade": {
+      "name": "Granada",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Grenade.png/32px-Grenade.png",
+      "type": "intermediate",
+      "unlock_tier": 2,
+      "category": "combat"
+    },
+    "science-pack-1": {
+      "name": "Paquete de Ciencia de Automatización (Ciencia Roja)",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Automation_science_pack.png/32px-Automation_science_pack.png",
+      "type": "product",
+      "unlock_tier": 0,
+      "category": "resources"
+    },
+    "science-pack-2": {
+      "name": "Paquete de Ciencia de Logística (Ciencia Verde)",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Logistic_science_pack.png/32px-Logistic_science_pack.png",
+      "type": "product",
+      "unlock_tier": 1,
+      "category": "resources"
+    },
+    "science-pack-3": {
+      "name": "Paquete de Ciencia Militar (Ciencia Negra)",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Military_science_pack.png/32px-Military_science_pack.png",
+      "type": "product",
+      "unlock_tier": 2,
+      "category": "resources"
+    },
+    "science-pack-4": {
+      "name": "Paquete de Ciencia Química (Ciencia Azul)",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Chemical_science_pack.png/32px-Chemical_science_pack.png",
+      "type": "product",
+      "unlock_tier": 2,
+      "category": "resources"
+    }
   },
   "recipes": {
-    "iron-plate": { "ingredients": [{"item": "iron-ore", "amount": 1}], "time": 3.2, "category": "smelting", "result": "iron-plate", "result_count": 1 },
-    "copper-plate": { "ingredients": [{"item": "copper-ore", "amount": 1}], "time": 3.2, "category": "smelting", "result": "copper-plate", "result_count": 1 },
-    "steel": { "ingredients": [{"item": "iron-plate", "amount": 5}], "time": 16, "category": "smelting", "result": "steel", "result_count": 1 },
-    "stone-brick": { "ingredients": [{"item": "stone", "amount": 2}], "time": 3.2, "category": "smelting", "result": "stone-brick", "result_count": 1 },
-    
-    "iron-gear-wheel": { "ingredients": [{"item": "iron-plate", "amount": 2}], "time": 0.5, "category": "crafting", "result": "iron-gear-wheel", "result_count": 1 },
-    "copper-cable": { "ingredients": [{"item": "copper-plate", "amount": 1}], "time": 0.5, "category": "crafting", "result": "copper-cable", "result_count": 2 },
-    "electronic-circuit": { "ingredients": [{"item": "copper-cable", "amount": 3}, {"item": "iron-plate", "amount": 1}], "time": 0.5, "category": "crafting", "result": "electronic-circuit", "result_count": 1 },
-    "pipe": { "ingredients": [{"item": "iron-plate", "amount": 1}], "time": 0.5, "category": "crafting", "result": "pipe", "result_count": 1 },
-    
-    "wooden-chest": { "ingredients": [{"item": "wood", "amount": 2}], "time": 0.5, "category": "crafting", "result": "wooden-chest", "result_count": 1 },
-    "iron-chest": { "ingredients": [{"item": "iron-plate", "amount": 8}], "time": 0.5, "category": "crafting", "result": "iron-chest", "result_count": 1 },
-    "steel-chest": { "ingredients": [{"item": "steel", "amount": 8}], "time": 0.5, "category": "crafting", "result": "steel-chest", "result_count": 1 },
-    
-    "transport-belt": { "ingredients": [{"item": "iron-gear-wheel", "amount": 1}, {"item": "iron-plate", "amount": 1}], "time": 0.5, "category": "crafting", "result": "transport-belt", "result_count": 1 },
-    "underground-belt": { "ingredients": [{"item": "transport-belt", "amount": 5}, {"item": "iron-plate", "amount": 1}], "time": 0.5, "category": "crafting", "result": "underground-belt", "result_count": 2 },
-    "splitter": { "ingredients": [{"item": "transport-belt", "amount": 1}, {"item": "iron-gear-wheel", "amount": 1}, {"item": "electronic-circuit", "amount": 1}], "time": 0.5, "category": "crafting", "result": "splitter", "result_count": 1 },
-    
-    "burner-inserter": { "ingredients": [{"item": "iron-plate", "amount": 2}], "time": 0.5, "category": "crafting", "result": "burner-inserter", "result_count": 1 },
-    "inserter": { "ingredients": [{"item": "iron-gear-wheel", "amount": 1}, {"item": "iron-plate", "amount": 1}, {"item": "electronic-circuit", "amount": 1}], "time": 0.5, "category": "crafting", "result": "inserter", "result_count": 1 },
-    "long-handed-inserter": { "ingredients": [{"item": "iron-gear-wheel", "amount": 1}, {"item": "iron-plate", "amount": 1}, {"item": "inserter", "amount": 1}], "time": 0.5, "category": "crafting", "result": "long-handed-inserter", "result_count": 1 },
-    "fast-inserter": { "ingredients": [{"item": "iron-gear-wheel", "amount": 1}, {"item": "electronic-circuit", "amount": 1}, {"item": "inserter", "amount": 1}], "time": 0.5, "category": "crafting", "result": "fast-inserter", "result_count": 1 },
-    
-    "stone-furnace": { "ingredients": [{"item": "stone", "amount": 5}], "time": 0.5, "category": "crafting", "result": "stone-furnace", "result_count": 1 },
-    "burner-mining-drill": { "ingredients": [{"item": "iron-plate", "amount": 3}, {"item": "iron-gear-wheel", "amount": 1}], "time": 2, "category": "crafting", "result": "burner-mining-drill", "result_count": 1 },
-    "electric-mining-drill": { "ingredients": [{"item": "iron-plate", "amount": 3}, {"item": "iron-gear-wheel", "amount": 1}, {"item": "electronic-circuit", "amount": 1}], "time": 2, "category": "crafting", "result": "electric-mining-drill", "result_count": 1 },
-    "assembling-machine-1": { "ingredients": [{"item": "iron-plate", "amount": 3}, {"item": "iron-gear-wheel", "amount": 3}, {"item": "electronic-circuit", "amount": 1}], "time": 0.5, "category": "crafting", "result": "assembling-machine-1", "result_count": 1 },
-    "offshore-pump": { "ingredients": [{"item": "iron-gear-wheel", "amount": 2}, {"item": "pipe", "amount": 2}], "time": 0.5, "category": "crafting", "result": "offshore-pump", "result_count": 1 },
-    "boiler": { "ingredients": [{"item": "pipe", "amount": 4}, {"item": "stone-furnace", "amount": 1}], "time": 0.5, "category": "crafting", "result": "boiler", "result_count": 1 },
-    "steam-engine": { "ingredients": [{"item": "iron-gear-wheel", "amount": 8}, {"item": "pipe", "amount": 5}], "time": 0.5, "category": "crafting", "result": "steam-engine", "result_count": 1 },
-    "small-electric-pole": { "ingredients": [{"item": "wood", "amount": 1}, {"item": "copper-cable", "amount": 1}], "time": 0.5, "category": "crafting", "result": "small-electric-pole", "result_count": 2 },
-    "lamp": { "ingredients": [{"item": "iron-plate", "amount": 1}, {"item": "copper-cable", "amount": 1}, {"item": "electronic-circuit", "amount": 1}], "time": 0.5, "category": "crafting", "result": "lamp", "result_count": 1 },
-    "pipe-to-ground": { "ingredients": [{"item": "pipe", "amount": 5}, {"item": "iron-plate", "amount": 2}], "time": 0.5, "category": "crafting", "result": "pipe-to-ground", "result_count": 1 },
-    
-    "lab": { "ingredients": [{"item": "iron-gear-wheel", "amount": 10}, {"item": "electronic-circuit", "amount": 10}, {"item": "transport-belt", "amount": 4}], "time": 3, "category": "crafting", "result": "lab", "result_count": 1 },
-    "radar": { "ingredients": [{"item": "iron-plate", "amount": 5}, {"item": "electronic-circuit", "amount": 5}], "time": 0.5, "category": "crafting", "result": "radar", "result_count": 1 },
-    "wall": { "ingredients": [{"item": "stone-brick", "amount": 5}], "time": 0.5, "category": "crafting", "result": "wall", "result_count": 1 },
-    "gun-turret": { "ingredients": [{"item": "iron-plate", "amount": 5}, {"item": "iron-gear-wheel", "amount": 10}, {"item": "electronic-circuit", "amount": 5}], "time": 0.5, "category": "crafting", "result": "gun-turret", "result_count": 1 },
-    "repair-pack": { "ingredients": [{"item": "iron-gear-wheel", "amount": 2}, {"item": "electronic-circuit", "amount": 2}], "time": 0.5, "category": "crafting", "result": "repair-pack", "result_count": 1 },
-    "firearm-magazine": { "ingredients": [{"item": "iron-plate", "amount": 4}], "time": 1, "category": "crafting", "result": "firearm-magazine", "result_count": 1 },
-    "shotgun-shell": { "ingredients": [{"item": "copper-plate", "amount": 2}, {"item": "iron-plate", "amount": 2}], "time": 3, "category": "crafting", "result": "shotgun-shell", "result_count": 1 },
-    
-    "science-pack-1": { "ingredients": [{"item": "iron-gear-wheel", "amount": 1}, {"item": "copper-plate", "amount": 1}], "time": 5, "category": "crafting", "result": "science-pack-1", "result_count": 1 },
-    "science-pack-2": { "ingredients": [{"item": "inserter", "amount": 1}, {"item": "transport-belt", "amount": 1}], "time": 6, "category": "crafting", "result": "science-pack-2", "result_count": 1 },
-    
-    "mining-iron-ore": { "ingredients": [], "time": 2, "category": "mining", "result": "iron-ore", "result_count": 1 },
-    "mining-copper-ore": { "ingredients": [], "time": 2, "category": "mining", "result": "copper-ore", "result_count": 1 },
-    "mining-coal": { "ingredients": [], "time": 2, "category": "mining", "result": "coal", "result_count": 1 },
-    "mining-stone": { "ingredients": [], "time": 2, "category": "mining", "result": "stone", "result_count": 1 },
-    "pumping-water": { "ingredients": [], "time": 1, "category": "pumping", "result": "water", "result_count": 1 },
-
-    "fast-transport-belt": { "ingredients": [{"item": "iron-gear-wheel", "amount": 1}, {"item": "transport-belt", "amount": 1}], "time": 0.5, "category": "crafting", "result": "fast-transport-belt", "result_count": 1 },
-    "fast-underground-belt": { "ingredients": [{"item": "fast-transport-belt", "amount": 5}, {"item": "iron-gear-wheel", "amount": 1}], "time": 0.5, "category": "crafting", "result": "fast-underground-belt", "result_count": 2 },
-    "fast-splitter": { "ingredients": [{"item": "fast-transport-belt", "amount": 1}, {"item": "iron-gear-wheel", "amount": 1}, {"item": "advanced-circuit", "amount": 1}], "time": 0.5, "category": "crafting", "result": "fast-splitter", "result_count": 1 },
-    "stack-inserter": { "ingredients": [{"item": "iron-gear-wheel", "amount": 1}, {"item": "advanced-circuit", "amount": 1}, {"item": "inserter", "amount": 1}], "time": 0.5, "category": "crafting", "result": "stack-inserter", "result_count": 1 },
-    "medium-electric-pole": { "ingredients": [{"item": "iron-stick", "amount": 2}, {"item": "advanced-circuit", "amount": 1}], "time": 0.5, "category": "crafting", "result": "medium-electric-pole", "result_count": 1 },
-    "big-electric-pole": { "ingredients": [{"item": "iron-stick", "amount": 5}, {"item": "advanced-circuit", "amount": 1}], "time": 0.5, "category": "crafting", "result": "big-electric-pole", "result_count": 1 },
-    "pump": { "ingredients": [{"item": "engine-unit", "amount": 1}, {"item": "pipe", "amount": 1}, {"item": "iron-gear-wheel", "amount": 1}], "time": 0.5, "category": "crafting", "result": "pump", "result_count": 1 },
-    "rail": { "ingredients": [{"item": "iron-stick", "amount": 1}, {"item": "steel", "amount": 1}], "time": 0.5, "category": "crafting", "result": "rail", "result_count": 2 },
-    "train-stop": { "ingredients": [{"item": "iron-plate", "amount": 10}, {"item": "steel", "amount": 5}, {"item": "electronic-circuit", "amount": 5}], "time": 0.5, "category": "crafting", "result": "train-stop", "result_count": 1 },
-    "rail-signal": { "ingredients": [{"item": "electronic-circuit", "amount": 1}], "time": 0.5, "category": "crafting", "result": "rail-signal", "result_count": 1 },
-    "rail-chain-signal": { "ingredients": [{"item": "electronic-circuit", "amount": 1}], "time": 0.5, "category": "crafting", "result": "rail-chain-signal", "result_count": 1 },
-    "locomotive": { "ingredients": [{"item": "engine-unit", "amount": 10}, {"item": "electronic-circuit", "amount": 5}, {"item": "steel", "amount": 20}], "time": 5, "category": "crafting", "result": "locomotive", "result_count": 1 },
-    "cargo-wagon": { "ingredients": [{"item": "iron-plate", "amount": 20}, {"item": "iron-gear-wheel", "amount": 5}, {"item": "steel", "amount": 5}], "time": 0.5, "category": "crafting", "result": "cargo-wagon", "result_count": 1 },
-    "fluid-wagon": { "ingredients": [{"item": "iron-plate", "amount": 20}, {"item": "iron-gear-wheel", "amount": 5}, {"item": "pipe", "amount": 4}, {"item": "steel", "amount": 5}], "time": 0.5, "category": "crafting", "result": "fluid-wagon", "result_count": 1 },
-    "arithmetic-combinator": { "ingredients": [{"item": "electronic-circuit", "amount": 5}, {"item": "copper-cable", "amount": 5}], "time": 0.5, "category": "crafting", "result": "arithmetic-combinator", "result_count": 1 },
-    "decider-combinator": { "ingredients": [{"item": "electronic-circuit", "amount": 5}, {"item": "copper-cable", "amount": 5}], "time": 0.5, "category": "crafting", "result": "decider-combinator", "result_count": 1 },
-    "constant-combinator": { "ingredients": [{"item": "electronic-circuit", "amount": 5}, {"item": "copper-cable", "amount": 5}], "time": 0.5, "category": "crafting", "result": "constant-combinator", "result_count": 1 },
-    "power-switch": { "ingredients": [{"item": "iron-plate", "amount": 2}, {"item": "electronic-circuit", "amount": 1}], "time": 0.5, "category": "crafting", "result": "power-switch", "result_count": 1 },
-    "programmable-speaker": { "ingredients": [{"item": "iron-plate", "amount": 2}, {"item": "electronic-circuit", "amount": 1}, {"item": "copper-cable", "amount": 2}], "time": 0.5, "category": "crafting", "result": "programmable-speaker", "result_count": 1 },
-    "display-panel": { "ingredients": [{"item": "iron-plate", "amount": 2}, {"item": "electronic-circuit", "amount": 1}], "time": 0.5, "category": "crafting", "result": "display-panel", "result_count": 1 },
-    "concrete": { "ingredients": [{"item": "iron-ore", "amount": 1}, {"item": "coal", "amount": 1}, {"item": "stone", "amount": 5}, {"item": "water", "amount": 10}], "time": 0.5, "category": "crafting", "result": "concrete", "result_count": 1 },
-    "hazard-concrete": { "ingredients": [{"item": "concrete", "amount": 1}], "time": 0.5, "category": "crafting", "result": "hazard-concrete", "result_count": 1 },
-    "refined-concrete": { "ingredients": [{"item": "concrete", "amount": 1}, {"item": "steel", "amount": 1}], "time": 0.5, "category": "crafting", "result": "refined-concrete", "result_count": 1 },
-    "refined-hazard-concrete": { "ingredients": [{"item": "refined-concrete", "amount": 1}], "time": 0.5, "category": "crafting", "result": "refined-hazard-concrete", "result_count": 1 },
-    "landfill": { "ingredients": [{"item": "stone", "amount": 5}], "time": 0.5, "category": "crafting", "result": "landfill", "result_count": 1 },
-    "solar-panel": { "ingredients": [{"item": "steel", "amount": 5}, {"item": "electronic-circuit", "amount": 5}], "time": 0.5, "category": "crafting", "result": "solar-panel", "result_count": 1 },
-    "accumulator": { "ingredients": [{"item": "iron-plate", "amount": 2}, {"item": "battery", "amount": 5}], "time": 0.5, "category": "crafting", "result": "accumulator", "result_count": 1 },
-    "pumpjack": { "ingredients": [{"item": "iron-gear-wheel", "amount": 5}, {"item": "electronic-circuit", "amount": 5}, {"item": "pipe", "amount": 10}], "time": 2, "category": "crafting", "result": "pumpjack", "result_count": 1 },
-    "steel-furnace": { "ingredients": [{"item": "steel", "amount": 6}], "time": 3, "category": "crafting", "result": "steel-furnace", "result_count": 1 },
-    "assembling-machine-2": { "ingredients": [{"item": "iron-plate", "amount": 3}, {"item": "iron-gear-wheel", "amount": 1}, {"item": "electronic-circuit", "amount": 1}], "time": 0.5, "category": "crafting", "result": "assembling-machine-2", "result_count": 1 },
-    "oil-refinery": { "ingredients": [{"item": "iron-plate", "amount": 15}, {"item": "iron-gear-wheel", "amount": 10}, {"item": "pipe", "amount": 10}, {"item": "electronic-circuit", "amount": 10}], "time": 5, "category": "crafting", "result": "oil-refinery", "result_count": 1 },
-    "chemical-plant": { "ingredients": [{"item": "iron-plate", "amount": 5}, {"item": "iron-gear-wheel", "amount": 5}, {"item": "pipe", "amount": 5}, {"item": "electronic-circuit", "amount": 5}], "time": 5, "category": "crafting", "result": "chemical-plant", "result_count": 1 },
-    "speed-module": { "ingredients": [{"item": "advanced-circuit", "amount": 5}, {"item": "speed-module-1", "amount": 1}], "time": 15, "category": "crafting", "result": "speed-module", "result_count": 1 },
-    "efficiency-module": { "ingredients": [{"item": "advanced-circuit", "amount": 5}, {"item": "efficiency-module-1", "amount": 1}], "time": 15, "category": "crafting", "result": "efficiency-module", "result_count": 1 },
-    "productivity-module": { "ingredients": [{"item": "advanced-circuit", "amount": 5}, {"item": "productivity-module-1", "amount": 1}], "time": 15, "category": "crafting", "result": "productivity-module", "result_count": 1 },
-    "quality-module": { "ingredients": [{"item": "advanced-circuit", "amount": 5}], "time": 15, "category": "crafting", "result": "quality-module", "result_count": 1 },
-    
-    "basic-oil-processing": { "ingredients": [{"item": "water", "amount": 10}], "time": 5, "category": "oil-processing", "result": "petroleum-gas", "result_count": 3 },
-    "solid-fuel-from-petroleum-gas": { "ingredients": [{"item": "petroleum-gas", "amount": 10}], "time": 2, "category": "crafting", "result": "solid-fuel", "result_count": 1 },
-    "sulfuric-acid": { "ingredients": [{"item": "sulfur", "amount": 5}, {"item": "iron-plate", "amount": 1}, {"item": "water", "amount": 30}], "time": 6, "category": "chemistry", "result": "sulfuric-acid", "result_count": 50 },
-    "plastic-bar": { "ingredients": [{"item": "petroleum-gas", "amount": 30}, {"item": "coal", "amount": 1}], "time": 1, "category": "chemistry", "result": "plastic-bar", "result_count": 2 },
-    "sulfur": { "ingredients": [{"item": "petroleum-gas", "amount": 30}, {"item": "water", "amount": 30}], "time": 6, "category": "chemistry", "result": "sulfur", "result_count": 2 },
-    "battery": { "ingredients": [{"item": "iron-plate", "amount": 1}, {"item": "copper-plate", "amount": 1}, {"item": "sulfuric-acid", "amount": 20}], "time": 5, "category": "chemistry", "result": "battery", "result_count": 1 },
-    "explosives": { "ingredients": [{"item": "sulfur", "amount": 2}, {"item": "coal", "amount": 1}, {"item": "iron-plate", "amount": 1}], "time": 5, "category": "crafting", "result": "explosives", "result_count": 2 },
-    "iron-stick": { "ingredients": [{"item": "iron-plate", "amount": 1}], "time": 0.5, "category": "crafting", "result": "iron-stick", "result_count": 2 },
-    "barrel": { "ingredients": [{"item": "steel", "amount": 1}], "time": 1, "category": "crafting", "result": "barrel", "result_count": 1 },
-    "advanced-circuit": { "ingredients": [{"item": "electronic-circuit", "amount": 2}, {"item": "plastic-bar", "amount": 2}, {"item": "copper-cable", "amount": 4}], "time": 6, "category": "crafting", "result": "advanced-circuit", "result_count": 1 },
-    "engine-unit": { "ingredients": [{"item": "iron-gear-wheel", "amount": 1}, {"item": "iron-stick", "amount": 1}, {"item": "pipe", "amount": 2}], "time": 10, "category": "crafting", "result": "engine-unit", "result_count": 1 },
-    "piercing-rounds-magazine": { "ingredients": [{"item": "firearm-magazine", "amount": 1}, {"item": "steel", "amount": 1}], "time": 3, "category": "crafting", "result": "piercing-rounds-magazine", "result_count": 1 },
-    "grenade": { "ingredients": [{"item": "iron-plate", "amount": 5}, {"item": "coal", "amount": 10}], "time": 8, "category": "crafting", "result": "grenade", "result_count": 1 },
-    
-    "science-pack-3": { "ingredients": [{"item": "piercing-rounds-magazine", "amount": 1}, {"item": "grenade", "amount": 1}, {"item": "wall", "amount": 2}], "time": 10, "category": "crafting", "result": "science-pack-3", "result_count": 1 },
-    "science-pack-4": { "ingredients": [{"item": "engine-unit", "amount": 2}, {"item": "sulfur", "amount": 1}, {"item": "plastic-bar", "amount": 1}], "time": 24, "category": "crafting", "result": "science-pack-4", "result_count": 1 },
-    
-    "mining-crude-oil": { "ingredients": [], "time": 2, "category": "mining", "result": "crude-oil", "result_count": 1 },
-
-    "advanced-oil-processing": { "ingredients": [{"item": "water", "amount": 50}, {"item": "crude-oil", "amount": 100}], "time": 5, "category": "oil-processing", "result": "petroleum-gas", "result_count": 50, "byproducts": [{"item": "heavy-oil", "amount": 25}, {"item": "light-oil", "amount": 45}] },
-    "heavy-oil-cracking": { "ingredients": [{"item": "heavy-oil", "amount": 40}, {"item": "water", "amount": 30}], "time": 2, "category": "chemistry", "result": "light-oil", "result_count": 30 },
-    "light-oil-cracking": { "ingredients": [{"item": "light-oil", "amount": 30}, {"item": "water", "amount": 30}], "time": 2, "category": "chemistry", "result": "petroleum-gas", "result_count": 20 },
-    "solid-fuel-from-light-oil": { "ingredients": [{"item": "light-oil", "amount": 10}], "time": 2, "category": "chemistry", "result": "solid-fuel", "result_count": 1 },
-    "solid-fuel-from-heavy-oil": { "ingredients": [{"item": "heavy-oil", "amount": 20}], "time": 2, "category": "chemistry", "result": "solid-fuel", "result_count": 1 },
-    "lubricant": { "ingredients": [{"item": "heavy-oil", "amount": 10}, {"item": "sulfuric-acid", "amount": 1}], "time": 1, "category": "chemistry", "result": "lubricant", "result_count": 10 },
-    
-    "processing-unit": { "ingredients": [{"item": "electronic-circuit", "amount": 20}, {"item": "advanced-circuit", "amount": 2}, {"item": "sulfuric-acid", "amount": 5}], "time": 10, "category": "crafting", "result": "processing-unit", "result_count": 1 },
-    "electric-engine-unit": { "ingredients": [{"item": "engine-unit", "amount": 1}, {"item": "electronic-circuit", "amount": 2}, {"item": "lubricant", "amount": 1}], "time": 10, "category": "crafting", "result": "electric-engine-unit", "result_count": 1 },
-    "flying-robot-frame": { "ingredients": [{"item": "electric-engine-unit", "amount": 1}, {"item": "battery", "amount": 2}, {"item": "steel", "amount": 1}, {"item": "electronic-circuit", "amount": 3}], "time": 20, "category": "crafting", "result": "flying-robot-frame", "result_count": 1 },
-    "low-density-structure": { "ingredients": [{"item": "steel", "amount": 2}, {"item": "plastic-bar", "amount": 5}], "time": 20, "category": "crafting", "result": "low-density-structure", "result_count": 1 },
-    "rocket-fuel": { "ingredients": [{"item": "solid-fuel", "amount": 10}, {"item": "light-oil", "amount": 10}], "time": 10, "category": "chemistry", "result": "rocket-fuel", "result_count": 1 },
-    
-    "uranium-processing": { "ingredients": [{"item": "uranium-ore", "amount": 10}, {"item": "sulfuric-acid", "amount": 10}], "time": 5, "category": "centrifuging", "result": "uranium-235", "result_count": 1, "byproducts": [{"item": "uranium-238", "amount": 199}] },
-    "uranium-fuel-cell": { "ingredients": [{"item": "uranium-235", "amount": 1}, {"item": "uranium-238", "amount": 19}, {"item": "iron-plate", "amount": 10}], "time": 10, "category": "crafting", "result": "uranium-fuel-cell", "result_count": 10 },
-    
-    "substation": { "ingredients": [{"item": "steel", "amount": 10}, {"item": "advanced-circuit", "amount": 5}], "time": 0.5, "category": "crafting", "result": "substation", "result_count": 1 },
-    "tank": { "ingredients": [{"item": "engine-unit", "amount": 16}, {"item": "iron-gear-wheel", "amount": 15}, {"item": "steel", "amount": 20}, {"item": "electronic-circuit", "amount": 10}], "time": 5, "category": "crafting", "result": "tank", "result_count": 1 },
-    "logistic-robot": { "ingredients": [{"item": "flying-robot-frame", "amount": 1}, {"item": "electronic-circuit", "amount": 2}], "time": 0.5, "category": "crafting", "result": "logistic-robot", "result_count": 1 },
-    "construction-robot": { "ingredients": [{"item": "flying-robot-frame", "amount": 1}, {"item": "electronic-circuit", "amount": 2}], "time": 0.5, "category": "crafting", "result": "construction-robot", "result_count": 1 },
-    "logistic-chest-passive-provider": { "ingredients": [{"item": "steel-chest", "amount": 1}, {"item": "electronic-circuit", "amount": 2}], "time": 0.5, "category": "crafting", "result": "logistic-chest-passive-provider", "result_count": 1 },
-    "logistic-chest-storage": { "ingredients": [{"item": "steel-chest", "amount": 1}, {"item": "electronic-circuit", "amount": 2}], "time": 0.5, "category": "crafting", "result": "logistic-chest-storage", "result_count": 1 },
-    "roboport": { "ingredients": [{"item": "steel", "amount": 45}, {"item": "iron-gear-wheel", "amount": 45}, {"item": "advanced-circuit", "amount": 45}, {"item": "processing-unit", "amount": 10}], "time": 5, "category": "crafting", "result": "roboport", "result_count": 1 },
-    "selector-combinator": { "ingredients": [{"item": "electronic-circuit", "amount": 5}, {"item": "copper-cable", "amount": 5}], "time": 0.5, "category": "crafting", "result": "selector-combinator", "result_count": 1 },
-    
-    "nuclear-reactor": { "ingredients": [{"item": "steel", "amount": 500}, {"item": "advanced-circuit", "amount": 500}, {"item": "concrete", "amount": 500}], "time": 8, "category": "crafting", "result": "nuclear-reactor", "result_count": 1 },
-    "heat-pipe": { "ingredients": [{"item": "steel", "amount": 10}, {"item": "copper-plate", "amount": 20}], "time": 0.5, "category": "crafting", "result": "heat-pipe", "result_count": 1 },
-    "heat-exchanger": { "ingredients": [{"item": "steel", "amount": 10}, {"item": "copper-plate", "amount": 20}, {"item": "pipe", "amount": 5}], "time": 0.5, "category": "crafting", "result": "heat-exchanger", "result_count": 1 },
-    "steam-turbine": { "ingredients": [{"item": "iron-gear-wheel", "amount": 50}, {"item": "copper-plate", "amount": 50}, {"item": "pipe", "amount": 20}], "time": 0.5, "category": "crafting", "result": "steam-turbine", "result_count": 1 },
-    "electric-furnace": { "ingredients": [{"item": "steel", "amount": 10}, {"item": "advanced-circuit", "amount": 5}], "time": 5, "category": "crafting", "result": "electric-furnace", "result_count": 1 },
-    "centrifuge": { "ingredients": [{"item": "iron-gear-wheel", "amount": 100}, {"item": "advanced-circuit", "amount": 100}, {"item": "steel", "amount": 50}, {"item": "concrete", "amount": 50}], "time": 4, "category": "crafting", "result": "centrifuge", "result_count": 1 },
-    
-    "rocket-silo": { "ingredients": [{"item": "steel", "amount": 1000}, {"item": "concrete", "amount": 1000}, {"item": "iron-gear-wheel", "amount": 200}, {"item": "advanced-circuit", "amount": 200}], "time": 30, "category": "crafting", "result": "rocket-silo", "result_count": 1 },
-    "landing-pad": { "ingredients": [{"item": "steel", "amount": 20}, {"item": "concrete", "amount": 20}], "time": 2, "category": "crafting", "result": "landing-pad", "result_count": 1 },
-    "space-platform-foundation": { "ingredients": [{"item": "steel", "amount": 1}, {"item": "concrete", "amount": 1}], "time": 0.5, "category": "crafting", "result": "space-platform-foundation", "result_count": 1 },
-    "cargo-bay": { "ingredients": [{"item": "steel", "amount": 20}, {"item": "iron-gear-wheel", "amount": 10}], "time": 1, "category": "crafting", "result": "cargo-bay", "result_count": 1 },
-    "asteroid-collector": { "ingredients": [{"item": "steel", "amount": 20}, {"item": "iron-gear-wheel", "amount": 10}, {"item": "advanced-circuit", "amount": 10}], "time": 2, "category": "crafting", "result": "asteroid-collector", "result_count": 1 },
-    "crusher": { "ingredients": [{"item": "steel", "amount": 20}, {"item": "iron-gear-wheel", "amount": 10}, {"item": "advanced-circuit", "amount": 10}], "time": 2, "category": "crafting", "result": "crusher", "result_count": 1 },
-    "space-platform-starter-pack": { "ingredients": [{"item": "steel", "amount": 10}, {"item": "concrete", "amount": 10}, {"item": "advanced-circuit", "amount": 5}], "time": 1, "category": "crafting", "result": "space-platform-starter-pack", "result_count": 1 },
-    
-    "crush-metallic-asteroid": { "ingredients": [{"item": "metallic-asteroid", "amount": 1}], "time": 2, "category": "crushing", "result": "iron-ore", "result_count": 10, "byproducts": [{"item": "metallic-asteroid-chunk", "amount": 2}] },
-    "crush-carbonic-asteroid": { "ingredients": [{"item": "carbonic-asteroid", "amount": 1}], "time": 2, "category": "crushing", "result": "coal", "result_count": 10, "byproducts": [{"item": "carbonic-asteroid-chunk", "amount": 2}] },
-    "crush-oxidic-asteroid": { "ingredients": [{"item": "oxidic-asteroid", "amount": 1}], "time": 2, "category": "crushing", "result": "stone", "result_count": 10, "byproducts": [{"item": "oxidic-asteroid-chunk", "amount": 2}] },
-    
-    "cannon-shell": { "ingredients": [{"item": "steel", "amount": 2}, {"item": "explosives", "amount": 2}], "time": 5, "category": "crafting", "result": "cannon-shell", "result_count": 1 },
-    "explosive-cannon-shell": { "ingredients": [{"item": "steel", "amount": 2}, {"item": "explosives", "amount": 4}, {"item": "plastic-bar", "amount": 2}], "time": 8, "category": "crafting", "result": "explosive-cannon-shell", "result_count": 1 },
-    "rocket": { "ingredients": [{"item": "explosives", "amount": 1}, {"item": "iron-plate", "amount": 2}], "time": 5, "category": "crafting", "result": "rocket", "result_count": 1 },
-    "explosive-rocket": { "ingredients": [{"item": "rocket", "amount": 1}, {"item": "explosives", "amount": 5}], "time": 8, "category": "crafting", "result": "explosive-rocket", "result_count": 1 },
-    "flamethrower-ammo": { "ingredients": [{"item": "steel", "amount": 5}, {"item": "crude-oil", "amount": 100}], "time": 5, "category": "chemistry", "result": "flamethrower-ammo", "result_count": 1 },
-    "poison-capsule": { "ingredients": [{"item": "steel", "amount": 3}, {"item": "electronic-circuit", "amount": 3}, {"item": "coal", "amount": 10}], "time": 5, "category": "crafting", "result": "poison-capsule", "result_count": 1 },
-    "slowdown-capsule": { "ingredients": [{"item": "steel", "amount": 2}, {"item": "electronic-circuit", "amount": 2}, {"item": "coal", "amount": 5}], "time": 5, "category": "crafting", "result": "slowdown-capsule", "result_count": 1 },
-    "defender-capsule": { "ingredients": [{"item": "piercing-rounds-magazine", "amount": 1}, {"item": "electronic-circuit", "amount": 3}, {"item": "iron-gear-wheel", "amount": 3}], "time": 8, "category": "crafting", "result": "defender-capsule", "result_count": 1 },
-    "distractor-capsule": { "ingredients": [{"item": "defender-capsule", "amount": 4}, {"item": "advanced-circuit", "amount": 3}], "time": 15, "category": "crafting", "result": "distractor-capsule", "result_count": 1 },
-    "land-mine": { "ingredients": [{"item": "steel", "amount": 1}, {"item": "explosives", "amount": 2}], "time": 5, "category": "crafting", "result": "land-mine", "result_count": 4 },
-    "laser-turret": { "ingredients": [{"item": "steel", "amount": 20}, {"item": "electronic-circuit", "amount": 20}], "time": 20, "category": "crafting", "result": "laser-turret", "result_count": 1 },
-    "flamethrower-turret": { "ingredients": [{"item": "steel", "amount": 20}, {"item": "iron-gear-wheel", "amount": 10}, {"item": "pipe", "amount": 10}], "time": 20, "category": "crafting", "result": "flamethrower-turret", "result_count": 1 },
-    
-    "science-pack-5": { "ingredients": [{"item": "electric-engine-unit", "amount": 1}, {"item": "processing-unit", "amount": 1}, {"item": "flying-robot-frame", "amount": 1}], "time": 21, "category": "crafting", "result": "science-pack-5", "result_count": 1 },
-    "science-pack-6": { "ingredients": [{"item": "low-density-structure", "amount": 1}, {"item": "processing-unit", "amount": 1}, {"item": "rocket-fuel", "amount": 1}], "time": 21, "category": "crafting", "result": "science-pack-6", "result_count": 1 },
-    "science-pack-7": { "ingredients": [{"item": "rocket-fuel", "amount": 1}, {"item": "low-density-structure", "amount": 1}, {"item": "processing-unit", "amount": 1}], "time": 21, "category": "crafting", "result": "science-pack-7", "result_count": 1 },
-    
-    "mining-uranium-ore": { "ingredients": [], "time": 2, "category": "mining", "result": "uranium-ore", "result_count": 1 }
+    "iron-plate": {
+      "ingredients": [
+        {
+          "item": "iron-ore",
+          "amount": 1
+        }
+      ],
+      "time": 3.2,
+      "category": "smelting",
+      "result": "iron-plate",
+      "result_count": 1
+    },
+    "copper-plate": {
+      "ingredients": [
+        {
+          "item": "copper-ore",
+          "amount": 1
+        }
+      ],
+      "time": 3.2,
+      "category": "smelting",
+      "result": "copper-plate",
+      "result_count": 1
+    },
+    "steel": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 5
+        }
+      ],
+      "time": 16,
+      "category": "smelting",
+      "result": "steel",
+      "result_count": 1
+    },
+    "stone-brick": {
+      "ingredients": [
+        {
+          "item": "stone",
+          "amount": 2
+        }
+      ],
+      "time": 3.2,
+      "category": "smelting",
+      "result": "stone-brick",
+      "result_count": 1
+    },
+    "iron-gear-wheel": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 2
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "iron-gear-wheel",
+      "result_count": 1
+    },
+    "copper-cable": {
+      "ingredients": [
+        {
+          "item": "copper-plate",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "copper-cable",
+      "result_count": 2
+    },
+    "electronic-circuit": {
+      "ingredients": [
+        {
+          "item": "copper-cable",
+          "amount": 3
+        },
+        {
+          "item": "iron-plate",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "electronic-circuit",
+      "result_count": 1
+    },
+    "pipe": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "pipe",
+      "result_count": 1
+    },
+    "wooden-chest": {
+      "ingredients": [
+        {
+          "item": "wood",
+          "amount": 2
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "wooden-chest",
+      "result_count": 1
+    },
+    "iron-chest": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 8
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "iron-chest",
+      "result_count": 1
+    },
+    "steel-chest": {
+      "ingredients": [
+        {
+          "item": "steel",
+          "amount": 8
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "steel-chest",
+      "result_count": 1
+    },
+    "transport-belt": {
+      "ingredients": [
+        {
+          "item": "iron-gear-wheel",
+          "amount": 1
+        },
+        {
+          "item": "iron-plate",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "transport-belt",
+      "result_count": 1
+    },
+    "underground-belt": {
+      "ingredients": [
+        {
+          "item": "transport-belt",
+          "amount": 5
+        },
+        {
+          "item": "iron-plate",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "underground-belt",
+      "result_count": 2
+    },
+    "splitter": {
+      "ingredients": [
+        {
+          "item": "transport-belt",
+          "amount": 1
+        },
+        {
+          "item": "iron-gear-wheel",
+          "amount": 1
+        },
+        {
+          "item": "electronic-circuit",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "splitter",
+      "result_count": 1
+    },
+    "burner-inserter": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 2
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "burner-inserter",
+      "result_count": 1
+    },
+    "inserter": {
+      "ingredients": [
+        {
+          "item": "iron-gear-wheel",
+          "amount": 1
+        },
+        {
+          "item": "iron-plate",
+          "amount": 1
+        },
+        {
+          "item": "electronic-circuit",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "inserter",
+      "result_count": 1
+    },
+    "long-handed-inserter": {
+      "ingredients": [
+        {
+          "item": "iron-gear-wheel",
+          "amount": 1
+        },
+        {
+          "item": "iron-plate",
+          "amount": 1
+        },
+        {
+          "item": "inserter",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "long-handed-inserter",
+      "result_count": 1
+    },
+    "fast-inserter": {
+      "ingredients": [
+        {
+          "item": "iron-gear-wheel",
+          "amount": 1
+        },
+        {
+          "item": "electronic-circuit",
+          "amount": 1
+        },
+        {
+          "item": "inserter",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "fast-inserter",
+      "result_count": 1
+    },
+    "stone-furnace": {
+      "ingredients": [
+        {
+          "item": "stone",
+          "amount": 5
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "stone-furnace",
+      "result_count": 1
+    },
+    "burner-mining-drill": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 3
+        },
+        {
+          "item": "iron-gear-wheel",
+          "amount": 1
+        }
+      ],
+      "time": 2,
+      "category": "crafting",
+      "result": "burner-mining-drill",
+      "result_count": 1
+    },
+    "electric-mining-drill": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 3
+        },
+        {
+          "item": "iron-gear-wheel",
+          "amount": 1
+        },
+        {
+          "item": "electronic-circuit",
+          "amount": 1
+        }
+      ],
+      "time": 2,
+      "category": "crafting",
+      "result": "electric-mining-drill",
+      "result_count": 1
+    },
+    "assembling-machine-1": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 3
+        },
+        {
+          "item": "iron-gear-wheel",
+          "amount": 3
+        },
+        {
+          "item": "electronic-circuit",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "assembling-machine-1",
+      "result_count": 1
+    },
+    "offshore-pump": {
+      "ingredients": [
+        {
+          "item": "iron-gear-wheel",
+          "amount": 2
+        },
+        {
+          "item": "pipe",
+          "amount": 2
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "offshore-pump",
+      "result_count": 1
+    },
+    "boiler": {
+      "ingredients": [
+        {
+          "item": "pipe",
+          "amount": 4
+        },
+        {
+          "item": "stone-furnace",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "boiler",
+      "result_count": 1
+    },
+    "steam-engine": {
+      "ingredients": [
+        {
+          "item": "iron-gear-wheel",
+          "amount": 8
+        },
+        {
+          "item": "pipe",
+          "amount": 5
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "steam-engine",
+      "result_count": 1
+    },
+    "small-electric-pole": {
+      "ingredients": [
+        {
+          "item": "wood",
+          "amount": 1
+        },
+        {
+          "item": "copper-cable",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "small-electric-pole",
+      "result_count": 2
+    },
+    "lamp": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 1
+        },
+        {
+          "item": "copper-cable",
+          "amount": 1
+        },
+        {
+          "item": "electronic-circuit",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "lamp",
+      "result_count": 1
+    },
+    "pipe-to-ground": {
+      "ingredients": [
+        {
+          "item": "pipe",
+          "amount": 5
+        },
+        {
+          "item": "iron-plate",
+          "amount": 2
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "pipe-to-ground",
+      "result_count": 1
+    },
+    "lab": {
+      "ingredients": [
+        {
+          "item": "iron-gear-wheel",
+          "amount": 10
+        },
+        {
+          "item": "electronic-circuit",
+          "amount": 10
+        },
+        {
+          "item": "transport-belt",
+          "amount": 4
+        }
+      ],
+      "time": 3,
+      "category": "crafting",
+      "result": "lab",
+      "result_count": 1
+    },
+    "radar": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 5
+        },
+        {
+          "item": "electronic-circuit",
+          "amount": 5
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "radar",
+      "result_count": 1
+    },
+    "wall": {
+      "ingredients": [
+        {
+          "item": "stone-brick",
+          "amount": 5
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "wall",
+      "result_count": 1
+    },
+    "gun-turret": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 5
+        },
+        {
+          "item": "iron-gear-wheel",
+          "amount": 10
+        },
+        {
+          "item": "electronic-circuit",
+          "amount": 5
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "gun-turret",
+      "result_count": 1
+    },
+    "repair-pack": {
+      "ingredients": [
+        {
+          "item": "iron-gear-wheel",
+          "amount": 2
+        },
+        {
+          "item": "electronic-circuit",
+          "amount": 2
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "repair-pack",
+      "result_count": 1
+    },
+    "firearm-magazine": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 4
+        }
+      ],
+      "time": 1,
+      "category": "crafting",
+      "result": "firearm-magazine",
+      "result_count": 1
+    },
+    "shotgun-shell": {
+      "ingredients": [
+        {
+          "item": "copper-plate",
+          "amount": 2
+        },
+        {
+          "item": "iron-plate",
+          "amount": 2
+        }
+      ],
+      "time": 3,
+      "category": "crafting",
+      "result": "shotgun-shell",
+      "result_count": 1
+    },
+    "science-pack-1": {
+      "ingredients": [
+        {
+          "item": "iron-gear-wheel",
+          "amount": 1
+        },
+        {
+          "item": "copper-plate",
+          "amount": 1
+        }
+      ],
+      "time": 5,
+      "category": "crafting",
+      "result": "science-pack-1",
+      "result_count": 1
+    },
+    "science-pack-2": {
+      "ingredients": [
+        {
+          "item": "inserter",
+          "amount": 1
+        },
+        {
+          "item": "transport-belt",
+          "amount": 1
+        }
+      ],
+      "time": 6,
+      "category": "crafting",
+      "result": "science-pack-2",
+      "result_count": 1
+    },
+    "mining-iron-ore": {
+      "ingredients": [],
+      "time": 2,
+      "category": "mining",
+      "result": "iron-ore",
+      "result_count": 1
+    },
+    "mining-copper-ore": {
+      "ingredients": [],
+      "time": 2,
+      "category": "mining",
+      "result": "copper-ore",
+      "result_count": 1
+    },
+    "mining-coal": {
+      "ingredients": [],
+      "time": 2,
+      "category": "mining",
+      "result": "coal",
+      "result_count": 1
+    },
+    "mining-stone": {
+      "ingredients": [],
+      "time": 2,
+      "category": "mining",
+      "result": "stone",
+      "result_count": 1
+    },
+    "pumping-water": {
+      "ingredients": [],
+      "time": 1,
+      "category": "pumping",
+      "result": "water",
+      "result_count": 1
+    },
+    "fast-transport-belt": {
+      "ingredients": [
+        {
+          "item": "iron-gear-wheel",
+          "amount": 1
+        },
+        {
+          "item": "transport-belt",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "fast-transport-belt",
+      "result_count": 1
+    },
+    "fast-underground-belt": {
+      "ingredients": [
+        {
+          "item": "fast-transport-belt",
+          "amount": 5
+        },
+        {
+          "item": "iron-gear-wheel",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "fast-underground-belt",
+      "result_count": 2
+    },
+    "fast-splitter": {
+      "ingredients": [
+        {
+          "item": "fast-transport-belt",
+          "amount": 1
+        },
+        {
+          "item": "iron-gear-wheel",
+          "amount": 1
+        },
+        {
+          "item": "advanced-circuit",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "fast-splitter",
+      "result_count": 1
+    },
+    "stack-inserter": {
+      "ingredients": [
+        {
+          "item": "iron-gear-wheel",
+          "amount": 1
+        },
+        {
+          "item": "advanced-circuit",
+          "amount": 1
+        },
+        {
+          "item": "inserter",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "stack-inserter",
+      "result_count": 1
+    },
+    "medium-electric-pole": {
+      "ingredients": [
+        {
+          "item": "iron-stick",
+          "amount": 2
+        },
+        {
+          "item": "advanced-circuit",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "medium-electric-pole",
+      "result_count": 1
+    },
+    "big-electric-pole": {
+      "ingredients": [
+        {
+          "item": "iron-stick",
+          "amount": 5
+        },
+        {
+          "item": "advanced-circuit",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "big-electric-pole",
+      "result_count": 1
+    },
+    "pump": {
+      "ingredients": [
+        {
+          "item": "engine-unit",
+          "amount": 1
+        },
+        {
+          "item": "pipe",
+          "amount": 1
+        },
+        {
+          "item": "iron-gear-wheel",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "pump",
+      "result_count": 1
+    },
+    "rail": {
+      "ingredients": [
+        {
+          "item": "iron-stick",
+          "amount": 1
+        },
+        {
+          "item": "steel",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "rail",
+      "result_count": 2
+    },
+    "train-stop": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 10
+        },
+        {
+          "item": "steel",
+          "amount": 5
+        },
+        {
+          "item": "electronic-circuit",
+          "amount": 5
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "train-stop",
+      "result_count": 1
+    },
+    "rail-signal": {
+      "ingredients": [
+        {
+          "item": "electronic-circuit",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "rail-signal",
+      "result_count": 1
+    },
+    "rail-chain-signal": {
+      "ingredients": [
+        {
+          "item": "electronic-circuit",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "rail-chain-signal",
+      "result_count": 1
+    },
+    "locomotive": {
+      "ingredients": [
+        {
+          "item": "engine-unit",
+          "amount": 10
+        },
+        {
+          "item": "electronic-circuit",
+          "amount": 5
+        },
+        {
+          "item": "steel",
+          "amount": 20
+        }
+      ],
+      "time": 5,
+      "category": "crafting",
+      "result": "locomotive",
+      "result_count": 1
+    },
+    "cargo-wagon": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 20
+        },
+        {
+          "item": "iron-gear-wheel",
+          "amount": 5
+        },
+        {
+          "item": "steel",
+          "amount": 5
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "cargo-wagon",
+      "result_count": 1
+    },
+    "fluid-wagon": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 20
+        },
+        {
+          "item": "iron-gear-wheel",
+          "amount": 5
+        },
+        {
+          "item": "pipe",
+          "amount": 4
+        },
+        {
+          "item": "steel",
+          "amount": 5
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "fluid-wagon",
+      "result_count": 1
+    },
+    "arithmetic-combinator": {
+      "ingredients": [
+        {
+          "item": "electronic-circuit",
+          "amount": 5
+        },
+        {
+          "item": "copper-cable",
+          "amount": 5
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "arithmetic-combinator",
+      "result_count": 1
+    },
+    "decider-combinator": {
+      "ingredients": [
+        {
+          "item": "electronic-circuit",
+          "amount": 5
+        },
+        {
+          "item": "copper-cable",
+          "amount": 5
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "decider-combinator",
+      "result_count": 1
+    },
+    "constant-combinator": {
+      "ingredients": [
+        {
+          "item": "electronic-circuit",
+          "amount": 5
+        },
+        {
+          "item": "copper-cable",
+          "amount": 5
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "constant-combinator",
+      "result_count": 1
+    },
+    "power-switch": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 2
+        },
+        {
+          "item": "electronic-circuit",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "power-switch",
+      "result_count": 1
+    },
+    "programmable-speaker": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 2
+        },
+        {
+          "item": "electronic-circuit",
+          "amount": 1
+        },
+        {
+          "item": "copper-cable",
+          "amount": 2
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "programmable-speaker",
+      "result_count": 1
+    },
+    "display-panel": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 2
+        },
+        {
+          "item": "electronic-circuit",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "display-panel",
+      "result_count": 1
+    },
+    "concrete": {
+      "ingredients": [
+        {
+          "item": "iron-ore",
+          "amount": 1
+        },
+        {
+          "item": "coal",
+          "amount": 1
+        },
+        {
+          "item": "stone",
+          "amount": 5
+        },
+        {
+          "item": "water",
+          "amount": 10
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "concrete",
+      "result_count": 1
+    },
+    "hazard-concrete": {
+      "ingredients": [
+        {
+          "item": "concrete",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "hazard-concrete",
+      "result_count": 1
+    },
+    "refined-concrete": {
+      "ingredients": [
+        {
+          "item": "concrete",
+          "amount": 1
+        },
+        {
+          "item": "steel",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "refined-concrete",
+      "result_count": 1
+    },
+    "refined-hazard-concrete": {
+      "ingredients": [
+        {
+          "item": "refined-concrete",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "refined-hazard-concrete",
+      "result_count": 1
+    },
+    "landfill": {
+      "ingredients": [
+        {
+          "item": "stone",
+          "amount": 5
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "landfill",
+      "result_count": 1
+    },
+    "solar-panel": {
+      "ingredients": [
+        {
+          "item": "steel",
+          "amount": 5
+        },
+        {
+          "item": "electronic-circuit",
+          "amount": 5
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "solar-panel",
+      "result_count": 1
+    },
+    "accumulator": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 2
+        },
+        {
+          "item": "battery",
+          "amount": 5
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "accumulator",
+      "result_count": 1
+    },
+    "pumpjack": {
+      "ingredients": [
+        {
+          "item": "iron-gear-wheel",
+          "amount": 5
+        },
+        {
+          "item": "electronic-circuit",
+          "amount": 5
+        },
+        {
+          "item": "pipe",
+          "amount": 10
+        }
+      ],
+      "time": 2,
+      "category": "crafting",
+      "result": "pumpjack",
+      "result_count": 1
+    },
+    "steel-furnace": {
+      "ingredients": [
+        {
+          "item": "steel",
+          "amount": 6
+        }
+      ],
+      "time": 3,
+      "category": "crafting",
+      "result": "steel-furnace",
+      "result_count": 1
+    },
+    "assembling-machine-2": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 3
+        },
+        {
+          "item": "iron-gear-wheel",
+          "amount": 1
+        },
+        {
+          "item": "electronic-circuit",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "assembling-machine-2",
+      "result_count": 1
+    },
+    "oil-refinery": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 15
+        },
+        {
+          "item": "iron-gear-wheel",
+          "amount": 10
+        },
+        {
+          "item": "pipe",
+          "amount": 10
+        },
+        {
+          "item": "electronic-circuit",
+          "amount": 10
+        }
+      ],
+      "time": 5,
+      "category": "crafting",
+      "result": "oil-refinery",
+      "result_count": 1
+    },
+    "chemical-plant": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 5
+        },
+        {
+          "item": "iron-gear-wheel",
+          "amount": 5
+        },
+        {
+          "item": "pipe",
+          "amount": 5
+        },
+        {
+          "item": "electronic-circuit",
+          "amount": 5
+        }
+      ],
+      "time": 5,
+      "category": "crafting",
+      "result": "chemical-plant",
+      "result_count": 1
+    },
+    "speed-module": {
+      "ingredients": [
+        {
+          "item": "advanced-circuit",
+          "amount": 5
+        },
+        {
+          "item": "speed-module-1",
+          "amount": 1
+        }
+      ],
+      "time": 15,
+      "category": "crafting",
+      "result": "speed-module",
+      "result_count": 1
+    },
+    "efficiency-module": {
+      "ingredients": [
+        {
+          "item": "advanced-circuit",
+          "amount": 5
+        },
+        {
+          "item": "efficiency-module-1",
+          "amount": 1
+        }
+      ],
+      "time": 15,
+      "category": "crafting",
+      "result": "efficiency-module",
+      "result_count": 1
+    },
+    "productivity-module": {
+      "ingredients": [
+        {
+          "item": "advanced-circuit",
+          "amount": 5
+        },
+        {
+          "item": "productivity-module-1",
+          "amount": 1
+        }
+      ],
+      "time": 15,
+      "category": "crafting",
+      "result": "productivity-module",
+      "result_count": 1
+    },
+    "quality-module": {
+      "ingredients": [
+        {
+          "item": "advanced-circuit",
+          "amount": 5
+        }
+      ],
+      "time": 15,
+      "category": "crafting",
+      "result": "quality-module",
+      "result_count": 1
+    },
+    "basic-oil-processing": {
+      "ingredients": [
+        {
+          "item": "water",
+          "amount": 10
+        }
+      ],
+      "time": 5,
+      "category": "oil-processing",
+      "result": "petroleum-gas",
+      "result_count": 3
+    },
+    "solid-fuel-from-petroleum-gas": {
+      "ingredients": [
+        {
+          "item": "petroleum-gas",
+          "amount": 10
+        }
+      ],
+      "time": 2,
+      "category": "crafting",
+      "result": "solid-fuel",
+      "result_count": 1
+    },
+    "sulfuric-acid": {
+      "ingredients": [
+        {
+          "item": "sulfur",
+          "amount": 5
+        },
+        {
+          "item": "iron-plate",
+          "amount": 1
+        },
+        {
+          "item": "water",
+          "amount": 30
+        }
+      ],
+      "time": 6,
+      "category": "chemistry",
+      "result": "sulfuric-acid",
+      "result_count": 50
+    },
+    "plastic-bar": {
+      "ingredients": [
+        {
+          "item": "petroleum-gas",
+          "amount": 30
+        },
+        {
+          "item": "coal",
+          "amount": 1
+        }
+      ],
+      "time": 1,
+      "category": "chemistry",
+      "result": "plastic-bar",
+      "result_count": 2
+    },
+    "sulfur": {
+      "ingredients": [
+        {
+          "item": "petroleum-gas",
+          "amount": 30
+        },
+        {
+          "item": "water",
+          "amount": 30
+        }
+      ],
+      "time": 6,
+      "category": "chemistry",
+      "result": "sulfur",
+      "result_count": 2
+    },
+    "battery": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 1
+        },
+        {
+          "item": "copper-plate",
+          "amount": 1
+        },
+        {
+          "item": "sulfuric-acid",
+          "amount": 20
+        }
+      ],
+      "time": 5,
+      "category": "chemistry",
+      "result": "battery",
+      "result_count": 1
+    },
+    "explosives": {
+      "ingredients": [
+        {
+          "item": "sulfur",
+          "amount": 2
+        },
+        {
+          "item": "coal",
+          "amount": 1
+        },
+        {
+          "item": "iron-plate",
+          "amount": 1
+        }
+      ],
+      "time": 5,
+      "category": "crafting",
+      "result": "explosives",
+      "result_count": 2
+    },
+    "iron-stick": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 1
+        }
+      ],
+      "time": 0.5,
+      "category": "crafting",
+      "result": "iron-stick",
+      "result_count": 2
+    },
+    "barrel": {
+      "ingredients": [
+        {
+          "item": "steel",
+          "amount": 1
+        }
+      ],
+      "time": 1,
+      "category": "crafting",
+      "result": "barrel",
+      "result_count": 1
+    },
+    "advanced-circuit": {
+      "ingredients": [
+        {
+          "item": "electronic-circuit",
+          "amount": 2
+        },
+        {
+          "item": "plastic-bar",
+          "amount": 2
+        },
+        {
+          "item": "copper-cable",
+          "amount": 4
+        }
+      ],
+      "time": 6,
+      "category": "crafting",
+      "result": "advanced-circuit",
+      "result_count": 1
+    },
+    "engine-unit": {
+      "ingredients": [
+        {
+          "item": "iron-gear-wheel",
+          "amount": 1
+        },
+        {
+          "item": "iron-stick",
+          "amount": 1
+        },
+        {
+          "item": "pipe",
+          "amount": 2
+        }
+      ],
+      "time": 10,
+      "category": "crafting",
+      "result": "engine-unit",
+      "result_count": 1
+    },
+    "piercing-rounds-magazine": {
+      "ingredients": [
+        {
+          "item": "firearm-magazine",
+          "amount": 1
+        },
+        {
+          "item": "steel",
+          "amount": 1
+        }
+      ],
+      "time": 3,
+      "category": "crafting",
+      "result": "piercing-rounds-magazine",
+      "result_count": 1
+    },
+    "grenade": {
+      "ingredients": [
+        {
+          "item": "iron-plate",
+          "amount": 5
+        },
+        {
+          "item": "coal",
+          "amount": 10
+        }
+      ],
+      "time": 8,
+      "category": "crafting",
+      "result": "grenade",
+      "result_count": 1
+    },
+    "science-pack-3": {
+      "ingredients": [
+        {
+          "item": "piercing-rounds-magazine",
+          "amount": 1
+        },
+        {
+          "item": "grenade",
+          "amount": 1
+        },
+        {
+          "item": "wall",
+          "amount": 2
+        }
+      ],
+      "time": 10,
+      "category": "crafting",
+      "result": "science-pack-3",
+      "result_count": 1
+    },
+    "science-pack-4": {
+      "ingredients": [
+        {
+          "item": "engine-unit",
+          "amount": 2
+        },
+        {
+          "item": "sulfur",
+          "amount": 1
+        },
+        {
+          "item": "plastic-bar",
+          "amount": 1
+        }
+      ],
+      "time": 24,
+      "category": "crafting",
+      "result": "science-pack-4",
+      "result_count": 1
+    },
+    "mining-crude-oil": {
+      "ingredients": [],
+      "time": 2,
+      "category": "mining",
+      "result": "crude-oil",
+      "result_count": 1
+    }
   },
   "machines": {
-    "stone-furnace": { "name": "Horno de Piedra", "icon_url": "https://wiki.factorio.com/images/thumb/Stone_furnace.png/32px-Stone_furnace.png", "speed": 1, "categories": ["smelting"], "tier": 0 },
-    "assembling-machine-1": { "name": "Máquina de Ensamblaje 1", "icon_url": "https://wiki.factorio.com/images/thumb/Assembling_machine_1.png/32px-Assembling_machine_1.png", "speed": 0.5, "categories": ["crafting"], "tier": 1 },
-    "burner-mining-drill": { "name": "Perforadora de Combustión", "icon_url": "https://wiki.factorio.com/images/thumb/Burner_mining_drill.png/32px-Burner_mining_drill.png", "speed": 0.5, "categories": ["mining"], "tier": 0 },
-    "electric-mining-drill": { "name": "Perforadora Eléctrica", "icon_url": "https://wiki.factorio.com/images/thumb/Electric_mining_drill.png/32px-Electric_mining_drill.png", "speed": 0.5, "categories": ["mining"], "tier": 1 },
-    "offshore-pump": { "name": "Bomba costera", "icon_url": "https://wiki.factorio.com/images/thumb/Offshore_pump.png/32px-Offshore_pump.png", "speed": 1, "categories": ["pumping"], "tier": 0 },
-    "steel-furnace": { "name": "Horno de Acero", "icon_url": "https://wiki.factorio.com/images/thumb/Steel_furnace.png/32px-Steel_furnace.png", "speed": 2, "categories": ["smelting"], "tier": 2 },
-    "assembling-machine-2": { "name": "Máquina de Ensamblaje 2", "icon_url": "https://wiki.factorio.com/images/thumb/Assembling_machine_2.png/32px-Assembling_machine_2.png", "speed": 0.75, "categories": ["crafting"], "tier": 2 },
-    "oil-refinery": { "name": "Refinería de petróleo", "icon_url": "https://wiki.factorio.com/images/thumb/Oil_refinery.png/32px-Oil_refinery.png", "speed": 1, "categories": ["oil-processing"], "tier": 2 },
-    "chemical-plant": { "name": "Planta Química", "icon_url": "https://wiki.factorio.com/images/thumb/Chemical_plant.png/32px-Chemical_plant.png", "speed": 1, "categories": ["chemistry"], "tier": 2 },
-    "pumpjack": { "name": "Bomba Extractora", "icon_url": "https://wiki.factorio.com/images/thumb/Pumpjack.png/32px-Pumpjack.png", "speed": 1, "categories": ["pumping"], "tier": 2 },
-    "electric-furnace": { "name": "Horno eléctrico", "icon_url": "https://wiki.factorio.com/images/thumb/Electric_furnace.png/32px-Electric_furnace.png", "speed": 2, "categories": ["smelting"], "tier": 3 },
-    "centrifuge": { "name": "Centrifugadora", "icon_url": "https://wiki.factorio.com/images/thumb/Centrifuge.png/32px-Centrifuge.png", "speed": 1, "categories": ["centrifuging"], "tier": 3 },
-    "crusher": { "name": "Trituradora", "icon_url": "https://wiki.factorio.com/images/thumb/Crusher.png/32px-Crusher.png", "speed": 1, "categories": ["crushing"], "tier": 3 },
-    "asteroid-collector": { "name": "Recolector de asteroides", "icon_url": "https://wiki.factorio.com/images/thumb/Asteroid_collector.png/32px-Asteroid_collector.png", "speed": 1, "categories": ["asteroid-collecting"], "tier": 3 }
+    "stone-furnace": {
+      "name": "Horno de Piedra",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Stone_furnace.png/32px-Stone_furnace.png",
+      "speed": 1,
+      "categories": [
+        "smelting"
+      ],
+      "tier": 0
+    },
+    "assembling-machine-1": {
+      "name": "Máquina de Ensamblaje 1",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Assembling_machine_1.png/32px-Assembling_machine_1.png",
+      "speed": 0.5,
+      "categories": [
+        "crafting"
+      ],
+      "tier": 1
+    },
+    "burner-mining-drill": {
+      "name": "Perforadora de Combustión",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Burner_mining_drill.png/32px-Burner_mining_drill.png",
+      "speed": 0.5,
+      "categories": [
+        "mining"
+      ],
+      "tier": 0
+    },
+    "electric-mining-drill": {
+      "name": "Perforadora Eléctrica",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Electric_mining_drill.png/32px-Electric_mining_drill.png",
+      "speed": 0.5,
+      "categories": [
+        "mining"
+      ],
+      "tier": 1
+    },
+    "offshore-pump": {
+      "name": "Bomba costera",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Offshore_pump.png/32px-Offshore_pump.png",
+      "speed": 1,
+      "categories": [
+        "pumping"
+      ],
+      "tier": 0
+    },
+    "steel-furnace": {
+      "name": "Horno de Acero",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Steel_furnace.png/32px-Steel_furnace.png",
+      "speed": 2,
+      "categories": [
+        "smelting"
+      ],
+      "tier": 2
+    },
+    "assembling-machine-2": {
+      "name": "Máquina de Ensamblaje 2",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Assembling_machine_2.png/32px-Assembling_machine_2.png",
+      "speed": 0.75,
+      "categories": [
+        "crafting"
+      ],
+      "tier": 2
+    },
+    "oil-refinery": {
+      "name": "Refinería de petróleo",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Oil_refinery.png/32px-Oil_refinery.png",
+      "speed": 1,
+      "categories": [
+        "oil-processing"
+      ],
+      "tier": 2
+    },
+    "chemical-plant": {
+      "name": "Planta Química",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Chemical_plant.png/32px-Chemical_plant.png",
+      "speed": 1,
+      "categories": [
+        "chemistry"
+      ],
+      "tier": 2
+    },
+    "pumpjack": {
+      "name": "Bomba Extractora",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Pumpjack.png/32px-Pumpjack.png",
+      "speed": 1,
+      "categories": [
+        "pumping"
+      ],
+      "tier": 2
+    }
   }
 }
