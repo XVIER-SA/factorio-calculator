@@ -19,40 +19,23 @@
 			<section class="calculator">
 				<div class="input-group">
 					<label for="tier-select" class="main-label">Tier de tecnología:</label>
-					<div class="input-group">
-						<label class="main-label">Selecciona un item:</label>
-
-						<!-- Tabs de categorías -->
-						<div class="category-tabs">
-							<button class="tab-btn active" data-category="all">Todos</button>
-							<button class="tab-btn" data-category="logistics">Logística</button>
-							<button class="tab-btn" data-category="production">Producción</button>
-							<button class="tab-btn" data-category="resources">Recursos</button>
-							<button class="tab-btn" data-category="space">Espacio</button>
-							<button class="tab-btn" data-category="combat">Combate</button>
-						</div>
-
-						<!-- Búsqueda -->
-						<input type="text" id="item-search" placeholder="Buscar item..." class="search-input">
-
-						<!-- Grid de items -->
-						<div id="item-grid" class="item-grid">
-							<!-- Los items se generan con JS -->
-						</div>
-
-						<!-- Item seleccionado (oculto pero funcional) -->
-						<input type="hidden" id="item-select">
-						<div id="selected-item-display" class="selected-item-display">
-							Ningún item seleccionado
-						</div>
-					</div>
 				</div>
 				<div class="input-group">
-					<label for="item-select" class="main-label">Selecciona un item:</label>
-					<div class="select-wrapper">
-						<select id="item-select">
-							<!-- Las opciones se llenan con JS -->
-						</select>
+					<label class="main-label">Selecciona un item:</label>
+					<div class="category-tabs">
+						<button class="tab-btn active" data-category="logistics">Logística</button>
+						<button class="tab-btn" data-category="production">Producción</button>
+						<button class="tab-btn" data-category="resources">Recursos</button>
+						<button class="tab-btn" data-category="space">Espacio</button>
+						<button class="tab-btn" data-category="combat">Combate</button>
+					</div>
+					<input type="text" id="item-search" placeholder="Buscar item..." class="search-input">
+					<div id="item-grid" class="item-grid">
+						<p style="color: #888; text-align: center; padding: 20px;">Cargando items...</p>
+					</div>
+					<input type="hidden" id="item-select">
+					<div id="selected-item-display" class="selected-item-display">
+						Ningún ítem seleccionado
 					</div>
 				</div>
 				<div class="input-group">
