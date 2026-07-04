@@ -89,7 +89,7 @@
       "icon_url": "https://wiki.factorio.com/images/thumb/Stone_brick.png/32px-Stone_brick.png",
       "type": "intermediate",
       "unlock_tier": 0,
-      "category": "resources"
+      "category": "logistics"
     },
     "firearm-magazine": {
       "name": "Cargador de Munición",
@@ -233,7 +233,7 @@
     },
     "lamp": {
       "name": "Lámpara",
-      "icon_url": "https://wiki.factorio.com/images/thumb/Small_lamp.png/32px-Small_lamp.png",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Lamp.png/32px-Lamp.png",
       "type": "intermediate",
       "unlock_tier": 1,
       "category": "logistics"
@@ -243,7 +243,7 @@
       "icon_url": "https://wiki.factorio.com/images/thumb/Repair_pack.png/32px-Repair_pack.png",
       "type": "intermediate",
       "unlock_tier": 1,
-      "category": "resources"
+      "category": "production"
     },
     "electric-mining-drill": {
       "name": "Perforadora Eléctrica",
@@ -261,7 +261,7 @@
     },
     "shotgun-shell": {
       "name": "Cartucho de Escopeta",
-      "icon_url": "https://wiki.factorio.com/images/thumb/Shotgun_shell.png/32px-Shotgun_shell.png",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Shotgun_shells.png/32px-Shotgun_shells.png",
       "type": "intermediate",
       "unlock_tier": 1,
       "category": "combat"
@@ -278,7 +278,7 @@
       "icon_url": "https://wiki.factorio.com/images/thumb/Radar.png/32px-Radar.png",
       "type": "intermediate",
       "unlock_tier": 1,
-      "category": "resources"
+      "category": "combat"
     },
     "gun-turret": {
       "name": "Torreta Ametralladora",
@@ -317,7 +317,7 @@
     },
     "stack-inserter": {
       "name": "Insertador por Lotes",
-      "icon_url": "https://wiki.factorio.com/images/thumb/Stack_inserter.png/32px-Stack_inserter.png",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Bulk_inserter.png/32px-Bulk_inserter.png",
       "type": "intermediate",
       "unlock_tier": 2,
       "category": "logistics"
@@ -345,7 +345,7 @@
     },
     "rail": {
       "name": "Vía",
-      "icon_url": "https://wiki.factorio.com/images/thumb/Rail.png/32px-Rail.png",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Straight_rail.png/32px-Straight_rail.png",
       "type": "intermediate",
       "unlock_tier": 2,
       "category": "logistics"
@@ -397,21 +397,21 @@
       "icon_url": "https://wiki.factorio.com/images/thumb/Arithmetic_combinator.png/32px-Arithmetic_combinator.png",
       "type": "intermediate",
       "unlock_tier": 2,
-      "category": "resources"
+      "category": "logistics"
     },
     "decider-combinator": {
       "name": "Combinador Comparador",
       "icon_url": "https://wiki.factorio.com/images/thumb/Decider_combinator.png/32px-Decider_combinator.png",
       "type": "intermediate",
       "unlock_tier": 2,
-      "category": "resources"
+      "category": "logistics"
     },
     "constant-combinator": {
       "name": "Combinador Constante",
       "icon_url": "https://wiki.factorio.com/images/thumb/Constant_combinator.png/32px-Constant_combinator.png",
       "type": "intermediate",
       "unlock_tier": 2,
-      "category": "resources"
+      "category": "logistics"
     },
     "power-switch": {
       "name": "Interruptor",
@@ -425,49 +425,49 @@
       "icon_url": "https://wiki.factorio.com/images/thumb/Programmable_speaker.png/32px-Programmable_speaker.png",
       "type": "intermediate",
       "unlock_tier": 2,
-      "category": "resources"
+      "category": "logistics"
     },
     "display-panel": {
       "name": "Panel de Visualización",
       "icon_url": "https://wiki.factorio.com/images/thumb/Display_panel.png/32px-Display_panel.png",
       "type": "intermediate",
       "unlock_tier": 2,
-      "category": "production"
+      "category": "logistics"
     },
     "concrete": {
       "name": "Hormigón",
       "icon_url": "https://wiki.factorio.com/images/thumb/Concrete.png/32px-Concrete.png",
       "type": "intermediate",
       "unlock_tier": 2,
-      "category": "resources"
+      "category": "logistics"
     },
     "hazard-concrete": {
       "name": "Hormigón con Señal de Peligro",
       "icon_url": "https://wiki.factorio.com/images/thumb/Hazard_concrete.png/32px-Hazard_concrete.png",
       "type": "intermediate",
       "unlock_tier": 2,
-      "category": "resources"
+      "category": "logistics"
     },
     "refined-concrete": {
       "name": "Hormigón Refinado",
       "icon_url": "https://wiki.factorio.com/images/thumb/Refined_concrete.png/32px-Refined_concrete.png",
       "type": "intermediate",
       "unlock_tier": 2,
-      "category": "resources"
+      "category": "logistics"
     },
     "refined-hazard-concrete": {
       "name": "Hormigón Refinado con Señal de Peligro",
       "icon_url": "https://wiki.factorio.com/images/thumb/Refined_hazard_concrete.png/32px-Refined_hazard_concrete.png",
       "type": "intermediate",
       "unlock_tier": 2,
-      "category": "resources"
+      "category": "logistics"
     },
     "landfill": {
       "name": "Relleno de Tierra",
       "icon_url": "https://wiki.factorio.com/images/thumb/Landfill.png/32px-Landfill.png",
       "type": "intermediate",
       "unlock_tier": 2,
-      "category": "resources"
+      "category": "logistics"
     },
     "solar-panel": {
       "name": "Panel Solar",
@@ -548,14 +548,14 @@
     },
     "crude-oil": {
       "name": "Petróleo Crudo",
-      "icon_url": "https://wiki.factorio.com/images/thumb/Fluid_crude-oil.png/32px-Fluid_crude-oil.png",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Crude_oil.png/32px-Crude_oil.png",
       "type": "resource",
       "unlock_tier": 2,
       "category": "resources"
     },
     "petroleum-gas": {
       "name": "Gas de Petróleo",
-      "icon_url": "https://wiki.factorio.com/images/thumb/Fluid_petroleum-gas.png/32px-Fluid_petroleum-gas.png",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Petroleum_gas.png/32px-Petroleum_gas.png",
       "type": "intermediate",
       "unlock_tier": 2,
       "category": "resources"
@@ -569,7 +569,7 @@
     },
     "sulfuric-acid": {
       "name": "Ácido Sulfúrico",
-      "icon_url": "https://wiki.factorio.com/images/thumb/Fluid_sulfuric-acid.png/32px-Fluid_sulfuric-acid.png",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Sulfuric_acid.png/32px-Sulfuric_acid.png",
       "type": "intermediate",
       "unlock_tier": 2,
       "category": "resources"
@@ -614,7 +614,7 @@
       "icon_url": "https://wiki.factorio.com/images/thumb/Barrel.png/32px-Barrel.png",
       "type": "intermediate",
       "unlock_tier": 2,
-      "category": "logistics"
+      "category": "resources"
     },
     "advanced-circuit": {
       "name": "Circuito Electrónico Avanzado",
@@ -1900,7 +1900,7 @@
     "basic-oil-processing": {
       "ingredients": [
         {
-          "item": "water",
+          "item": "crude-oil",
           "amount": 10
         }
       ],
@@ -2152,7 +2152,7 @@
     "mining-crude-oil": {
       "ingredients": [],
       "time": 2,
-      "category": "mining",
+      "category": "pumping",
       "result": "crude-oil",
       "result_count": 1
     }

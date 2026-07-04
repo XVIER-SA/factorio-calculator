@@ -46,19 +46,18 @@ function updateMachineSelectors() {
     const container = document.getElementById('machine-upgrades-content');
     container.innerHTML = '';
 
-    // Determinar el tier automáticamente del item seleccionado
+    // Determinar tier del item
     let currentTier = 0;
     if (itemId && gameData.items[itemId]) {
         currentTier = gameData.items[itemId].unlock_tier;
     }
 
+    // SOLO mostrar máquinas con upgrades (QUITAR oil-processing y chemistry)
     const categories = ['crafting', 'smelting', 'mining'];
     const categoryNames = {
         'crafting': 'Ensamblaje',
         'smelting': 'Fundición',
-        'mining': 'Minería / Extracción',
-        'oil-processing': 'Refinería',
-        'chemistry': 'Planta Química'
+        'mining': 'Minería / Extracción'
     };
 
     categories.forEach(cat => {
@@ -157,14 +156,14 @@ function renderItemGrid() {
     let itemCount = 0;
     
     Object.entries(gameData.items).forEach(([id, item]) => {
-        // Filtrar por categoría (CORREGIDO)
+        // Filtrar por categoría
         if (currentCategory && item.category !== currentCategory) return;
         
         // Filtrar por búsqueda
         if (searchQuery && !item.name.toLowerCase().includes(searchQuery.toLowerCase())) return;
         
-        // Solo mostrar items que tienen receta (no recursos puros)
-        if (item.type === 'resource') return;
+        // MOSTRAR TODO: recursos, intermedios, productos
+        // if (item.type === 'resource') return;  <-- ELIMINAR ESTA LÍNEA
         
         // Crear card
         const card = document.createElement('div');
@@ -230,17 +229,35 @@ function calculateItemRecursive(itemId, ratePerSecond, nodes) {
     // CASO 1: Recurso crudo
     if (item.type === 'resource') {
         const recipeId = `mining-${itemId}`;
-        const recipe = gameData.recipes[recipeId];
-        if (!recipe) return; // Si no hay receta de minería (ej. agua a veces)
+        let recipe = gameData.recipes[recipeId];
+        
+        // Si no hay receta de mining, buscar otras (pumping, etc)
+        if (!recipe) {
+            recipe = Object.values(gameData.recipes).find(r => r.result === itemId);
+        }
+        
+        if (!recipe) return;
 
-        const machineId = selectedMachines['mining'];
-        const machine = machineId ? gameData.machines[machineId] : null;
+        let machine = null;
+        
+        // MÁQUINAS AUTOMÁTICAS para extracción de recursos
+        if (recipe.category === 'pumping') {
+            // Agua y otros fluidos usan Bomba Costera o Extractora
+            if (itemId === 'water' || itemId === 'lava') {
+                machine = gameData.machines['offshore-pump'];
+            } else {
+                machine = gameData.machines['pumpjack'];
+            }
+        } else {
+            // Minería normal
+            const machineId = selectedMachines['mining'];
+            machine = machineId ? gameData.machines[machineId] : null;
+        }
 
         if (!machine) {
-            // Si es manual o no hay máquina, no calculamos máquinas
             nodes.push({
                 itemId, itemName: item.name, ratePerSecond, recipe,
-                machine: { name: 'Manual' }, machinesNeeded: 0
+                machine: { name: 'Extracción Manual' }, machinesNeeded: 0
             });
             return;
         }
@@ -256,8 +273,22 @@ function calculateItemRecursive(itemId, ratePerSecond, nodes) {
     const recipe = findRecipeForItem(itemId);
     if (!recipe) return;
     
-    const machineId = selectedMachines[recipe.category];
-    const machine = machineId ? gameData.machines[machineId] : null;
+    // MÁQUINAS FIJAS para categorías especiales
+    let machine = null;
+    
+    if (recipe.category === 'oil-processing') {
+        machine = gameData.machines['oil-refinery'];
+    } else if (recipe.category === 'chemistry') {
+        machine = gameData.machines['chemical-plant'];
+    } else if (recipe.category === 'centrifuging') {
+        machine = gameData.machines['centrifuge'];
+    } else if (recipe.category === 'crushing') {
+        machine = gameData.machines['crusher'];
+    } else {
+        // Usar máquina seleccionada por el usuario
+        const machineId = selectedMachines[recipe.category];
+        machine = machineId ? gameData.machines[machineId] : null;
+    }
 
     if (!machine) {
         nodes.push({
