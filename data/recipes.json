@@ -644,7 +644,6 @@
       "unlock_tier": 2,
       "category": "combat"
     },
-    ,
     "heavy-oil": { "name": "Petróleo pesado", "icon_url": "https://wiki.factorio.com/images/thumb/Fluid_heavy-oil.png/32px-Fluid_heavy-oil.png", "type": "intermediate", "unlock_tier": 3, "category": "resources" },
     "light-oil": { "name": "Petróleo ligero", "icon_url": "https://wiki.factorio.com/images/thumb/Fluid_light-oil.png/32px-Fluid_light-oil.png", "type": "intermediate", "unlock_tier": 3, "category": "resources" },
     "lubricant": { "name": "Lubricante", "icon_url": "https://wiki.factorio.com/images/thumb/Fluid_lubricant.png/32px-Fluid_lubricant.png", "type": "intermediate", "unlock_tier": 3, "category": "resources" },
