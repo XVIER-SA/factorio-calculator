@@ -602,7 +602,7 @@ header p {
 }
 /* Toggle de modo de petróleo */
 .oil-mode-toggle {
-    display: flex !important;
+    display: flex;
     gap: 10px !important;
     margin-bottom: 15px !important;
     padding: 10px !important;
