@@ -389,19 +389,13 @@ function calculate() {
 
 function calculateItemRecursive(itemId, ratePerSecond, nodes) {
     const item = gameData.items[itemId];
-
-    // === RASTREO DE SUBPRODUCTOS ===
-    // Si este item es un fluido que puede ser subproducto, registrar su consumo
-    if (['heavy-oil', 'light-oil', 'petroleum-gas'].includes(itemId)) {
-        byproductTracker.consumed[itemId] = (byproductTracker.consumed[itemId] || 0) + ratePerSecond;
-    }
     
     // CASO 1: Recurso crudo
     if (item.type === 'resource') {
         const recipeId = `mining-${itemId}`;
         let recipe = gameData.recipes[recipeId];
         
-        // Si no hay receta de mining, buscar otras (pumping, oil-processing, etc)
+        // Si no hay receta de mining, buscar otras (pumping, etc)
         if (!recipe) {
             recipe = Object.values(gameData.recipes).find(r => r.result === itemId);
         }
@@ -412,18 +406,14 @@ function calculateItemRecursive(itemId, ratePerSecond, nodes) {
         
         // MÁQUINAS AUTOMÁTICAS para extracción de recursos
         if (recipe.category === 'pumping') {
+            // Agua y otros fluidos usan Bomba Costera o Extractora
             if (itemId === 'water' || itemId === 'lava') {
                 machine = gameData.machines['offshore-pump'];
-            } else if (itemId === 'crude-oil') {
-                machine = gameData.machines['pumpjack'];
             } else {
-                const pumpingMachine = Object.values(gameData.machines).find(m => m.categories.includes('pumping'));
-                machine = pumpingMachine || null;
+                machine = gameData.machines['pumpjack'];
             }
-        } else if (recipe.category === 'oil-processing') {
-            // Petróleo crudo se procesa en refinería
-            machine = gameData.machines['oil-refinery'];
         } else {
+            // Minería normal
             const machineId = selectedMachines['mining'];
             machine = machineId ? gameData.machines[machineId] : null;
         }
@@ -436,24 +426,51 @@ function calculateItemRecursive(itemId, ratePerSecond, nodes) {
             return;
         }
 
-        const productionPerMachine = (machine.speed / recipe.time) * recipe.result_count;
-        const machinesNeeded = ratePerSecond / productionPerMachine;
-        
-        // === RASTREO DE SUBPRODUCTOS DEL PETRÓLEO ===
-        if (recipe.category === 'oil-processing' && currentOilMode === 'advanced') {
-            // Matemática directa del Procesamiento Avanzado:
-            // Por cada 50 de Gas (result_count), produce 25 de Pesado y 45 de Ligero.
-            // Proporción: Pesado = 0.5 * Gas, Ligero = 0.9 * Gas
-            
-            const gasRate = ratePerSecond;
-            const heavyRate = gasRate * 0.5; // 25/50
-            const lightRate = gasRate * 0.9; // 45/50
-            
-            byproductTracker.produced['petroleum-gas'] = (byproductTracker.produced['petroleum-gas'] || 0) + gasRate;
-            byproductTracker.produced['heavy-oil'] = (byproductTracker.produced['heavy-oil'] || 0) + heavyRate;
-            byproductTracker.produced['light-oil'] = (byproductTracker.produced['light-oil'] || 0) + lightRate;
+        // Calcular producción - manejar recetas con múltiples resultados
+        let productionPerMachine = 0;
+        let recipeResults = [];
+
+        if (recipe.results) {
+            // Receta con múltiples resultados (ej. procesamiento avanzado)
+            recipeResults = recipe.results;
+            const mainResult = recipe.results.find(r => r.item === itemId) || recipe.results[0];
+            productionPerMachine = (machine.speed / recipe.time) * mainResult.amount;
+        } else {
+            // Receta normal con un solo resultado
+            productionPerMachine = (machine.speed / recipe.time) * recipe.result_count;
+            recipeResults = [{item: itemId, amount: recipe.result_count}];
         }
-        
+
+        // Aplicar bonus de productividad si existe
+        let productivityBonus = 0;
+        if (itemId === 'iron-ore' || itemId === 'copper-ore' || itemId === 'coal' || itemId === 'stone' || itemId === 'uranium-ore' || itemId === 'crude-oil' || itemId === 'water' || itemId === 'lava' || itemId === 'heavy-oil' || itemId === 'light-oil') {
+            productivityBonus = productivityLevels.mining * 0.1;
+        } else if (itemId === 'steel') {
+            productivityBonus = productivityLevels.steel * 0.1;
+        } else if (itemId === 'low-density-structure') {
+            productivityBonus = productivityLevels['low-density'] * 0.1;
+        } else if (itemId === 'processing-unit') {
+            productivityBonus = productivityLevels.processing * 0.1;
+        } else if (itemId === 'plastic-bar') {
+            productivityBonus = productivityLevels.plastic * 0.1;
+        } else if (itemId === 'rocket-fuel') {
+            productivityBonus = productivityLevels['rocket-fuel'] * 0.1;
+        } else if (itemId === 'rocket-part') {
+            productivityBonus = productivityLevels['rocket-part'] * 0.1;
+        }
+
+        // Ajustar producción con el bonus
+        const adjustedProduction = productionPerMachine * (1 + productivityBonus);
+        const machinesNeeded = ratePerSecond / adjustedProduction;
+
+        // === RASTREO DE SUBPRODUCTOS ===
+        if (recipeResults.length > 1 && currentOilMode === 'advanced') {
+            recipeResults.forEach(result => {
+                const resultRate = (ratePerSecond / (recipe.results ? recipe.results.find(r => r.item === itemId).amount : recipe.result_count)) * result.amount;
+                byproductTracker.produced[result.item] = (byproductTracker.produced[result.item] || 0) + resultRate;
+            });
+        }
+
         nodes.push({ itemId, itemName: item.name, ratePerSecond, recipe, machine, machinesNeeded });
         return;
     }
@@ -490,7 +507,7 @@ function calculateItemRecursive(itemId, ratePerSecond, nodes) {
         const productionPerMachine = (machine.speed / recipe.time) * recipe.result_count;
         // Aplicar bonus de productividad si existe
         let productivityBonus = 0;
-        if (itemId === 'iron-ore' || itemId === 'copper-ore' || itemId === 'coal' || itemId === 'stone' || itemId === 'uranium-ore') {
+        if (itemId === 'iron-ore' || itemId === 'copper-ore' || itemId === 'coal' || itemId === 'stone' || itemId === 'uranium-ore' || itemId === 'crude-oil' || itemId === 'water' || itemId === 'lava' || itemId === 'heavy-oil' || itemId === 'light-oil') {
             productivityBonus = productivityLevels.mining * 0.1;
         } else if (itemId === 'steel') {
             productivityBonus = productivityLevels.steel * 0.1;
