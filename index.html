@@ -21,12 +21,22 @@
 					<label for="tier-select" class="main-label">Tier de tecnología:</label>
 				</div>
 				<div class="input-group">
+					<div class="game-mode-toggle">
+						<label class="mode-option">
+							<input type="radio" name="game-mode" value="base" id="mode-base">
+							<span>Factorio Base</span>
+						</label>
+						<label class="mode-option">
+							<input type="radio" name="game-mode" value="space-age" id="mode-space-age" checked>
+							<span>Space Age</span>
+						</label>
+					</div>
 					<label class="main-label">Selecciona un item:</label>
 					<div class="category-tabs">
 						<button class="tab-btn active" data-category="logistics">Logística</button>
 						<button class="tab-btn" data-category="production">Producción</button>
 						<button class="tab-btn" data-category="resources">Recursos</button>
-						<button class="tab-btn" data-category="space">Espacio</button>
+						<button class="tab-btn" data-category="space" id="tab-space">Espacio</button>
 						<button class="tab-btn" data-category="combat">Combate</button>
 					</div>
 					<input type="text" id="item-search" placeholder="Buscar item..." class="search-input">

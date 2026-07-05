@@ -644,54 +644,76 @@
       "unlock_tier": 2,
       "category": "combat"
     },
-    "heavy-oil": { "name": "Petróleo pesado", "icon_url": "https://wiki.factorio.com/images/thumb/Fluid_heavy-oil.png/32px-Fluid_heavy-oil.png", "type": "intermediate", "unlock_tier": 3, "category": "resources" },
-    "light-oil": { "name": "Petróleo ligero", "icon_url": "https://wiki.factorio.com/images/thumb/Fluid_light-oil.png/32px-Fluid_light-oil.png", "type": "intermediate", "unlock_tier": 3, "category": "resources" },
-    "lubricant": { "name": "Lubricante", "icon_url": "https://wiki.factorio.com/images/thumb/Fluid_lubricant.png/32px-Fluid_lubricant.png", "type": "intermediate", "unlock_tier": 3, "category": "resources" },
-    "processing-unit": { "name": "Unidad de procesamiento", "icon_url": "https://wiki.factorio.com/images/thumb/Processing_unit.png/32px-Processing_unit.png", "type": "intermediate", "unlock_tier": 3, "category": "resources" },
-    "electric-engine-unit": { "name": "Motor eléctrico", "icon_url": "https://wiki.factorio.com/images/thumb/Electric_engine_unit.png/32px-Electric_engine_unit.png", "type": "intermediate", "unlock_tier": 3, "category": "resources" },
-    "flying-robot-frame": { "name": "Estructura de robot volador", "icon_url": "https://wiki.factorio.com/images/thumb/Flying_robot_frame.png/32px-Flying_robot_frame.png", "type": "intermediate", "unlock_tier": 3, "category": "resources" },
-    "low-density-structure": { "name": "Estructura de baja densidad", "icon_url": "https://wiki.factorio.com/images/thumb/Low_density_structure.png/32px-Low_density_structure.png", "type": "intermediate", "unlock_tier": 3, "category": "resources" },
-    "rocket-fuel": { "name": "Combustible de cohete", "icon_url": "https://wiki.factorio.com/images/thumb/Rocket_fuel.png/32px-Rocket_fuel.png", "type": "intermediate", "unlock_tier": 3, "category": "resources" },
-    "uranium-ore": { "name": "Mineral de uranio", "icon_url": "https://wiki.factorio.com/images/thumb/Uranium_ore.png/32px-Uranium_ore.png", "type": "resource", "unlock_tier": 3, "category": "resources" },
+    "heavy-oil": {
+      "name": "Petróleo Pesado",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Heavy_oil.png/32px-Heavy_oil.png",
+      "type": "intermediate",
+      "unlock_tier": 3,
+      "category":
+      "resources"
+    },
+    "light-oil": {
+      "name": "Petróleo Ligero",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Light_oil.png/32px-Light_oil.png",
+      "type": "intermediate",
+      "unlock_tier": 3,
+      "category": "resources"
+    },
+    "lubricant": {
+      "name": "Lubricante",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Lubricant.png/32px-Lubricant.png",
+      "type": "intermediate",
+      "unlock_tier": 3,
+      "category":
+      "resources"
+    },
+    "processing-unit": { "name": "Unidad de Procesamiento", "icon_url": "https://wiki.factorio.com/images/thumb/Processing_unit.png/32px-Processing_unit.png", "type": "intermediate", "unlock_tier": 3, "category": "resources" },
+    "electric-engine-unit": { "name": "Motor Eléctrico", "icon_url": "https://wiki.factorio.com/images/thumb/Electric_engine_unit.png/32px-Electric_engine_unit.png", "type": "intermediate", "unlock_tier": 3, "category": "resources" },
+    "flying-robot-frame": { "name": "Estructura de Robot Volador", "icon_url": "https://wiki.factorio.com/images/thumb/Flying_robot_frame.png/32px-Flying_robot_frame.png", "type": "intermediate", "unlock_tier": 3, "category": "resources" },
+    "low-density-structure": { "name": "Estructura de Baja Densidad", "icon_url": "https://wiki.factorio.com/images/thumb/Low_density_structure.png/32px-Low_density_structure.png", "type": "intermediate", "unlock_tier": 3, "category": "resources" },
+    "rocket-fuel": { "name": "Combustible de Cohete", "icon_url": "https://wiki.factorio.com/images/thumb/Rocket_fuel.png/32px-Rocket_fuel.png", "type": "intermediate", "unlock_tier": 3, "category": "resources" },
+    "uranium-ore": { "name": "Mineral de Uranio", "icon_url": "https://wiki.factorio.com/images/thumb/Uranium_ore.png/32px-Uranium_ore.png", "type": "resource", "unlock_tier": 3, "category": "resources" },
     "uranium-235": { "name": "Uranio 235", "icon_url": "https://wiki.factorio.com/images/thumb/Uranium-235.png/32px-Uranium-235.png", "type": "intermediate", "unlock_tier": 3, "category": "resources" },
     "uranium-238": { "name": "Uranio 238", "icon_url": "https://wiki.factorio.com/images/thumb/Uranium-238.png/32px-Uranium-238.png", "type": "intermediate", "unlock_tier": 3, "category": "resources" },
-    "uranium-fuel-cell": { "name": "Célula de combustible de uranio", "icon_url": "https://wiki.factorio.com/images/thumb/Uranium_fuel_cell.png/32px-Uranium_fuel_cell.png", "type": "intermediate", "unlock_tier": 3, "category": "resources" },
-    "substation": { "name": "Subestación eléctrica", "icon_url": "https://wiki.factorio.com/images/thumb/Substation.png/32px-Substation.png", "type": "intermediate", "unlock_tier": 3, "category": "logistics" },
-    "tank": { "name": "Tanque", "icon_url": "https://wiki.factorio.com/images/thumb/Tank.png/32px-Tank.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
-    "logistic-robot": { "name": "Robot logístico", "icon_url": "https://wiki.factorio.com/images/thumb/Logistic_robot.png/32px-Logistic_robot.png", "type": "intermediate", "unlock_tier": 3, "category": "logistics" },
-    "construction-robot": { "name": "Robot de construcción", "icon_url": "https://wiki.factorio.com/images/thumb/Construction_robot.png/32px-Construction_robot.png", "type": "intermediate", "unlock_tier": 3, "category": "logistics" },
-    "logistic-chest-passive-provider": { "name": "Cofre proveedor pasivo", "icon_url": "https://wiki.factorio.com/images/thumb/Passive_provider_chest.png/32px-Passive_provider_chest.png", "type": "intermediate", "unlock_tier": 3, "category": "logistics" },
-    "logistic-chest-storage": { "name": "Cofre de almacenamiento", "icon_url": "https://wiki.factorio.com/images/thumb/Storage_chest.png/32px-Storage_chest.png", "type": "intermediate", "unlock_tier": 3, "category": "logistics" },
+    "uranium-fuel-cell": { "name": "Célula de Combustible de Uranio", "icon_url": "https://wiki.factorio.com/images/thumb/Uranium_fuel_cell.png/32px-Uranium_fuel_cell.png", "type": "intermediate", "unlock_tier": 3, "category": "resources" },
+    "substation": { "name": "Subestación Eléctrica", "icon_url": "https://wiki.factorio.com/images/thumb/Substation.png/32px-Substation.png", "type": "intermediate", "unlock_tier": 3, "category": "logistics" },
+    "tank": { "name": "Tanque", "icon_url": "https://wiki.factorio.com/images/thumb/Tank.png/32px-Tank.png", "type": "intermediate", "unlock_tier": 3, "category": "logistics" },
+    "logistic-robot": { "name": "Robot Logístico", "icon_url": "https://wiki.factorio.com/images/thumb/Logistic_robot.png/32px-Logistic_robot.png", "type": "intermediate", "unlock_tier": 3, "category": "logistics" },
+    "construction-robot": { "name": "Robot de Construcción", "icon_url": "https://wiki.factorio.com/images/thumb/Construction_robot.png/32px-Construction_robot.png", "type": "intermediate", "unlock_tier": 3, "category": "logistics" },
+    "logistic-chest-passive-provider": { "name": "Cofre Proveedor Pasivo", "icon_url": "https://wiki.factorio.com/images/thumb/Passive_provider_chest.png/32px-Passive_provider_chest.png", "type": "intermediate", "unlock_tier": 3, "category": "logistics" },
+    "logistic-chest-storage": { "name": "Cofre de Almacenamiento", "icon_url": "https://wiki.factorio.com/images/thumb/Storage_chest.png/32px-Storage_chest.png", "type": "intermediate", "unlock_tier": 3, "category": "logistics" },
     "roboport": { "name": "Robopuerto", "icon_url": "https://wiki.factorio.com/images/thumb/Roboport.png/32px-Roboport.png", "type": "intermediate", "unlock_tier": 3, "category": "logistics" },
-    "selector-combinator": { "name": "Combinador selector", "icon_url": "https://wiki.factorio.com/images/thumb/Selector_combinator.png/32px-Selector_combinator.png", "type": "intermediate", "unlock_tier": 3, "category": "logistics" },
-    "nuclear-reactor": { "name": "Reactor nuclear", "icon_url": "https://wiki.factorio.com/images/thumb/Nuclear_reactor.png/32px-Nuclear_reactor.png", "type": "intermediate", "unlock_tier": 3, "category": "production" },
-    "heat-pipe": { "name": "Tubería térmica", "icon_url": "https://wiki.factorio.com/images/thumb/Heat_pipe.png/32px-Heat_pipe.png", "type": "intermediate", "unlock_tier": 3, "category": "production" },
-    "heat-exchanger": { "name": "Intercambiador de calor", "icon_url": "https://wiki.factorio.com/images/thumb/Heat_exchanger.png/32px-Heat_exchanger.png", "type": "intermediate", "unlock_tier": 3, "category": "production" },
-    "steam-turbine": { "name": "Turbina de vapor", "icon_url": "https://wiki.factorio.com/images/thumb/Steam_turbine.png/32px-Steam_turbine.png", "type": "intermediate", "unlock_tier": 3, "category": "production" },
-    "electric-furnace": { "name": "Horno eléctrico", "icon_url": "https://wiki.factorio.com/images/thumb/Electric_furnace.png/32px-Electric_furnace.png", "type": "intermediate", "unlock_tier": 3, "category": "production" },
+    "selector-combinator": { "name": "Combinador Selector", "icon_url": "https://wiki.factorio.com/images/thumb/Selector_combinator.png/32px-Selector_combinator.png", "type": "intermediate", "unlock_tier": 3, "category": "logistics" },
+    "nuclear-reactor": { "name": "Reactor Nuclear", "icon_url": "https://wiki.factorio.com/images/thumb/Nuclear_reactor.png/32px-Nuclear_reactor.png", "type": "intermediate", "unlock_tier": 3, "category": "production" },
+    "heat-pipe": { "name": "Tubería Térmica", "icon_url": "https://wiki.factorio.com/images/thumb/Heat_pipe.png/32px-Heat_pipe.png", "type": "intermediate", "unlock_tier": 3, "category": "production" },
+    "heat-exchanger": { "name": "Intercambiador de Calor", "icon_url": "https://wiki.factorio.com/images/thumb/Heat_exchanger.png/32px-Heat_exchanger.png", "type": "intermediate", "unlock_tier": 3, "category": "production" },
+    "steam-turbine": { "name": "Turbina de Vapor", "icon_url": "https://wiki.factorio.com/images/thumb/Steam_turbine.png/32px-Steam_turbine.png", "type": "intermediate", "unlock_tier": 3, "category": "production" },
+    "electric-furnace": { "name": "Horno Eléctrico", "icon_url": "https://wiki.factorio.com/images/thumb/Electric_furnace.png/32px-Electric_furnace.png", "type": "intermediate", "unlock_tier": 3, "category": "production" },
     "centrifuge": { "name": "Centrifugadora", "icon_url": "https://wiki.factorio.com/images/thumb/Centrifuge.png/32px-Centrifuge.png", "type": "intermediate", "unlock_tier": 3, "category": "production" },
-    "rocket-silo": { "name": "Silo de cohetes", "icon_url": "https://wiki.factorio.com/images/thumb/Rocket_silo.png/32px-Rocket_silo.png", "type": "intermediate", "unlock_tier": 3, "category": "space" },
-    "landing-pad": { "name": "Plataforma de aterrizaje", "icon_url": "https://wiki.factorio.com/images/thumb/Landing_pad.png/32px-Landing_pad.png", "type": "intermediate", "unlock_tier": 3, "category": "space" },
-    "space-platform-foundation": { "name": "Cimiento de plataforma espacial", "icon_url": "https://wiki.factorio.com/images/thumb/Space_platform_foundation.png/32px-Space_platform_foundation.png", "type": "intermediate", "unlock_tier": 3, "category": "space" },
-    "cargo-bay": { "name": "Compartimiento de carga", "icon_url": "https://wiki.factorio.com/images/thumb/Cargo_bay.png/32px-Cargo_bay.png", "type": "intermediate", "unlock_tier": 3, "category": "space" },
-    "asteroid-collector": { "name": "Recolector de asteroides", "icon_url": "https://wiki.factorio.com/images/thumb/Asteroid_collector.png/32px-Asteroid_collector.png", "type": "intermediate", "unlock_tier": 3, "category": "space" },
+    "rocket-silo": { "name": "Silo de Cohetes", "icon_url": "https://wiki.factorio.com/images/thumb/Rocket_silo.png/32px-Rocket_silo.png", "type": "intermediate", "unlock_tier": 3, "category": "space" },
+    "landing-pad": { "name": "Plataforma de Aterrizaje", "icon_url": "https://wiki.factorio.com/images/thumb/Cargo_landing_pad.png/32px-Cargo_landing_pad.png", "type": "intermediate", "unlock_tier": 3, "category": "space" },
+    "space-platform-foundation": { "name": "Cimiento de Plataforma Espacial", "icon_url": "https://wiki.factorio.com/images/thumb/Space_platform_foundation.png/32px-Space_platform_foundation.png", "type": "intermediate", "unlock_tier": 3, "category": "space" },
+    "cargo-bay": { "name": "Compartimiento de Carga", "icon_url": "https://wiki.factorio.com/images/thumb/Cargo_bay.png/32px-Cargo_bay.png", "type": "intermediate", "unlock_tier": 3, "category": "space" },
+    "asteroid-collector": { "name": "Recolector de Asteroides", "icon_url": "https://wiki.factorio.com/images/thumb/Asteroid_collector.png/32px-Asteroid_collector.png", "type": "intermediate", "unlock_tier": 3, "category": "space" },
     "crusher": { "name": "Trituradora", "icon_url": "https://wiki.factorio.com/images/thumb/Crusher.png/32px-Crusher.png", "type": "intermediate", "unlock_tier": 3, "category": "space" },
-    "space-platform-starter-pack": { "name": "Paquete de inicio espacial", "icon_url": "https://wiki.factorio.com/images/thumb/Space_platform_starter_pack.png/32px-Space_platform_starter_pack.png", "type": "intermediate", "unlock_tier": 3, "category": "space" },
-    "metallic-asteroid": { "name": "Asteroide metálico", "icon_url": "https://wiki.factorio.com/images/thumb/Metallic_asteroid.png/32px-Metallic_asteroid.png", "type": "resource", "unlock_tier": 3, "category": "resources" },
-    "carbonic-asteroid": { "name": "Asteroide carbónico", "icon_url": "https://wiki.factorio.com/images/thumb/Carbonic_asteroid.png/32px-Carbonic_asteroid.png", "type": "resource", "unlock_tier": 3, "category": "resources" },
-    "oxidic-asteroid": { "name": "Asteroide de óxido", "icon_url": "https://wiki.factorio.com/images/thumb/Oxidic_asteroid.png/32px-Oxidic_asteroid.png", "type": "resource", "unlock_tier": 3, "category": "resources" },
-    "cannon-shell": { "name": "Proyectil de cañón", "icon_url": "https://wiki.factorio.com/images/thumb/Cannon_shell.png/32px-Cannon_shell.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
-    "explosive-cannon-shell": { "name": "Proyectil explosivo", "icon_url": "https://wiki.factorio.com/images/thumb/Explosive_cannon_shell.png/32px-Explosive_cannon_shell.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
+    "space-platform-starter-pack": { "name": "Paquete de Inicio de la Platadorma Espacial", "icon_url": "https://wiki.factorio.com/images/thumb/Space_platform_starter_pack.png/32px-Space_platform_starter_pack.png", "type": "intermediate", "unlock_tier": 3, "category": "space" },
+    "metallic-asteroid": { "name": "Asteroide Metálico", "icon_url": "https://wiki.factorio.com/images/thumb/Metallic_asteroid_chunk.png/32px-Metallic_asteroid_chunk.png", "type": "resource", "unlock_tier": 3, "category": "space" },
+    "carbonic-asteroid": { "name": "Asteroide Carbónico", "icon_url": "https://wiki.factorio.com/images/thumb/Carbonic_asteroid_chunk.png/32px-Carbonic_asteroid_chunk.png", "type": "resource", "unlock_tier": 3, "category": "space" },
+    "oxidic-asteroid": { "name": "Asteroide de Óxido", "icon_url": "https://wiki.factorio.com/images/thumb/Oxide_asteroid_chunk.png/32px-Oxide_asteroid_chunk.png", "type": "resource", "unlock_tier": 3, "category": "space" },
+    "cannon-shell": { "name": "Proyectil de Cañón", "icon_url": "https://wiki.factorio.com/images/thumb/Cannon_shell.png/32px-Cannon_shell.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
+    "explosive-cannon-shell": { "name": "Proyectil Explosivo", "icon_url": "https://wiki.factorio.com/images/thumb/Explosive_cannon_shell.png/32px-Explosive_cannon_shell.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
     "rocket": { "name": "Cohete", "icon_url": "https://wiki.factorio.com/images/thumb/Rocket.png/32px-Rocket.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
-    "explosive-rocket": { "name": "Cohete explosivo", "icon_url": "https://wiki.factorio.com/images/thumb/Explosive_rocket.png/32px-Explosive_rocket.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
-    "flamethrower-ammo": { "name": "Munición de lanzallamas", "icon_url": "https://wiki.factorio.com/images/thumb/Flamethrower_ammo.png/32px-Flamethrower_ammo.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
-    "poison-capsule": { "name": "Cápsula de veneno", "icon_url": "https://wiki.factorio.com/images/thumb/Poison_capsule.png/32px-Poison_capsule.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
-    "slowdown-capsule": { "name": "Cápsula de ralentización", "icon_url": "https://wiki.factorio.com/images/thumb/Slowdown_capsule.png/32px-Slowdown_capsule.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
-    "defender-capsule": { "name": "Cápsula de defensor", "icon_url": "https://wiki.factorio.com/images/thumb/Defender_capsule.png/32px-Defender_capsule.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
-    "distractor-capsule": { "name": "Cápsula de distractor", "icon_url": "https://wiki.factorio.com/images/thumb/Distractor_capsule.png/32px-Distractor_capsule.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
-    "land-mine": { "name": "Mina terrestre", "icon_url": "https://wiki.factorio.com/images/thumb/Land_mine.png/32px-Land_mine.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
-    "laser-turret": { "name": "Torreta láser", "icon_url": "https://wiki.factorio.com/images/thumb/Laser_turret.png/32px-Laser_turret.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
-    "flamethrower-turret": { "name": "Torreta lanzallamas", "icon_url": "https://wiki.factorio.com/images/thumb/Flamethrower_turret.png/32px-Flamethrower_turret.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
+    "explosive-rocket": { "name": "Cohete Explosivo", "icon_url": "https://wiki.factorio.com/images/thumb/Explosive_rocket.png/32px-Explosive_rocket.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
+    "flamethrower-ammo": { "name": "Munición de Lanzallamas", "icon_url": "https://wiki.factorio.com/images/thumb/Flamethrower_ammo.png/32px-Flamethrower_ammo.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
+    "poison-capsule": { "name": "Cápsula de Veneno", "icon_url": "https://wiki.factorio.com/images/thumb/Poison_capsule.png/32px-Poison_capsule.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
+    "slowdown-capsule": { "name": "Cápsula de Ralentización", "icon_url": "https://wiki.factorio.com/images/thumb/Slowdown_capsule.png/32px-Slowdown_capsule.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
+    "defender-capsule": { "name": "Cápsula de Defensor", "icon_url": "https://wiki.factorio.com/images/thumb/Defender_capsule.png/32px-Defender_capsule.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
+    "distractor-capsule": { "name": "Cápsula de Distractor", "icon_url": "https://wiki.factorio.com/images/thumb/Distractor_capsule.png/32px-Distractor_capsule.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
+    "land-mine": { "name": "Mina Terrestre", "icon_url": "https://wiki.factorio.com/images/thumb/Land_mine.png/32px-Land_mine.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
+    "laser-turret": { "name": "Torreta Láser", "icon_url": "https://wiki.factorio.com/images/thumb/Laser_turret.png/32px-Laser_turret.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
+    "flamethrower-turret": { "name": "Torreta Lanzallamas", "icon_url": "https://wiki.factorio.com/images/thumb/Flamethrower_turret.png/32px-Flamethrower_turret.png", "type": "intermediate", "unlock_tier": 3, "category": "combat" },
+    "satellite": { "name": "Satélite", "icon_url": "https://wiki.factorio.com/images/thumb/Satellite.png/32px-Satellite.png", "type": "product", "unlock_tier": 3, "category": "resources", "game_mode": "base" },
+    "rocket-part": { "name": "Parte de cohete", "icon_url": "https://wiki.factorio.com/images/thumb/Rocket_part.png/32px-Rocket_part.png", "type": "intermediate", "unlock_tier": 3, "category": "space" },
     "science-pack-1": {
       "name": "Paquete de Ciencia de Automatización (Ciencia Roja)",
       "icon_url": "https://wiki.factorio.com/images/thumb/Automation_science_pack.png/32px-Automation_science_pack.png",
@@ -720,9 +742,27 @@
       "unlock_tier": 2,
       "category": "resources"
     },
-    "science-pack-5": { "name": "Paquete de Ciencia de Producción (Ciencia Morada)", "icon_url": "https://wiki.factorio.com/images/thumb/Production_science_pack.png/32px-Production_science_pack.png", "type": "product", "unlock_tier": 3, "category": "resources" },
-    "science-pack-6": { "name": "Paquete de Ciencia de Utilidad (Ciencia Amarilla)", "icon_url": "https://wiki.factorio.com/images/thumb/Utility_science_pack.png/32px-Utility_science_pack.png", "type": "product", "unlock_tier": 3, "category": "resources" },
-    "science-pack-7": { "name": "Paquete de Ciencia Espacial (Ciencia Blanca)", "icon_url": "https://wiki.factorio.com/images/thumb/Space_science_pack.png/32px-Space_science_pack.png", "type": "product", "unlock_tier": 3, "category": "resources" }
+    "science-pack-5": {
+      "name": "Paquete de Ciencia de Producción (Ciencia Morada)",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Production_science_pack.png/32px-Production_science_pack.png",
+      "type": "product",
+      "unlock_tier": 3,
+      "category": "resources"
+    },
+    "science-pack-6": {
+      "name": "Paquete de Ciencia de Utilidad (Ciencia Amarilla)",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Utility_science_pack.png/32px-Utility_science_pack.png",
+      "type": "product",
+      "unlock_tier": 3,
+      "category": "resources"
+    },
+    "science-pack-7": {
+      "name": "Paquete de Ciencia Espacial (Ciencia Blanca)",
+      "icon_url": "https://wiki.factorio.com/images/thumb/Space_science_pack.png/32px-Space_science_pack.png",
+      "type": "product",
+      "unlock_tier": 3,
+      "category": "resources"
+    }
   },
   "recipes": {
     "iron-plate": {
@@ -2237,7 +2277,32 @@
     "science-pack-5": { "ingredients": [{"item": "electric-engine-unit", "amount": 1}, {"item": "processing-unit", "amount": 1}, {"item": "flying-robot-frame", "amount": 1}], "time": 21, "category": "crafting", "result": "science-pack-5", "result_count": 1 },
     "science-pack-6": { "ingredients": [{"item": "low-density-structure", "amount": 1}, {"item": "processing-unit", "amount": 1}, {"item": "rocket-fuel", "amount": 1}], "time": 21, "category": "crafting", "result": "science-pack-6", "result_count": 1 },
     "science-pack-7": { "ingredients": [{"item": "rocket-fuel", "amount": 1}, {"item": "low-density-structure", "amount": 1}, {"item": "processing-unit", "amount": 1}], "time": 21, "category": "crafting", "result": "science-pack-7", "result_count": 1 },
-    "mining-uranium-ore": { "ingredients": [], "time": 2, "category": "mining", "result": "uranium-ore", "result_count": 1 }
+    "mining-uranium-ore": { "ingredients": [], "time": 2, "category": "mining", "result": "uranium-ore", "result_count": 1 },
+    "rocket-part-base": { 
+        "ingredients": [
+            {"item": "processing-unit", "amount": 10}, 
+            {"item": "low-density-structure", "amount": 10}, 
+            {"item": "rocket-fuel", "amount": 10}
+        ], 
+        "time": 3, 
+        "category": "rocket-building", 
+        "result": "rocket-part", 
+        "result_count": 1, 
+        "game_mode": "base" 
+    },
+    "rocket-part-space": { 
+        "ingredients": [
+            {"item": "processing-unit", "amount": 1}, 
+            {"item": "low-density-structure", "amount": 1}, 
+            {"item": "rocket-fuel", "amount": 1}
+        ], 
+        "time": 3, 
+        "category": "rocket-building", 
+        "result": "rocket-part", 
+        "result_count": 1, 
+        "game_mode": "space-age" 
+    },
+    "satellite": { "ingredients": [{"item": "low-density-structure", "amount": 100}, {"item": "solar-panel", "amount": 100}, {"item": "accumulator", "amount": 100}, {"item": "radar", "amount": 1}], "time": 1, "category": "rocket-building", "result": "satellite", "result_count": 1, "game_mode": "base" }
   },
   "machines": {
     "stone-furnace": {

@@ -2,6 +2,7 @@
 let gameData = null;
 let selectedMachines = {}; // Almacena qué máquina está seleccionada para cada categoría
 let currentCategory = 'all';
+let currentGameMode = 'space-age'; // 'base' o 'space-age'
 let searchQuery = '';
 
 // Al iniciar
@@ -111,7 +112,30 @@ function updateMachineSelectors() {
 function setupEventListeners() {
     document.getElementById('calculate-btn').addEventListener('click', calculate);
     
-    // Eliminado el event listener del tier-select
+    // Event listeners para el toggle de modo de juego
+    document.querySelectorAll('input[name="game-mode"]').forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            currentGameMode = e.target.value;
+            const tabSpace = document.getElementById('tab-space');
+            
+            if (currentGameMode === 'base') {
+                // Ocultar pestaña Espacio
+                tabSpace.style.display = 'none';
+                
+                // Si la pestaña activa era Espacio, cambiar a Producción
+                if (currentCategory === 'space') {
+                    currentCategory = 'production';
+                    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                    document.querySelector('.tab-btn[data-category="production"]').classList.add('active');
+                }
+            } else {
+                // Mostrar pestaña Espacio
+                tabSpace.style.display = ''; 
+            }
+            
+            renderItemGrid();
+        });
+    });
     
     setupCategoryTabs();
     setupSearch();
@@ -156,14 +180,29 @@ function renderItemGrid() {
     let itemCount = 0;
     
     Object.entries(gameData.items).forEach(([id, item]) => {
-        // Filtrar por categoría
-        if (currentCategory && item.category !== currentCategory) return;
+        // === FILTRO DE MODO DE JUEGO ===
+        if (currentGameMode === 'base') {
+            // Ocultar items exclusivos de Space Age
+            if (item.game_mode === 'space-age') return;
+        } else {
+            // En Space Age: ocultar items exclusivos de Base
+            if (item.game_mode === 'base') return;
+        }
+        
+        // === CATEGORÍA DINÁMICA ===
+        let displayCategory = item.category;
+        
+        // El Silo de Cohetes cambia de categoría según el modo
+        if (id === 'rocket-silo') {
+            displayCategory = currentGameMode === 'base' ? 'production' : 'space';
+        } else if (id === 'rocket-part') {
+            displayCategory = currentGameMode === 'base' ? 'resources' : 'space';
+        }        
+        // Filtrar por categoría (usando la categoría dinámica)
+        if (currentCategory && displayCategory !== currentCategory) return;
         
         // Filtrar por búsqueda
         if (searchQuery && !item.name.toLowerCase().includes(searchQuery.toLowerCase())) return;
-        
-        // MOSTRAR TODO: recursos, intermedios, productos
-        // if (item.type === 'resource') return;  <-- ELIMINAR ESTA LÍNEA
         
         // Crear card
         const card = document.createElement('div');
@@ -309,7 +348,15 @@ function calculateItemRecursive(itemId, ratePerSecond, nodes) {
 }
 
 function findRecipeForItem(itemId) {
-    return Object.values(gameData.recipes).find(r => r.result === itemId);
+    return Object.values(gameData.recipes).find(r => {
+        // Debe coincidir el item resultante
+        if (r.result !== itemId) return false;
+        
+        // Si la receta tiene game_mode, debe coincidir con el actual
+        if (r.game_mode && r.game_mode !== currentGameMode) return false;
+        
+        return true;
+    });
 }
 
 // ============================================
