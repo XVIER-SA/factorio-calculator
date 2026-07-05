@@ -15,6 +15,10 @@ let productivityLevels = {
     asteroid: 0,
     'rocket-part': 0
 };
+let byproductTracker = {
+    produced: {}, // Fluidos producidos como subproductos
+    consumed: {}  // Fluidos consumidos en otras recetas
+};
 let searchQuery = '';
 
 // Al iniciar
@@ -365,6 +369,9 @@ function selectItem(itemId, itemName) {
 // ============================================
 
 function calculate() {
+    // Limpiar el rastreador de subproductos
+    byproductTracker = { produced: {}, consumed: {} };
+    
     const itemId = document.getElementById('item-select').value;
     const ratePerMinute = parseFloat(document.getElementById('rate-input').value);
     
@@ -382,6 +389,12 @@ function calculate() {
 
 function calculateItemRecursive(itemId, ratePerSecond, nodes) {
     const item = gameData.items[itemId];
+
+    // === RASTREO DE SUBPRODUCTOS ===
+    // Si este item es un fluido que puede ser subproducto, registrar su consumo
+    if (['heavy-oil', 'light-oil', 'petroleum-gas'].includes(itemId)) {
+        byproductTracker.consumed[itemId] = (byproductTracker.consumed[itemId] || 0) + ratePerSecond;
+    }
     
     // CASO 1: Recurso crudo
     if (item.type === 'resource') {
@@ -442,6 +455,23 @@ function calculateItemRecursive(itemId, ratePerSecond, nodes) {
         const adjustedProduction = productionPerMachine * (1 + productivityBonus);
         const machinesNeeded = ratePerSecond / adjustedProduction;
         
+        // === RASTREO DE SUBPRODUCTOS DEL PETRÓLEO ===
+        if (recipe.category === 'oil-processing' && currentOilMode === 'advanced') {
+            // Procesamiento Avanzado produce subproductos
+            const refineryCount = machinesNeeded;
+            
+            // advanced-oil-processing produce: 50 gas, 25 heavy, 45 light por ciclo
+            // Calcular proporción basada en el result_count de la receta
+            const gasProduced = ratePerSecond; // Ya calculado
+            const heavyProduced = (ratePerSecond / recipe.result_count) * 25;
+            const lightProduced = (ratePerSecond / recipe.result_count) * 45;
+            
+            byproductTracker.produced['petroleum-gas'] = (byproductTracker.produced['petroleum-gas'] || 0) + gasProduced;
+            byproductTracker.produced['heavy-oil'] = (byproductTracker.produced['heavy-oil'] || 0) + heavyProduced;
+            byproductTracker.produced['light-oil'] = (byproductTracker.produced['light-oil'] || 0) + lightProduced;
+        }
+        // ================================================
+
         nodes.push({ itemId, itemName: item.name, ratePerSecond, recipe, machine, machinesNeeded });
         return;
     }
@@ -583,5 +613,52 @@ function displayResults(itemId, ratePerMinute, nodes) {
             <p>💡 <em>Nota: Las cantidades se redondean hacia arriba.</em></p>
         </div>`;
     
+    // === REPORTE DE BALANCE DE FLUIDOS ===
+    if (currentOilMode === 'advanced' && Object.keys(byproductTracker.produced).length > 0) {
+        html += `
+            <div class="fluid-balance-report" style="background: rgba(138, 43, 226, 0.1); padding: 15px; border-radius: 5px; margin-top: 20px; border-left: 4px solid #8a2be2;">
+                <h3 style="color: #8a2be2; margin-bottom: 10px;">⚖️ Balance de Fluidos (Procesamiento Avanzado)</h3>
+                <p style="color: #ccc; margin-bottom: 10px;">Tu producción genera automáticamente estos subproductos:</p>
+                <ul style="list-style: none; padding: 0;">
+        `;
+        
+        const fluids = ['heavy-oil', 'light-oil', 'petroleum-gas'];
+        fluids.forEach(fluidId => {
+            const produced = byproductTracker.produced[fluidId] || 0;
+            const consumed = byproductTracker.consumed[fluidId] || 0;
+            const balance = produced - consumed;
+            const fluidName = gameData.items[fluidId]?.name || fluidId;
+            
+            let statusText = '';
+            let statusColor = '';
+            
+            if (balance > 0.01) {
+                statusText = `Te sobran ${balance.toFixed(2)}/s (puedes convertirlo o usarlo para otra cosa)`;
+                statusColor = '#00ff00';
+            } else if (balance < -0.01) {
+                statusText = `Te faltan ${Math.abs(balance).toFixed(2)}/s (necesitas más producción)`;
+                statusColor = '#ff6600';
+            } else {
+                statusText = 'Balance perfecto';
+                statusColor = '#4a90e2';
+            }
+            
+            html += `
+                <li style="margin-bottom: 8px; color: #ccc;">
+                    <strong style="color: #b266ff;">${fluidName}:</strong> 
+                    Producido ${produced.toFixed(2)}/s - Consumido ${consumed.toFixed(2)}/s = 
+                    <span style="color: ${statusColor}; font-weight: bold;">${statusText}</span>
+                </li>
+            `;
+        });
+        
+        html += `
+                </ul>
+            </div>
+        `;
+    }
+    // ========================================
+    
+    resultsContent.innerHTML = html;
     resultsContent.innerHTML = html;
 }
