@@ -3,6 +3,17 @@ let gameData = null;
 let selectedMachines = {}; // Almacena qué máquina está seleccionada para cada categoría
 let currentCategory = 'all';
 let currentGameMode = 'space-age'; // 'base' o 'space-age'
+let productivityLevels = {
+    mining: 0,
+    steel: 0,
+    'low-density': 0,
+    scrap: 0,
+    processing: 0,
+    plastic: 0,
+    'rocket-fuel': 0,
+    asteroid: 0,
+    'rocket-part': 0
+};
 let searchQuery = '';
 
 // Al iniciar
@@ -108,6 +119,32 @@ function updateMachineSelectors() {
     });
 }
 
+function updateProductivityBonus() {
+    const categories = ['mining', 'steel', 'low-density', 'scrap', 'processing', 'plastic', 'rocket-fuel', 'asteroid', 'rocket-part'];
+    
+    categories.forEach(cat => {
+        const input = document.getElementById(`prod-${cat}`);
+        const bonusDisplay = document.getElementById(`bonus-${cat}`);
+        
+        if (input && bonusDisplay) {
+            let level = parseInt(input.value) || 0;
+            
+            // Validar límites
+            if (cat !== 'mining' && level > 30) {
+                level = 30;
+                input.value = 30;
+                bonusDisplay.classList.add('warning');
+            } else {
+                bonusDisplay.classList.remove('warning');
+            }
+            
+            productivityLevels[cat] = level;
+            const bonus = level * 10;
+            bonusDisplay.textContent = `+${bonus}%`;
+        }
+    });
+}
+
 // Configurar eventos
 function setupEventListeners() {
     document.getElementById('calculate-btn').addEventListener('click', calculate);
@@ -136,7 +173,14 @@ function setupEventListeners() {
             renderItemGrid();
         });
     });
-    
+
+    // Event listeners para investigaciones de productividad
+    document.querySelectorAll('.research-input').forEach(input => {
+        input.addEventListener('input', updateProductivityBonus);
+    });
+
+    // Inicializar bonus al cargar
+    updateProductivityBonus();
     setupCategoryTabs();
     setupSearch();
 }
@@ -302,7 +346,27 @@ function calculateItemRecursive(itemId, ratePerSecond, nodes) {
         }
 
         const productionPerMachine = (machine.speed / recipe.time) * recipe.result_count;
-        const machinesNeeded = ratePerSecond / productionPerMachine;
+        // Aplicar bonus de productividad si existe
+        let productivityBonus = 0;
+        if (itemId === 'iron-ore' || itemId === 'copper-ore' || itemId === 'coal' || itemId === 'stone' || itemId === 'uranium-ore') {
+            productivityBonus = productivityLevels.mining * 0.1;
+        } else if (itemId === 'steel') {
+            productivityBonus = productivityLevels.steel * 0.1;
+        } else if (itemId === 'low-density-structure') {
+            productivityBonus = productivityLevels['low-density'] * 0.1;
+        } else if (itemId === 'processing-unit') {
+            productivityBonus = productivityLevels.processing * 0.1;
+        } else if (itemId === 'plastic-bar') {
+            productivityBonus = productivityLevels.plastic * 0.1;
+        } else if (itemId === 'rocket-fuel') {
+            productivityBonus = productivityLevels['rocket-fuel'] * 0.1;
+        } else if (itemId === 'rocket-part') {
+            productivityBonus = productivityLevels['rocket-part'] * 0.1;
+        }
+
+        // Ajustar producción con el bonus
+        const adjustedProduction = productionPerMachine * (1 + productivityBonus);
+        const machinesNeeded = ratePerSecond / adjustedProduction;
         
         nodes.push({ itemId, itemName: item.name, ratePerSecond, recipe, machine, machinesNeeded });
         return;
@@ -338,7 +402,27 @@ function calculateItemRecursive(itemId, ratePerSecond, nodes) {
         });
     } else {
         const productionPerMachine = (machine.speed / recipe.time) * recipe.result_count;
-        const machinesNeeded = ratePerSecond / productionPerMachine;
+        // Aplicar bonus de productividad si existe
+        let productivityBonus = 0;
+        if (itemId === 'iron-ore' || itemId === 'copper-ore' || itemId === 'coal' || itemId === 'stone' || itemId === 'uranium-ore') {
+            productivityBonus = productivityLevels.mining * 0.1;
+        } else if (itemId === 'steel') {
+            productivityBonus = productivityLevels.steel * 0.1;
+        } else if (itemId === 'low-density-structure') {
+            productivityBonus = productivityLevels['low-density'] * 0.1;
+        } else if (itemId === 'processing-unit') {
+            productivityBonus = productivityLevels.processing * 0.1;
+        } else if (itemId === 'plastic-bar') {
+            productivityBonus = productivityLevels.plastic * 0.1;
+        } else if (itemId === 'rocket-fuel') {
+            productivityBonus = productivityLevels['rocket-fuel'] * 0.1;
+        } else if (itemId === 'rocket-part') {
+            productivityBonus = productivityLevels['rocket-part'] * 0.1;
+        }
+
+        // Ajustar producción con el bonus
+        const adjustedProduction = productionPerMachine * (1 + productivityBonus);
+        const machinesNeeded = ratePerSecond / adjustedProduction;
         nodes.push({ itemId, itemName: item.name, ratePerSecond, recipe, machine, machinesNeeded });
     }
     

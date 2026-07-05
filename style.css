@@ -531,3 +531,72 @@ header p {
     color: #ffa500 !important;
     font-weight: bold !important;
 }
+/* Panel de Investigaciones de Productividad */
+.productivity-research {
+    background: rgba(0, 0, 0, 0.4) !important;
+    padding: 20px !important;
+    border-radius: 10px !important;
+    border: 2px solid #00ff00 !important;
+    margin-bottom: 30px !important;
+}
+
+.productivity-research h2 {
+    color: #00ff00 !important;
+    margin-bottom: 10px !important;
+    font-size: 1.4em !important;
+}
+
+.research-note {
+    color: #aaa !important;
+    font-size: 0.9em !important;
+    margin-bottom: 15px !important;
+}
+
+.research-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 15px !important;
+}
+
+.research-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 10px !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    border-radius: 5px !important;
+}
+
+.research-item label {
+    flex: 1 !important;
+    color: #00ff00 !important;
+    font-weight: bold !important;
+    font-size: 0.9em !important;
+}
+
+.research-input {
+    width: 60px !important;
+    padding: 5px !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    border: 2px solid #00ff00 !important;
+    border-radius: 5px !important;
+    color: #ffffff !important;
+    font-size: 14px !important;
+    text-align: center !important;
+}
+
+.research-input:focus {
+    outline: none !important;
+    border-color: #00cc00 !important;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3) !important;
+}
+
+.research-bonus {
+    color: #00ff00 !important;
+    font-weight: bold !important;
+    min-width: 50px !important;
+}
+
+.research-bonus.warning {
+    color: #ff6600 !important;
+}

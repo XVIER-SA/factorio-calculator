@@ -60,6 +60,67 @@
 					qué máquina usar para cada proceso.</p>
 				<div id="machine-upgrades-content"></div>
 			</section>
+			<section class="productivity-research">
+				<h2>🔬 Investigaciones de Productividad</h2>
+				<p class="research-note">Cada nivel aumenta la producción en un 10%. Límite: 300% (nivel 30), excepto Minería
+					que es ilimitada.</p>
+
+				<div class="research-grid">
+					<div class="research-item">
+						<label for="prod-mining">Productividad Minera:</label>
+						<input type="number" id="prod-mining" min="0" value="0" class="research-input">
+						<span class="research-bonus" id="bonus-mining">+0%</span>
+					</div>
+
+					<div class="research-item">
+						<label for="prod-steel">Productividad del Acero:</label>
+						<input type="number" id="prod-steel" min="0" max="30" value="0" class="research-input">
+						<span class="research-bonus" id="bonus-steel">+0%</span>
+					</div>
+
+					<div class="research-item">
+						<label for="prod-low-density">Productividad Estructuras Baja Densidad:</label>
+						<input type="number" id="prod-low-density" min="0" max="30" value="0" class="research-input">
+						<span class="research-bonus" id="bonus-low-density">+0%</span>
+					</div>
+
+					<div class="research-item">
+						<label for="prod-scrap">Productividad Reciclaje Chatarra:</label>
+						<input type="number" id="prod-scrap" min="0" max="30" value="0" class="research-input">
+						<span class="research-bonus" id="bonus-scrap">+0%</span>
+					</div>
+
+					<div class="research-item">
+						<label for="prod-processing">Productividad Unidad de Procesamiento:</label>
+						<input type="number" id="prod-processing" min="0" max="30" value="0" class="research-input">
+						<span class="research-bonus" id="bonus-processing">+0%</span>
+					</div>
+
+					<div class="research-item">
+						<label for="prod-plastic">Productividad Barras de Plástico:</label>
+						<input type="number" id="prod-plastic" min="0" max="30" value="0" class="research-input">
+						<span class="research-bonus" id="bonus-plastic">+0%</span>
+					</div>
+
+					<div class="research-item">
+						<label for="prod-rocket-fuel">Productividad Combustible Cohetes:</label>
+						<input type="number" id="prod-rocket-fuel" min="0" max="30" value="0" class="research-input">
+						<span class="research-bonus" id="bonus-rocket-fuel">+0%</span>
+					</div>
+
+					<div class="research-item">
+						<label for="prod-asteroid">Productividad Asteroides:</label>
+						<input type="number" id="prod-asteroid" min="0" max="30" value="0" class="research-input">
+						<span class="research-bonus" id="bonus-asteroid">+0%</span>
+					</div>
+
+					<div class="research-item">
+						<label for="prod-rocket-part">Productividad Piezas de Cohete:</label>
+						<input type="number" id="prod-rocket-part" min="0" max="30" value="0" class="research-input">
+						<span class="research-bonus" id="bonus-rocket-part">+0%</span>
+					</div>
+				</div>
+			</section>
 			<section id="results" class="results hidden">
 				<h2>Resultados</h2>
 				<div id="results-content"></div>
