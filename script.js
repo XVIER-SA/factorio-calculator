@@ -3,6 +3,7 @@ let gameData = null;
 let selectedMachines = {}; // Almacena qué máquina está seleccionada para cada categoría
 let currentCategory = 'all';
 let currentGameMode = 'space-age'; // 'base' o 'space-age'
+let currentOilMode = 'basic'; // 'basic' o 'advanced'
 let productivityLevels = {
     mining: 0,
     steel: 0,
@@ -271,6 +272,20 @@ function renderItemGrid() {
 
 // Seleccionar item
 function selectItem(itemId, itemName) {
+    // === AUTO-SELECCIÓN DE MODO DE PETRÓLEO SEGÚN TIER ===
+    const itemTier = gameData.items[itemId].unlock_tier;
+    const oilBasicRadio = document.getElementById('oil-basic');
+    const oilAdvancedRadio = document.getElementById('oil-advanced');
+    
+    if (itemTier >= 3) {
+        currentOilMode = 'advanced';
+        oilAdvancedRadio.checked = true;
+    } else {
+        currentOilMode = 'basic';
+        oilBasicRadio.checked = true;
+    }
+    // ====================================================
+
     document.getElementById('item-select').value = itemId;
     
     // Actualizar display
@@ -434,13 +449,18 @@ function calculateItemRecursive(itemId, ratePerSecond, nodes) {
 }
 
 function findRecipeForItem(itemId) {
+    // CASO ESPECIAL: Gas de Petróleo
+    if (itemId === 'petroleum-gas') {
+        if (currentOilMode === 'advanced' && gameData.recipes['advanced-oil-processing']) {
+            return gameData.recipes['advanced-oil-processing'];
+        }
+        return gameData.recipes['basic-oil-processing'];
+    }
+
+    // Lógica normal para el resto
     return Object.values(gameData.recipes).find(r => {
-        // Debe coincidir el item resultante
         if (r.result !== itemId) return false;
-        
-        // Si la receta tiene game_mode, debe coincidir con el actual
         if (r.game_mode && r.game_mode !== currentGameMode) return false;
-        
         return true;
     });
 }

@@ -600,3 +600,26 @@ header p {
 .research-bonus.warning {
     color: #ff6600 !important;
 }
+/* Toggle de modo de petróleo */
+.oil-mode-toggle {
+    display: flex !important;
+    gap: 10px !important;
+    margin-bottom: 15px !important;
+    padding: 10px !important;
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: 2px solid #8a2be2 !important; /* Morado para química/petróleo */
+    border-radius: 5px !important;
+}
+
+.oil-mode-toggle .mode-option:hover {
+    background: rgba(138, 43, 226, 0.1) !important;
+}
+
+.oil-mode-toggle .mode-option:has(input:checked) {
+    background: rgba(138, 43, 226, 0.2) !important;
+    color: #b266ff !important;
+}
+
+.oil-mode-toggle input[type="radio"] {
+    accent-color: #8a2be2 !important;
+}
