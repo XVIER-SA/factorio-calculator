@@ -440,20 +440,19 @@ function calculateItemRecursive(itemId, ratePerSecond, nodes) {
         const machinesNeeded = ratePerSecond / productionPerMachine;
         
         // === RASTREO DE SUBPRODUCTOS DEL PETRÓLEO ===
-        if (recipe.category === 'oil-processing' && currentOilMode === 'advanced' && recipe.byproducts) {
-            // advanced-oil-processing produce subproductos
-            // La receta base produce `result_count` de petroleum-gas
-            // Los byproducts son proporcionales
+        if (recipe.category === 'oil-processing' && currentOilMode === 'advanced') {
+            // Matemática directa del Procesamiento Avanzado:
+            // Por cada 50 de Gas (result_count), produce 25 de Pesado y 45 de Ligero.
+            // Proporción: Pesado = 0.5 * Gas, Ligero = 0.9 * Gas
             
-            recipe.byproducts.forEach(byproduct => {
-                const byproductRate = (ratePerSecond / recipe.result_count) * byproduct.amount;
-                byproductTracker.produced[byproduct.item] = (byproductTracker.produced[byproduct.item] || 0) + byproductRate;
-            });
+            const gasRate = ratePerSecond;
+            const heavyRate = gasRate * 0.5; // 25/50
+            const lightRate = gasRate * 0.9; // 45/50
             
-            // También registrar el gas producido
-            byproductTracker.produced['petroleum-gas'] = (byproductTracker.produced['petroleum-gas'] || 0) + ratePerSecond;
+            byproductTracker.produced['petroleum-gas'] = (byproductTracker.produced['petroleum-gas'] || 0) + gasRate;
+            byproductTracker.produced['heavy-oil'] = (byproductTracker.produced['heavy-oil'] || 0) + heavyRate;
+            byproductTracker.produced['light-oil'] = (byproductTracker.produced['light-oil'] || 0) + lightRate;
         }
-        // ================================================
         
         nodes.push({ itemId, itemName: item.name, ratePerSecond, recipe, machine, machinesNeeded });
         return;
@@ -521,22 +520,12 @@ function calculateItemRecursive(itemId, ratePerSecond, nodes) {
 }
 
 function findRecipeForItem(itemId) {
-    // CASO ESPECIAL: Gas de Petróleo - elegir según modo
+    // CASO ESPECIAL: Gas de Petróleo
     if (itemId === 'petroleum-gas') {
         if (currentOilMode === 'advanced') {
             return gameData.recipes['advanced-oil-processing'];
         }
         return gameData.recipes['basic-oil-processing'];
-    }
-    
-    // CASO ESPECIAL: Petróleo Pesado y Ligero - solo existen como subproductos del avanzado
-    // o como resultado del cracking
-    if (itemId === 'heavy-oil' || itemId === 'light-oil') {
-        // Buscar receta de cracking primero
-        const crackingRecipe = Object.values(gameData.recipes).find(r => 
-            r.result === itemId && r.category === 'chemistry'
-        );
-        return crackingRecipe || null;
     }
 
     // Lógica normal para el resto

@@ -2260,11 +2260,7 @@
       "time": 5,
       "category": "oil-processing",
       "result": "petroleum-gas",
-      "result_count": 50,
-      "byproducts": [
-        {"item": "heavy-oil", "amount": 25}, 
-        {"item": "light-oil", "amount": 45}
-      ]
+      "result_count": 50
     },
     "heavy-oil-cracking": { "ingredients": [{"item": "heavy-oil", "amount": 40}, {"item": "water", "amount": 30}], "time": 2, "category": "chemistry", "result": "light-oil", "result_count": 30 },
     "light-oil-cracking": { "ingredients": [{"item": "light-oil", "amount": 30}, {"item": "water", "amount": 30}], "time": 2, "category": "chemistry", "result": "petroleum-gas", "result_count": 20 },
