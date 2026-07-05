@@ -505,9 +505,27 @@ function calculateItemRecursive(itemId, ratePerSecond, nodes) {
         });
     } else {
         const productionPerMachine = (machine.speed / recipe.time) * recipe.result_count;
-        // Aplicar bonus de productividad si existe
+        // Calcular producción - manejar recetas con múltiples resultados
+        let productionPerMachine = 0;
+        let allResults = [];
+
+        // Normalizar: si result es array, usarlo; si no, convertir a array
+        if (Array.isArray(recipe.result)) {
+            allResults = recipe.result.map((item, index) => ({
+                item: item,
+                amount: recipe.result_count[index]
+            }));
+        } else {
+            allResults = [{item: recipe.result, amount: recipe.result_count}];
+        }
+
+        // Encontrar el item principal que estamos calculando
+        const mainResult = allResults.find(r => r.item === itemId) || allResults[0];
+        productionPerMachine = (machine.speed / recipe.time) * mainResult.amount;
+
+        // Aplicar bonus de productividad
         let productivityBonus = 0;
-        if (itemId === 'iron-ore' || itemId === 'copper-ore' || itemId === 'coal' || itemId === 'stone' || itemId === 'uranium-ore' || itemId === 'crude-oil' || itemId === 'water' || itemId === 'lava' || itemId === 'heavy-oil' || itemId === 'light-oil') {
+        if (itemId === 'iron-ore' || itemId === 'copper-ore' || itemId === 'coal' || itemId === 'stone' || itemId === 'uranium-ore' || itemId === 'crude-oil') {
             productivityBonus = productivityLevels.mining * 0.1;
         } else if (itemId === 'steel') {
             productivityBonus = productivityLevels.steel * 0.1;
@@ -523,9 +541,17 @@ function calculateItemRecursive(itemId, ratePerSecond, nodes) {
             productivityBonus = productivityLevels['rocket-part'] * 0.1;
         }
 
-        // Ajustar producción con el bonus
         const adjustedProduction = productionPerMachine * (1 + productivityBonus);
         const machinesNeeded = ratePerSecond / adjustedProduction;
+
+        // === RASTREO DE SUBPRODUCTOS ===
+        if (allResults.length > 1 && currentOilMode === 'advanced') {
+            allResults.forEach(result => {
+                const resultRate = (ratePerSecond / mainResult.amount) * result.amount;
+                byproductTracker.produced[result.item] = (byproductTracker.produced[result.item] || 0) + resultRate;
+            });
+        }
+
         nodes.push({ itemId, itemName: item.name, ratePerSecond, recipe, machine, machinesNeeded });
     }
     
