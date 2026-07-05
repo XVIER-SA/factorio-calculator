@@ -323,6 +323,8 @@ function calculateItemRecursive(itemId, ratePerSecond, nodes) {
         machine = gameData.machines['centrifuge'];
     } else if (recipe.category === 'crushing') {
         machine = gameData.machines['crusher'];
+    } else if (recipe.category === 'rocket-building') {
+        machine = gameData.machines['rocket-silo'];
     } else {
         // Usar máquina seleccionada por el usuario
         const machineId = selectedMachines[recipe.category];

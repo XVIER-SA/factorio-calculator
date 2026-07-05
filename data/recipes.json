@@ -2302,7 +2302,31 @@
         "result_count": 1, 
         "game_mode": "space-age" 
     },
-    "satellite": { "ingredients": [{"item": "low-density-structure", "amount": 100}, {"item": "solar-panel", "amount": 100}, {"item": "accumulator", "amount": 100}, {"item": "radar", "amount": 1}], "time": 1, "category": "rocket-building", "result": "satellite", "result_count": 1, "game_mode": "base" }
+    "satellite": {
+      "ingredients": [
+        {
+          "item": "low-density-structure",
+          "amount": 100
+        },
+        {
+          "item": "solar-panel",
+          "amount": 100
+        },
+        {
+          "item": "accumulator",
+          "amount": 100
+        },
+        {
+          "item": "radar",
+          "amount": 1
+        }
+      ],
+      "time": 1,
+      "category": "crafting",
+      "result": "satellite",
+      "result_count": 1,
+      "game_mode": "base"
+    }
   },
   "machines": {
     "stone-furnace": {
@@ -2398,6 +2422,14 @@
     "electric-furnace": { "name": "Horno eléctrico", "icon_url": "https://wiki.factorio.com/images/thumb/Electric_furnace.png/32px-Electric_furnace.png", "speed": 2, "categories": ["smelting"], "tier": 3, "category": "production" },
     "centrifuge": { "name": "Centrifugadora", "icon_url": "https://wiki.factorio.com/images/thumb/Centrifuge.png/32px-Centrifuge.png", "speed": 1, "categories": ["centrifuging"], "tier": 3, "category": "production" },
     "crusher": { "name": "Trituradora", "icon_url": "https://wiki.factorio.com/images/thumb/Crusher.png/32px-Crusher.png", "speed": 1, "categories": ["crushing"], "tier": 3, "category": "space" },
-    "asteroid-collector": { "name": "Recolector de asteroides", "icon_url": "https://wiki.factorio.com/images/thumb/Asteroid_collector.png/32px-Asteroid_collector.png", "speed": 1, "categories": ["asteroid-collecting"], "tier": 3, "category": "space" }
+    "asteroid-collector": { "name": "Recolector de asteroides", "icon_url": "https://wiki.factorio.com/images/thumb/Asteroid_collector.png/32px-Asteroid_collector.png", "speed": 1, "categories": ["asteroid-collecting"], "tier": 3, "category": "space" },
+    "rocket-silo": { 
+    "name": "Silo de cohetes", 
+    "icon_url": "https://wiki.factorio.com/images/thumb/Rocket_silo.png/32px-Rocket_silo.png", 
+    "speed": 1, 
+    "categories": ["rocket-building"], 
+    "tier": 3, 
+    "category": "production" 
+}
   }
 }
