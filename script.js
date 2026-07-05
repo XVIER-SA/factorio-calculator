@@ -19,6 +19,8 @@ let searchQuery = '';
 
 // Al iniciar
 document.addEventListener('DOMContentLoaded', async () => {
+    const oilToggle = document.querySelector('.oil-mode-toggle');
+    if (oilToggle) oilToggle.style.display = 'none';
     await loadGameData();
     
     // Set default category to logistics
@@ -59,13 +61,12 @@ function updateMachineSelectors() {
     const container = document.getElementById('machine-upgrades-content');
     container.innerHTML = '';
 
-    // Determinar tier del item
+    // 1. Obtener el tier EXACTO del item seleccionado
     let currentTier = 0;
     if (itemId && gameData.items[itemId]) {
         currentTier = gameData.items[itemId].unlock_tier;
     }
 
-    // SOLO mostrar máquinas con upgrades (QUITAR oil-processing y chemistry)
     const categories = ['crafting', 'smelting', 'mining'];
     const categoryNames = {
         'crafting': 'Ensamblaje',
@@ -75,11 +76,11 @@ function updateMachineSelectors() {
 
     categories.forEach(cat => {
         const allMachines = Object.entries(gameData.machines).filter(([id, m]) => m.categories.includes(cat));
+        
+        // 2. Filtrar máquinas disponibles para el tier del item
         const tierMachines = allMachines.filter(([id, m]) => m.tier <= currentTier);
 
         if (allMachines.length === 0) return;
-
-        allMachines.sort((a, b) => b[1].tier - a[1].tier);
 
         const groupDiv = document.createElement('div');
         groupDiv.className = 'machine-upgrade-group';
@@ -92,15 +93,21 @@ function updateMachineSelectors() {
         select.id = `machine-select-${cat}`;
         select.className = 'machine-select';
 
+        // 3. Lógica de selección por defecto
         let defaultMachineId = null;
-
+        
         if (tierMachines.length > 0) {
+            // Si hay máquinas para este tier, elegir la MEJOR (mayor tier)
             tierMachines.sort((a, b) => b[1].tier - a[1].tier);
             defaultMachineId = tierMachines[0][0];
         } else {
+            // Si no hay máquinas para este tier, elegir la MÁS BÁSICA (menor tier)
+            allMachines.sort((a, b) => a[1].tier - b[1].tier);
             defaultMachineId = allMachines[0][0];
         }
 
+        // 4. Llenar el select con TODAS las máquinas (ordenadas de mejor a peor)
+        allMachines.sort((a, b) => b[1].tier - a[1].tier);
         allMachines.forEach(([id, m]) => {
             const opt = document.createElement('option');
             opt.value = id;
@@ -131,7 +138,7 @@ function updateProductivityBonus() {
             let level = parseInt(input.value) || 0;
             
             // Validar límites
-            if (cat !== 'mining' && level > 30) {
+            if (level > 30) {
                 level = 30;
                 input.value = 30;
                 bonusDisplay.classList.add('warning');
@@ -270,6 +277,56 @@ function renderItemGrid() {
     }
 }
 
+// Caché para no recalcular lo mismo varias veces
+const oilDependencyCache = {};
+
+function requiresOilProcessing(itemId, visited = new Set()) {
+    // Si ya lo calculamos, devolver el resultado guardado
+    if (oilDependencyCache[itemId] !== undefined) return oilDependencyCache[itemId];
+    
+    // Evitar bucles infinitos si hay recetas circulares
+    if (visited.has(itemId)) return false;
+    visited.add(itemId);
+
+    // Buscar TODAS las recetas que producen este item
+    const recipes = Object.values(gameData.recipes).filter(r => r.result === itemId);
+
+    for (const recipe of recipes) {
+        // Si la receta es de refinería o química, DEPENDE del petróleo
+        if (recipe.category === 'oil-processing' || recipe.category === 'chemistry') {
+            oilDependencyCache[itemId] = true;
+            return true;
+        }
+        
+        // Revisar recursivamente los ingredientes
+        if (recipe.ingredients) {
+            for (const ing of recipe.ingredients) {
+                if (requiresOilProcessing(ing.item, new Set(visited))) {
+                    oilDependencyCache[itemId] = true;
+                    return true;
+                }
+            }
+        }
+    }
+
+    oilDependencyCache[itemId] = false;
+    return false;
+}
+
+function checkOilToggleVisibility(itemId) {
+    const oilToggle = document.querySelector('.oil-mode-toggle');
+    if (!oilToggle) return;
+
+    // Limpiar caché si cambiamos de modo de juego (opcional, pero buena práctica)
+    // Object.keys(oilDependencyCache).forEach(key => delete oilDependencyCache[key]);
+
+    if (requiresOilProcessing(itemId)) {
+        oilToggle.style.display = 'flex';
+    } else {
+        oilToggle.style.display = 'none';
+    }
+}
+
 // Seleccionar item
 function selectItem(itemId, itemName) {
     // === AUTO-SELECCIÓN DE MODO DE PETRÓLEO SEGÚN TIER ===
@@ -299,6 +356,8 @@ function selectItem(itemId, itemName) {
             card.classList.add('selected');
         }
     });
+    checkOilToggleVisibility(itemId);
+    updateMachineSelectors();
 }
 
 // ============================================
