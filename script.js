@@ -478,10 +478,10 @@ function calculateItemRecursive(itemId, ratePerSecond, nodes) {
     // CASO 2: Item intermedio o producto
     const recipe = findRecipeForItem(itemId);
     if (!recipe) return;
-    
+
     // MÁQUINAS FIJAS para categorías especiales
     let machine = null;
-    
+
     if (recipe.category === 'oil-processing') {
         machine = gameData.machines['oil-refinery'];
     } else if (recipe.category === 'chemistry') {
@@ -504,7 +504,6 @@ function calculateItemRecursive(itemId, ratePerSecond, nodes) {
             machine: { name: 'Manual' }, machinesNeeded: 0
         });
     } else {
-        const productionPerMachine = (machine.speed / recipe.time) * recipe.result_count;
         // Calcular producción - manejar recetas con múltiples resultados
         let productionPerMachine = 0;
         let allResults = [];
@@ -554,7 +553,7 @@ function calculateItemRecursive(itemId, ratePerSecond, nodes) {
 
         nodes.push({ itemId, itemName: item.name, ratePerSecond, recipe, machine, machinesNeeded });
     }
-    
+
     // RECURSIÓN
     recipe.ingredients.forEach(ingredient => {
         const ingredientRate = ratePerSecond * ingredient.amount;
@@ -563,7 +562,7 @@ function calculateItemRecursive(itemId, ratePerSecond, nodes) {
 }
 
 function findRecipeForItem(itemId) {
-    // CASO ESPECIAL: Gas de Petróleo
+    // CASO ESPECIAL: Gas de Petróleo - elegir según modo
     if (itemId === 'petroleum-gas') {
         if (currentOilMode === 'advanced') {
             return gameData.recipes['advanced-oil-processing'];
@@ -571,9 +570,18 @@ function findRecipeForItem(itemId) {
         return gameData.recipes['basic-oil-processing'];
     }
 
-    // Lógica normal para el resto
+    // Lógica normal para el resto - manejar arrays en result
     return Object.values(gameData.recipes).find(r => {
-        if (r.result !== itemId) return false;
+        if (!r.result) return false;
+        
+        // Si result es un array, buscar si el item está en él
+        if (Array.isArray(r.result)) {
+            if (!r.result.includes(itemId)) return false;
+        } else {
+            // Si result es string, comparar normalmente
+            if (r.result !== itemId) return false;
+        }
+        
         if (r.game_mode && r.game_mode !== currentGameMode) return false;
         return true;
     });
